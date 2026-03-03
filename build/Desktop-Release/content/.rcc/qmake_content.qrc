@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/content">
+    <file alias="qmldir">/home/felix/eye_gymnastics/build/Desktop-Release/qml/content/qmldir</file>
+  </qresource>
+</RCC>
+

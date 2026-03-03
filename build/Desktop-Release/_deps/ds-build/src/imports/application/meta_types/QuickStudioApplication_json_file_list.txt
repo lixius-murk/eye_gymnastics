@@ -1,0 +1,1 @@
+/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/application/QuickStudioApplication_autogen/include/../EWIEGA46WW/moc_quickstudioapplication_p.cpp.json

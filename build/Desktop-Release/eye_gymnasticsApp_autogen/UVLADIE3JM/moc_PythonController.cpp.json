@@ -1,0 +1,66 @@
+{
+    "classes": [
+        {
+            "className": "PythonController",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "rendererType",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "blType",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "movement",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "startRenderer",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "stopRenderer",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "running",
+                    "notify": "runningChanged",
+                    "read": "running",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "PythonController",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "runningChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PythonController.h",
+    "outputRevision": 68
+}

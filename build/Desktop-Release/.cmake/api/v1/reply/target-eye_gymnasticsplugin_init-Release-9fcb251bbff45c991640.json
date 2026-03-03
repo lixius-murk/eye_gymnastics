@@ -1,0 +1,265 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/./eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o"
+		},
+		{
+			"path" : "imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/./eye_gymnasticsplugin_init.cpp.o"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"_qt_internal_add_library",
+			"qt6_add_library",
+			"__qt_internal_add_static_plugin_init_object_library",
+			"qt6_add_qml_module",
+			"set_property",
+			"_qt_internal_copy_dependency_properties",
+			"__qt_internal_propagate_object_library"
+		],
+		"files" : 
+		[
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"imports/eye_gymnastics/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 628,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 245,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1993,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2066,
+				"parent" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 632,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1407,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 2169,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 2169,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 2169,
+				"parent" : 7
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_DEPRECATED_WARNINGS"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_PLUGIN"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_QMLINTEGRATION_LIB"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_QML_LIB"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "QT_STATICPLUGIN"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/home/felix/eye_gymnastics/build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/home/felix/eye_gymnastics/build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_autogen/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQml"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtNetwork"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt6/QtCore"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "eye_gymnasticsplugin_init_autogen_timestamp_deps::@e4b58e35ea2f69b00f07"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "eye_gymnasticsplugin_init_autogen::@e4b58e35ea2f69b00f07"
+		}
+	],
+	"id" : "eye_gymnasticsplugin_init::@e4b58e35ea2f69b00f07",
+	"name" : "eye_gymnasticsplugin_init",
+	"paths" : 
+	{
+		"build" : "imports/eye_gymnastics",
+		"source" : "imports/eye_gymnastics"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_init.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Release/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

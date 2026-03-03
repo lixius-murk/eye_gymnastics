@@ -1,0 +1,71 @@
+{
+    "classes": [
+        {
+            "className": "CameraLogic",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "toggle",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "active",
+                    "notify": "activeChanged",
+                    "read": "active",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "CameraLogic",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "activeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "frame",
+                            "type": "QImage"
+                        }
+                    ],
+                    "name": "frameReady",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "frame",
+                            "type": "QVideoFrame"
+                        }
+                    ],
+                    "name": "onFrame",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "CameraLogic.h",
+    "outputRevision": 68
+}

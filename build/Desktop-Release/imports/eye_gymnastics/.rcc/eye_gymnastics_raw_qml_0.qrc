@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/qt/qml/eye_gymnastics/">
+    <file alias="Constants.qml">/home/felix/eye_gymnastics/imports/eye_gymnastics/Constants.qml</file>
+    <file alias="DirectoryFontLoader.qml">/home/felix/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml</file>
+    <file alias="EventListModel.qml">/home/felix/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml</file>
+    <file alias="EventListSimulator.qml">/home/felix/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml</file>
+  </qresource>
+</RCC>
+
