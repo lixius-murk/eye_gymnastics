@@ -1,51 +1,21 @@
-name: Build
-
-on:
-  push:
-    branches:
-      - main
-    tags:
-      - 'v*'
-
-jobs:
-  build-linux:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: '6.5.0'
-          modules: 'qtmultimedia'
-      - name: Build
-        run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=Release
-          cmake --build build --config Release
-      - name: Upload
-        uses: actions/upload-artifact@v4
-        with:
-          name: linux-build
-          path: build/eye_gymnasticsApp
-
-  build-windows:
+build-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Install Qt
-        uses: jurplel/install-qt-action@v4
+        uses: jurplel/install-qt-action@v3
         with:
           version: '6.5.0'
           modules: 'qtmultimedia'
       - name: Build
         run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=Release
-          cmake --build build --config Release
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -A x64 -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release --parallel
       - name: Deploy Qt deps
         run: |
-          cd build/Release
-          windeployqt6 eye_gymnasticsApp.exe
+          windeployqt6 build/Release/eye_gymnasticsApp.exe
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: windows-build
           path: build/Release/
