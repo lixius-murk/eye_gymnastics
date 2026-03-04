@@ -1,0 +1,82 @@
+{
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_expose_source_file_to_ide",
+			"_qt_internal_process_resource",
+			"qt6_add_resources",
+			"qt6_add_qml_module"
+		],
+		"files" : 
+		[
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"build/Desktop-Release/_deps/ds-src/src/imports/application/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 561,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 342,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1584,
+				"parent" : 4
+			}
+		]
+	},
+	"id" : "QuickStudioApplication_other_files::@a324641c06033e250fc2",
+	"name" : "QuickStudioApplication_other_files",
+	"paths" : 
+	{
+		"build" : "_deps/ds-build/src/imports/application",
+		"source" : "build/Desktop-Release/_deps/ds-src/src/imports/application"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"path" : "build/Desktop-Release/qml/QtQuick/Studio/Application/qmldir",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "UTILITY"
+}

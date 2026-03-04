@@ -15,7 +15,8 @@ endif()
 qt_add_executable(eye_gymnasticsApp src/main.cpp
     src/PythonController.h src/PythonController.cpp
     src/CameraLogic.h src/CameraLogic.cpp
-    src/FrameProvider.h src/FrameProvider.cpp)
+    src/FrameProvider.h
+)
 
 qt_add_resources(eye_gymnasticsApp "configuration"
     PREFIX "/"

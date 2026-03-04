@@ -4,14 +4,15 @@
 #include <QQuickImageProvider>
 #include <QImage>
 #include <QMutex>
+
+#ifdef Q_OS_WIN
+#include <windows.h>
+#else
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <cstring>
-
-//QML polls this via a Timer + incrementing frameTag.
-//reads fresh from mmap on every requestImage call.
+#endif
 
 class FrameProvider : public QQuickImageProvider
 {
@@ -25,24 +26,102 @@ public:
         : QQuickImageProvider(QQuickImageProvider::Image)
     {}
 
-    ~FrameProvider()
+    ~FrameProvider() { detach(); }
+
+    QImage requestImage(const QString &, QSize *size, const QSize &) override
     {
-        detach();
+        QMutexLocker lock(&m_mutex);
+        if (!ensureAttached()) return blackFrame(size);
+
+        const uchar *data = static_cast<const uchar *>(m_data);
+
+        if (data[4]) return blackFrame(size);
+
+        quint32 counter;
+        memcpy(&counter, data, 4);
+
+        QImage img(data + 5, W, H, W * 3, QImage::Format_RGB888);
+        QImage copy = img.copy();
+        if (size) *size = copy.size();
+        return copy;
     }
 
-    QImage requestImage(const QString &, QSize *size, const QSize &) override;
-
 private:
-    void *m_map = MAP_FAILED;
-    int   m_fd  = -1;
-    QMutex m_mutex;
+    void        *m_data = nullptr;
+    QMutex       m_mutex;
+
+#ifdef Q_OS_WIN
+    HANDLE m_hFile   = INVALID_HANDLE_VALUE;
+    HANDLE m_hMap    = nullptr;
+
+    void detach()
+    {
+        if (m_data)  { UnmapViewOfFile(m_data); m_data = nullptr; }
+        if (m_hMap)  { CloseHandle(m_hMap);     m_hMap = nullptr; }
+        if (m_hFile != INVALID_HANDLE_VALUE) {
+            CloseHandle(m_hFile);
+            m_hFile = INVALID_HANDLE_VALUE;
+        }
+    }
+
+    bool ensureAttached()
+    {
+        if (m_data) return true;
+
+        m_hMap = OpenFileMappingA(FILE_MAP_READ, FALSE, "Global\\frames");
+        if (!m_hMap) return false;
+
+        m_data = MapViewOfFile(m_hMap, FILE_MAP_READ, 0, 0, BUF_SIZE);
+        if (!m_data) { CloseHandle(m_hMap); m_hMap = nullptr; return false; }
+
+        return true;
+    }
+
+#else
+    int  m_fd    = -1;
     ino_t m_inode = 0;
 
-    void detach();
+    void detach()
+    {
+        if (m_data && m_data != MAP_FAILED) {
+            munmap(m_data, BUF_SIZE);
+            m_data = nullptr;
+        }
+        if (m_fd >= 0) { close(m_fd); m_fd = -1; }
+        m_inode = 0;
+    }
 
-    bool ensureAttached();
+    bool ensureAttached()
+    {
+        if (m_data) {
+            struct stat st;
+            if (fstat(m_fd, &st) != 0 || st.st_nlink == 0)
+                detach();
+        }
+        if (m_data) return true;
 
-    QImage blackFrame(QSize *size);
+        int fd = open("/dev/shm/frames", O_RDONLY);
+        if (fd < 0) return false;
+
+        void *map = mmap(nullptr, BUF_SIZE, PROT_READ, MAP_SHARED, fd, 0);
+        if (map == MAP_FAILED) { close(fd); return false; }
+
+        struct stat st;
+        fstat(fd, &st);
+        m_fd    = fd;
+        m_data  = map;
+        m_inode = st.st_ino;
+        return true;
+    }
+#endif
+
+    QImage blackFrame(QSize *size)
+    {
+        QImage img(W, H, QImage::Format_RGB888);
+        img.fill(Qt::black);
+        if (size) *size = img.size();
+        return img;
+    }
 };
 
 #endif // FRAMEPROVIDER_H
