@@ -20,20 +20,11 @@ jobs:
           modules: 'qtmultimedia'
 
       - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libgl1-mesa-dev \
-            libgstreamer1.0-dev \
-            libgstreamer-plugins-base1.0-dev \
-            libpulse-dev
+        run: sudo apt-get update && sudo apt-get install -y libgl1-mesa-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libpulse-dev
 
       - name: Build
         run: |
-          cmake -B build \
-            -DCMAKE_BUILD_TYPE=Release \
-            -DBUILD_QDS_COMPONENTS=OFF \
-            -DLINK_INSIGHT=OFF
+          cmake -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_QDS_COMPONENTS=OFF -DLINK_INSIGHT=OFF
           cmake --build build --config Release --parallel
 
       - name: Upload
@@ -58,31 +49,20 @@ jobs:
 
       - name: Configure
         shell: pwsh
-        run: |
-          cmake -B build `
-            -G "Visual Studio 17 2022" `
-            -A x64 `
-            -DCMAKE_BUILD_TYPE=Release `
-            -DBUILD_QDS_COMPONENTS=OFF `
-            -DLINK_INSIGHT=OFF
+        run: cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DBUILD_QDS_COMPONENTS=OFF -DLINK_INSIGHT=OFF
 
       - name: Build
         shell: pwsh
-        run: |
-          cmake --build build --config Release --parallel
+        run: cmake --build build --config Release --parallel
 
-      - name: Deploy Qt dependencies
+      - name: Deploy
         shell: pwsh
         run: |
           $exe = Get-ChildItem -Recurse -Filter "eye_gymnasticsApp.exe" build | Select-Object -First 1
-          Write-Host "Found exe at: $($exe.FullName)"
-          $outDir = "dist-windows"
-          New-Item -ItemType Directory -Force -Path $outDir
-          Copy-Item $exe.FullName -Destination $outDir/
-          & "$env:Qt6_DIR/../../../bin/windeployqt6.exe" `
-            --qmldir . `
-            --release `
-            "$outDir/eye_gymnasticsApp.exe"
+          Write-Host "Found: $($exe.FullName)"
+          New-Item -ItemType Directory -Force -Path dist-windows
+          Copy-Item $exe.FullName dist-windows/
+          & "$env:Qt6_DIR/../../../bin/windeployqt6.exe" --qmldir . --release dist-windows/eye_gymnasticsApp.exe
 
       - name: Upload
         uses: actions/upload-artifact@v4
