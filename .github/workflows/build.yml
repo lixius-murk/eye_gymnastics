@@ -64,7 +64,7 @@ jobs:
           Copy-Item $exe.FullName dist-windows/
           $deploy = Get-ChildItem -Recurse -Filter "windeployqt6.exe" "D:\a\eye_gymnastics\Qt" | Select-Object -First 1
           Write-Host "windeployqt6: $($deploy.FullName)"
-          & $deploy.FullName --qmldir . --release dist-windows/eye_gymnasticsApp.exe
+          & $deploy.FullName --qmldir $env:GITHUB_WORKSPACE --release dist-windows/eye_gymnasticsApp.exe
 
       - name: Upload
         uses: actions/upload-artifact@v4
