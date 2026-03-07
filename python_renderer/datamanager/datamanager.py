@@ -41,122 +41,103 @@ class DataManager:
         self.start_timestamp = time.time()
         self.frame_count = 0
         self.coordinates_buffer = []
-        
+
         session_id = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        
+        self.current_file = self.data_dir / f"session_{session_id}.json"
+
         self.session_data = {
             "session_id": session_id,
             "color_blindness_type": bl_type.name,
             "movement_function": mv,
             "session_start": datetime.datetime.now().isoformat(),
-            "completion_status": "started"
+            "completion_status": "started",
+            "coordinates": [] 
         }
-        
-        self.logger.info(
-            "Session started",
-            extra={
-                'session_id': session_id,
-                'bl_type': bl_type.name,
-                'movement': mv,
-                'duration': 0,
-                'x_coord': 0,
-                'y_coord': 0,
-                'error_msg': ''
-            }
-        )
-        
+
         return self.session_data.copy()
 
     def log_coordinates(self, coord):
         if not self.start_timestamp:
             return
-        
         current_time = time.time() - self.start_timestamp
         self.frame_count += 1
-        
-        self.coordinates_buffer.append({
+
+        self.session_data["coordinates"].append({
             'time': round(current_time, 3),
-            'x': round(coord[0], 3),
-            'y': round(coord[1], 3),
+            'x':    round(coord[0], 3),
+            'y':    round(coord[1], 3),
         })
-        
-        if len(self.coordinates_buffer) > 1000:
-            self.flush_coordinates_buffer()
-        
-        if self.frame_count % 10 == 0:
-            self.logger.info(
-                "Coordinates",
+
+    def end_session(self, session_data: dict):
+        duration = time.time() - self.start_timestamp if self.start_timestamp else 0
+
+        self.session_data.update({
+            "session_end":      datetime.datetime.now().isoformat(),
+            "duration_seconds": round(duration, 2),
+            "total_frames":     self.frame_count,
+            "completion_status": session_data.get("status", "unknown")
+        })
+
+        with open(self.current_file, 'w', encoding='utf-8') as f:
+            json.dump(self.session_data, f, ensure_ascii=False, indent=4)
+
+        self.logger.info("Session ended", extra={
+            'session_id': self.session_data['session_id'],
+            'bl_type':    self.session_data['color_blindness_type'],
+            'movement':   self.session_data['movement_function'],
+            'duration':   duration,
+            'x_coord': 0, 'y_coord': 0, 'error_msg': ''
+        })
+
+        return self.session_data  
+    
+    def add_error(self, error: Exception):
+            error_msg = f"{type(error).__name__}: {str(error)}"
+            
+            self.logger.error(
+                "Error",
                 extra={
                     'session_id': self.session_data.get('session_id', 'unknown'),
                     'bl_type': self.session_data.get('color_blindness_type', 'unknown'),
                     'movement': self.session_data.get('movement_function', 'unknown'),
-                    'duration': current_time,
-                    'x_coord': coord[0],
-                    'y_coord': coord[1],
+                    'duration': time.time() - self.start_timestamp if self.start_timestamp else 0,
+                    'x_coord': 0,
+                    'y_coord': 0,
+                    'error_msg': error_msg
+                },
+                exc_info=True
+            )
+        
+        
+    def end_session(self, session_data: dict):
+            if self.start_timestamp:
+                duration = time.time() - self.start_timestamp
+            else:
+                duration = 0
+            
+            self.logger.info(
+                "Session ended",
+                extra={
+                    'session_id': session_data.get('session_id', 'unknown'),
+                    'bl_type': session_data.get('color_blindness_type', 'unknown'),
+                    'movement': session_data.get('movement_function', 'unknown'),
+                    'duration': duration,
+                    'x_coord': 0,
+                    'y_coord': 0,
                     'error_msg': ''
                 }
             )
-    
-    def add_error(self, error: Exception):
-        error_msg = f"{type(error).__name__}: {str(error)}"
-        
-        self.logger.error(
-            "Error",
-            extra={
-                'session_id': self.session_data.get('session_id', 'unknown'),
-                'bl_type': self.session_data.get('color_blindness_type', 'unknown'),
-                'movement': self.session_data.get('movement_function', 'unknown'),
-                'duration': time.time() - self.start_timestamp if self.start_timestamp else 0,
-                'x_coord': 0,
-                'y_coord': 0,
-                'error_msg': error_msg
-            },
-            exc_info=True
-        )
-    
-    def flush_coordinates_buffer(self):
-        if not self.coordinates_buffer:
-            return
-        
-        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        coords_file = self.data_dir / f"coords_{timestamp}.json"
-        
-        with open(coords_file, 'w', encoding='utf-8') as f:
-            json.dump(self.coordinates_buffer, f, ensure_ascii=False, indent=2)
-        
-        self.coordinates_buffer.clear()
-    
-    def end_session(self, session_data: dict):
-        if self.start_timestamp:
-            duration = time.time() - self.start_timestamp
-        else:
-            duration = 0
-        
-        self.flush_coordinates_buffer()
-        
-        self.logger.info(
-            "Session ended",
-            extra={
-                'session_id': session_data.get('session_id', 'unknown'),
-                'bl_type': session_data.get('color_blindness_type', 'unknown'),
-                'movement': session_data.get('movement_function', 'unknown'),
-                'duration': duration,
-                'x_coord': 0,
-                'y_coord': 0,
-                'error_msg': ''
-            }
-        )
-        
-        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = self.data_dir / f"session_{timestamp}.json"
-        
-        session_data.update({
-            "session_end": datetime.datetime.now().isoformat(),
-            "duration_seconds": round(duration, 2),
-            "total_frames": self.frame_count
-        })
-        
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(session_data, f, ensure_ascii=False, indent=4)
-        
-        return session_data
+            
+            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = self.data_dir / f"session_{timestamp}.json"
+            
+            session_data.update({
+                "session_end": datetime.datetime.now().isoformat(),
+                "duration_seconds": round(duration, 2),
+                "total_frames": self.frame_count
+            })
+            
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(session_data, f, ensure_ascii=False, indent=4)
+            
+            return session_data

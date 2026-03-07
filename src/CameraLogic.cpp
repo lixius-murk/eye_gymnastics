@@ -31,13 +31,11 @@ void CameraLogic::start()
     m_sink     = new QVideoSink(this);
     m_session  = new QMediaCaptureSession(this);
     m_recorder = new QMediaRecorder(this);
-
-    // Order matters: set everything on session first
+    //don't change order
     m_session->setCamera(m_camera);
     m_session->setVideoSink(m_sink);
     m_session->setRecorder(m_recorder);
 
-    // Set format explicitly
     QMediaFormat format;
     format.setFileFormat(QMediaFormat::MPEG4);
     format.setVideoCodec(QMediaFormat::VideoCodec::H264);
@@ -58,10 +56,8 @@ void CameraLogic::start()
 
     connect(m_sink, &QVideoSink::videoFrameChanged, this, &CameraLogic::onFrame);
 
-    // Start camera first, then record
     m_camera->start();
 
-    // Small delay to let camera initialize before recording
     QTimer::singleShot(500, this, [this](){
         m_recorder->record();
         qDebug() << "Recording started";
@@ -76,9 +72,9 @@ void CameraLogic::stop()
     if (!m_active) return;
 
     if (m_recorder) { m_recorder->stop(); m_recorder->deleteLater(); m_recorder = nullptr; }
-    if (m_camera)   { m_camera->stop();   m_camera->deleteLater();   m_camera   = nullptr; }
-    if (m_sink)     { m_sink->deleteLater();                          m_sink     = nullptr; }
-    if (m_session)  { m_session->deleteLater();                       m_session  = nullptr; }
+    if (m_camera)   { m_camera->stop();   m_camera->deleteLater(); m_camera = nullptr; }
+    if (m_sink)     { m_sink->deleteLater(); m_sink = nullptr; }
+    if (m_session)  { m_session->deleteLater(); m_session = nullptr; }
 
     m_active = false;
     emit activeChanged();
