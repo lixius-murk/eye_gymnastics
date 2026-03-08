@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/qt-project.org/imports/QtQuick/Studio/Effects">
-    <file alias="qmldir">/home/felix/eye_gymnastics/build/Desktop-Release/qml/QtQuick/Studio/Effects/qmldir</file>
+    <file alias="qmldir">/home/felix/repo/eye_gymnastics/build/Desktop-Release/qml/QtQuick/Studio/Effects/qmldir</file>
   </qresource>
 </RCC>
 

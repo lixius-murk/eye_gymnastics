@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnastics_other_files.
 
@@ -74,10 +74,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build: eye_gymn
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_other_files.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_other_files.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/depend
 

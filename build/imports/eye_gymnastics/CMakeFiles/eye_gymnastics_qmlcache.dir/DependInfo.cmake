@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o.d"
-  "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o.d"
+  "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o.d"
+  "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

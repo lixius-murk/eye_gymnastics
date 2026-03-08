@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnastics_tooling.
 
@@ -66,21 +66,21 @@ include imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/compiler_de
 # Include the progress variables for this target.
 include imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/progress.make
 
-qml/eye_gymnastics/Constants.qml: /home/felix/eye_gymnastics/imports/eye_gymnastics/Constants.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../qml/eye_gymnastics/Constants.qml"
-	cd /home/felix/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/imports/eye_gymnastics/Constants.qml /home/felix/eye_gymnastics/build/qml/eye_gymnastics/Constants.qml
+qml/eye_gymnastics/Constants.qml: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/Constants.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../qml/eye_gymnastics/Constants.qml"
+	cd /home/felix/repo/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/Constants.qml /home/felix/repo/eye_gymnastics/build/qml/eye_gymnastics/Constants.qml
 
-qml/eye_gymnastics/DirectoryFontLoader.qml: /home/felix/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../../qml/eye_gymnastics/DirectoryFontLoader.qml"
-	cd /home/felix/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml /home/felix/eye_gymnastics/build/qml/eye_gymnastics/DirectoryFontLoader.qml
+qml/eye_gymnastics/DirectoryFontLoader.qml: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../../qml/eye_gymnastics/DirectoryFontLoader.qml"
+	cd /home/felix/repo/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml /home/felix/repo/eye_gymnastics/build/qml/eye_gymnastics/DirectoryFontLoader.qml
 
-qml/eye_gymnastics/EventListModel.qml: /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../../qml/eye_gymnastics/EventListModel.qml"
-	cd /home/felix/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml /home/felix/eye_gymnastics/build/qml/eye_gymnastics/EventListModel.qml
+qml/eye_gymnastics/EventListModel.qml: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../../qml/eye_gymnastics/EventListModel.qml"
+	cd /home/felix/repo/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml /home/felix/repo/eye_gymnastics/build/qml/eye_gymnastics/EventListModel.qml
 
-qml/eye_gymnastics/EventListSimulator.qml: /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../../qml/eye_gymnastics/EventListSimulator.qml"
-	cd /home/felix/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml /home/felix/eye_gymnastics/build/qml/eye_gymnastics/EventListSimulator.qml
+qml/eye_gymnastics/EventListSimulator.qml: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ../../qml/eye_gymnastics/EventListSimulator.qml"
+	cd /home/felix/repo/eye_gymnastics/imports/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml /home/felix/repo/eye_gymnastics/build/qml/eye_gymnastics/EventListSimulator.qml
 
 eye_gymnastics_tooling: qml/eye_gymnastics/Constants.qml
 eye_gymnastics_tooling: qml/eye_gymnastics/DirectoryFontLoader.qml
@@ -94,10 +94,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/build: eye_gymnasti
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_tooling.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_tooling.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_tooling.dir/depend
 

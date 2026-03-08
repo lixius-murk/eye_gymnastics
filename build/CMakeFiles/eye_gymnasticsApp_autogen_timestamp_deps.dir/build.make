@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_autogen_timestamp_deps.
 
@@ -69,17 +69,8 @@ include CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/progress.make
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/Effects/libQuickStudioEffectsplugin.a
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Multimedia.so.6.4.2
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/Components/libQuickStudioComponentsplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/FlowView/libFlowViewplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/LogicHelper/libQuickStudioLogicHelperplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/MultiText/libQuickStudioMultiTextplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/EventSimulator/libQuickStudioEventSimulatorplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/EventSystem/libQuickStudioEventSystemplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/Application/libQuickStudioApplicationplugin.a
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/QtQuick/Studio/Utils/libQuickStudioUtilsplugin.a
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/content/libcontentplugin.a
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/eye_gymnastics/libeye_gymnasticsplugin.a
 
@@ -88,8 +79,8 @@ CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/eye_gymnastics/libeye_g
 .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp: .rcc/configuration.qrc
 .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp: .rcc/qmake_Main.qrc
 .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp: .rcc/eye_gymnasticsApp_raw_qml_0.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp"
-	/usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_eye_gymnasticsApp --resource /home/felix/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp @/home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qml_loader_file_list.rsp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp"
+	/usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_eye_gymnasticsApp --resource /home/felix/repo/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp @/home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qml_loader_file_list.rsp
 
 eye_gymnasticsApp_autogen_timestamp_deps: .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
 eye_gymnasticsApp_autogen_timestamp_deps: CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps
@@ -105,6 +96,6 @@ CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/depend
 

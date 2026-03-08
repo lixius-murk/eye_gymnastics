@@ -9,7 +9,7 @@ endif()
 
 _qt_internal_deploy_qml_imports_for_target(
     ${__qt_opts}
-    IMPORTS_FILE "/home/felix/eye_gymnastics/build/.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake"
+    IMPORTS_FILE "/home/felix/repo/eye_gymnastics/build/.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake"
     PLUGINS_FOUND __qt_internal_plugins_found
     QML_DIR     "${arg_QML_DIR}"
     PLUGINS_DIR "${arg_PLUGINS_DIR}"

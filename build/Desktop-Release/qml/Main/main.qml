@@ -101,9 +101,13 @@ ApplicationWindow {
                                     if (pythonCtrl.running)
                                         pythonCtrl.stopRenderer()
                                     else
-                                        pythonCtrl.startRenderer(rendererBox.currentText,
-                                                                 blTypeBox.currentText,
-                                                                 movementBox.currentText)
+                                        pythonCtrl.startRenderer(
+                                            rendererBox.currentText,
+                                            blTypeBox.currentText,
+                                            movementBox.currentText,
+                                            renderRect.width,
+                                            renderRect.height
+                                        )
                                 }
                             }
 

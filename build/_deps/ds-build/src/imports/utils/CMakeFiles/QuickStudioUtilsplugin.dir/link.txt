@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../../../qml/QtQuick/Studio/Utils/libQuickStudioUtilsplugin.a CMakeFiles/QuickStudioUtilsplugin.dir/QuickStudioUtilsplugin_autogen/mocs_compilation.cpp.o CMakeFiles/QuickStudioUtilsplugin.dir/QuickStudioUtilsplugin_QtQuick_Studio_UtilsPlugin.cpp.o
-/usr/bin/ranlib ../../../../../qml/QtQuick/Studio/Utils/libQuickStudioUtilsplugin.a

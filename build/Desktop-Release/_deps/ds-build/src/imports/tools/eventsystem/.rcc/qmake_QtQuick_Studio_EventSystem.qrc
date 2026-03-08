@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/qt-project.org/imports/QtQuick/Studio/EventSystem">
-    <file alias="qmldir">/home/felix/eye_gymnastics/build/Desktop-Release/qml/QtQuick/Studio/EventSystem/qmldir</file>
+    <file alias="qmldir">/home/felix/repo/eye_gymnastics/build/Desktop-Release/qml/QtQuick/Studio/EventSystem/qmldir</file>
   </qresource>
 </RCC>
 

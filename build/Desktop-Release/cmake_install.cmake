@@ -1,4 +1,4 @@
-# Install script for directory: /home/felix/eye_gymnastics
+# Install script for directory: /home/felix/repo/eye_gymnastics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/content/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/imports/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/imports/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -64,7 +64,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/eye_gymnasticsApp"
          RPATH "\$ORIGIN:\$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/felix/eye_gymnastics/build/Desktop-Release/eye_gymnasticsApp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/felix/repo/eye_gymnastics/build/Desktop-Release/eye_gymnasticsApp")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/eye_gymnasticsApp" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/eye_gymnasticsApp")
     file(RPATH_CHANGE
@@ -85,5 +85,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/felix/eye_gymnastics/build/Desktop-Release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/felix/repo/eye_gymnastics/build/Desktop-Release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

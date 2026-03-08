@@ -29,8 +29,8 @@ file(REMOVE_RECURSE
   "eye_gymnasticsApp"
   "eye_gymnasticsApp.pdb"
   "eye_gymnasticsapp_qmltyperegistrations.cpp"
-  "meta_types/qt6eye_gymnasticsapp_release_metatypes.json"
-  "meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen"
+  "meta_types/qt6eye_gymnasticsapp_debug_metatypes.json"
+  "meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen"
   "qml/Main/eye_gymnasticsApp.qmltypes"
 )
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Include any dependencies generated for this target.
 include content/CMakeFiles/content.dir/depend.make
@@ -69,104 +69,104 @@ include content/CMakeFiles/content.dir/progress.make
 # Include the compile flags for this target's objects.
 include content/CMakeFiles/content.dir/flags.make
 
-content/meta_types/qt6content_release_metatypes.json.gen: /usr/lib/qt6/libexec/moc
-content/meta_types/qt6content_release_metatypes.json.gen: content/meta_types/content_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running moc --collect-json for target content"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/moc -o /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json.gen --collect-json @/home/felix/eye_gymnastics/build/content/meta_types/content_json_file_list.txt
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E copy_if_different /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json.gen /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json
+content/meta_types/qt6content_debug_metatypes.json.gen: /usr/lib/qt6/libexec/moc
+content/meta_types/qt6content_debug_metatypes.json.gen: content/meta_types/content_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running moc --collect-json for target content"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/moc -o /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json.gen --collect-json @/home/felix/repo/eye_gymnastics/build/content/meta_types/content_json_file_list.txt
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E copy_if_different /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json.gen /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json
 
-content/meta_types/qt6content_release_metatypes.json: content/meta_types/qt6content_release_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E touch_nocreate content/meta_types/qt6content_release_metatypes.json
+content/meta_types/qt6content_debug_metatypes.json: content/meta_types/qt6content_debug_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E touch_nocreate content/meta_types/qt6content_debug_metatypes.json
 
 content/content_qmltyperegistrations.cpp: content/qmltypes/content_foreign_types.txt
-content/content_qmltyperegistrations.cpp: content/meta_types/qt6content_release_metatypes.json
+content/content_qmltyperegistrations.cpp: content/meta_types/qt6content_debug_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/qt6/libexec/qmltyperegistrar
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6qml_none_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6core_none_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6network_none_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic QML type registration for target content"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/eye_gymnastics/build/qml/content/content.qmltypes --import-name=content --major-version=1 --minor-version=0 @/home/felix/eye_gymnastics/build/content/qmltypes/content_foreign_types.txt -o /home/felix/eye_gymnastics/build/content/content_qmltyperegistrations.cpp /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/content/.generated
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/content/.generated/content.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic QML type registration for target content"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/repo/eye_gymnastics/build/qml/content/content.qmltypes --import-name=content --major-version=1 --minor-version=0 @/home/felix/repo/eye_gymnastics/build/content/qmltypes/content_foreign_types.txt -o /home/felix/repo/eye_gymnastics/build/content/content_qmltyperegistrations.cpp /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/content/.generated
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/content/.generated/content.qmltypes
 
 qml/content/content.qmltypes: content/content_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate qml/content/content.qmltypes
 
 content/.rcc/qmlcache/content_App_qml.cpp: /usr/lib/qt6/libexec/qmlcachegen
-content/.rcc/qmlcache/content_App_qml.cpp: /home/felix/eye_gymnastics/content/App.qml
+content/.rcc/qmlcache/content_App_qml.cpp: /home/felix/repo/eye_gymnastics/content/App.qml
 content/.rcc/qmlcache/content_App_qml.cpp: content/.rcc/qmake_content.qrc
 content/.rcc/qmlcache/content_App_qml.cpp: content/.rcc/content_raw_qml_0.qrc
 content/.rcc/qmlcache/content_App_qml.cpp: qml/content/content.qmltypes
 content/.rcc/qmlcache/content_App_qml.cpp: qml/content/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/content_App_qml.cpp"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/content/.rcc/qmlcache
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/content/App.qml -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/eye_gymnastics/build/qml/content/qmldir --resource /home/felix/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp /home/felix/eye_gymnastics/content/App.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/content_App_qml.cpp"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/content/App.qml -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/repo/eye_gymnastics/build/qml/content/qmldir --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp /home/felix/repo/eye_gymnastics/content/App.qml
 
 content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: /usr/lib/qt6/libexec/qmlcachegen
-content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: /home/felix/eye_gymnastics/content/Screen01.ui.qml
+content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: /home/felix/repo/eye_gymnastics/content/Screen01.ui.qml
 content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: content/.rcc/qmake_content.qrc
 content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: content/.rcc/content_raw_qml_0.qrc
 content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: qml/content/content.qmltypes
 content/.rcc/qmlcache/content_Screen01.ui_qml.cpp: qml/content/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/content_Screen01.ui_qml.cpp"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/content/.rcc/qmlcache
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/content/Screen01.ui.qml -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/eye_gymnastics/build/qml/content/qmldir --resource /home/felix/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp /home/felix/eye_gymnastics/content/Screen01.ui.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/content_Screen01.ui_qml.cpp"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/content/Screen01.ui.qml -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/repo/eye_gymnastics/build/qml/content/qmldir --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp /home/felix/repo/eye_gymnastics/content/Screen01.ui.qml
 
 content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o: content/CMakeFiles/content.dir/flags.make
 content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o: content/content_autogen/mocs_compilation.cpp
 content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o: content/CMakeFiles/content.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o -MF CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o -c /home/felix/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o -MF CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp
 
 content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp > CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp > CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.i
 
 content/CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp -o CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/content_autogen/mocs_compilation.cpp -o CMakeFiles/content.dir/content_autogen/mocs_compilation.cpp.s
 
 content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o: content/CMakeFiles/content.dir/flags.make
 content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o: content/content_qmltyperegistrations.cpp
 content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o: content/CMakeFiles/content.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o -MF CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o.d -o CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o -c /home/felix/eye_gymnastics/build/content/content_qmltyperegistrations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o -MF CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o.d -o CMakeFiles/content.dir/content_qmltyperegistrations.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/content_qmltyperegistrations.cpp
 
 content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content.dir/content_qmltyperegistrations.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/content_qmltyperegistrations.cpp > CMakeFiles/content.dir/content_qmltyperegistrations.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/content_qmltyperegistrations.cpp > CMakeFiles/content.dir/content_qmltyperegistrations.cpp.i
 
 content/CMakeFiles/content.dir/content_qmltyperegistrations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content.dir/content_qmltyperegistrations.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/content_qmltyperegistrations.cpp -o CMakeFiles/content.dir/content_qmltyperegistrations.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/content_qmltyperegistrations.cpp -o CMakeFiles/content.dir/content_qmltyperegistrations.cpp.s
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o: content/CMakeFiles/content.dir/flags.make
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o: content/.rcc/qmlcache/content_App_qml.cpp
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o: content/CMakeFiles/content.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o -MF CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o.d -o CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o -c /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o -MF CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o.d -o CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp > CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp > CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.i
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp -o CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_App_qml.cpp -o CMakeFiles/content.dir/.rcc/qmlcache/content_App_qml.cpp.s
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o: content/CMakeFiles/content.dir/flags.make
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o: content/.rcc/qmlcache/content_Screen01.ui_qml.cpp
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o: content/CMakeFiles/content.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o -MF CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o.d -o CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o -c /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o -MF CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o.d -o CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp > CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp > CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.i
 
 content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp -o CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp -o CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.s
 
 # Object files for target content
 content_OBJECTS = \
@@ -184,24 +184,24 @@ content/libcontent.a: content/CMakeFiles/content.dir/.rcc/qmlcache/content_App_q
 content/libcontent.a: content/CMakeFiles/content.dir/.rcc/qmlcache/content_Screen01.ui_qml.cpp.o
 content/libcontent.a: content/CMakeFiles/content.dir/build.make
 content/libcontent.a: content/CMakeFiles/content.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libcontent.a"
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content.dir/cmake_clean_target.cmake
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/content.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libcontent.a"
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content.dir/cmake_clean_target.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/content.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 content/CMakeFiles/content.dir/build: content/libcontent.a
 .PHONY : content/CMakeFiles/content.dir/build
 
 content/CMakeFiles/content.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content.dir/clean
 
 content/CMakeFiles/content.dir/depend: content/.rcc/qmlcache/content_App_qml.cpp
 content/CMakeFiles/content.dir/depend: content/.rcc/qmlcache/content_Screen01.ui_qml.cpp
 content/CMakeFiles/content.dir/depend: content/content_qmltyperegistrations.cpp
-content/CMakeFiles/content.dir/depend: content/meta_types/qt6content_release_metatypes.json
-content/CMakeFiles/content.dir/depend: content/meta_types/qt6content_release_metatypes.json.gen
+content/CMakeFiles/content.dir/depend: content/meta_types/qt6content_debug_metatypes.json
+content/CMakeFiles/content.dir/depend: content/meta_types/qt6content_debug_metatypes.json.gen
 content/CMakeFiles/content.dir/depend: qml/content/content.qmltypes
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content.dir/depend
 

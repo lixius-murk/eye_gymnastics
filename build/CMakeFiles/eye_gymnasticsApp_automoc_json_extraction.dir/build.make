@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_automoc_json_extraction.
 
@@ -67,8 +67,8 @@ include CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/compiler_depend
 include CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/progress.make
 
 CMakeFiles/eye_gymnasticsApp_automoc_json_extraction: /usr/lib/qt6/libexec/cmake_automoc_parser
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running AUTOMOC file extraction for target eye_gymnasticsApp"
-	/usr/lib/qt6/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/AutogenInfo.json --output-file-path /home/felix/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt --timestamp-file-path /home/felix/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running AUTOMOC file extraction for target eye_gymnasticsApp"
+	/usr/lib/qt6/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/AutogenInfo.json --output-file-path /home/felix/repo/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt --timestamp-file-path /home/felix/repo/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/include
 
 eye_gymnasticsApp_automoc_json_extraction: CMakeFiles/eye_gymnasticsApp_automoc_json_extraction
 eye_gymnasticsApp_automoc_json_extraction: CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_automoc_json_extraction.dir/depend
 

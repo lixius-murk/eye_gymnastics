@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate-complete.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/CMakeFiles/ds-populate-complete.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-build.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-build.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-configure.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-configure.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-download.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-download.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-install.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-install.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-mkdir.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-patch.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-patch.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-test.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-test.rule"
 		},
 		{
-			"file" : "/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-update.rule"
+			"file" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/src/ds-populate-stamp/ds-populate-update.rule"
 		}
 	],
 	"target" : 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/eye_gymnasticsApp_autogen: eye_gymnasticsApp_autogen/timestamp
 
 eye_gymnasticsApp_autogen/timestamp: /usr/lib/qt6/libexec/moc
 eye_gymnasticsApp_autogen/timestamp: CMakeFiles/eye_gymnasticsApp_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target eye_gymnasticsApp"
-	/usr/bin/cmake -E cmake_autogen /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/AutogenInfo.json Release
-	/usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target eye_gymnasticsApp"
+	/usr/bin/cmake -E cmake_autogen /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/AutogenInfo.json Debug
+	/usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/timestamp
 
 eye_gymnasticsApp_autogen: CMakeFiles/eye_gymnasticsApp_autogen
 eye_gymnasticsApp_autogen: eye_gymnasticsApp_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/eye_gymnasticsApp_autogen.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_autogen.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_autogen.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_autogen.dir/depend
 

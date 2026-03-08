@@ -31,16 +31,17 @@ def create_fbo(w, h):
     return fbo, tex
 
 class BaseRenderer:
-    def __init__(self, bl_type: blType, movement_func):
-        self.display_size = (800, 600)
+    def __init__(self, bl_type, movement_func, width=1920, height=1080):
+        self.display_size = (width, height)
         self.bl_type = bl_type
         self.movement_func = movement_func
         self.session_manager = DataManager()
         self.cs = ColorSystem()
-        self.ground_size = 15.0
-        self.orbit_radius = 8.0
+        self.ground_size = 12.0
+        self.orbit_radius = 5.0
         self.ball_radius = 1.0
         self.speed = 2.0
+        self.edge_margin = 0.85
 
         self.fbo = None
         self.fbo_tex = None
@@ -50,15 +51,23 @@ class BaseRenderer:
         try:
             glMatrixMode(GL_PROJECTION)
             glLoadIdentity()
-            aspect = self.display_size[0] / self.display_size[1]
-            glOrtho(-self.ground_size, self.ground_size, -self.ground_size/aspect, self.ground_size/aspect, 0.1, 100.0)
+            w, h = self.display_size
+            aspect = w / h
+            # x goes left-right, z goes up-down (top-down camera)
+            glOrtho(
+                -self.ground_size,          # left
+                self.ground_size,           # right
+                -self.ground_size / aspect, # bottom
+                self.ground_size / aspect,  # top
+                0.1, 100.0
+            )
             glMatrixMode(GL_MODELVIEW)
             glLoadIdentity()
             glEnable(GL_DEPTH_TEST)
             glEnable(GL_NORMALIZE)
             self.cs.init_lighting()
-        except:
-            print("Error initing scenee")
+        except Exception as e:
+            print(f"Error initing scene: {e}")
 
     def _draw_ground(self, size):
         if self.bl_type == blType.Achromatopsia:
@@ -95,7 +104,7 @@ class EyeGymnasticsOne(BaseRenderer):
             self.movement_func.__name__
         )
         try:
-            self.shm = SharedMemoryWriter("frames", 800, 600)
+            self.shm = SharedMemoryWriter("frames", self.display_size[0], self.display_size[1])            
             pygame.init()
             pygame.display.set_mode(self.display_size, DOUBLEBUF | OPENGL | HIDDEN)
             pygame.display.set_caption(f"Eye Gymnastics - {self.bl_type.name}")
@@ -117,7 +126,7 @@ class EyeGymnasticsOne(BaseRenderer):
                 
                 current_time = time.time() - start_time
                 ball_position[0], ball_position[1], ball_position[2] = self.movement_func(
-                    current_time, self.orbit_radius, self.ground_size, self.speed
+                    current_time, self.orbit_radius, self.ground_size * self.edge_margin, self.speed
                 )
                 self.session_manager.log_coordinates(ball_position)
                 ball_color = self.cs.calc_cur_color(self.bl_type, ball_position, 20.0, current_time)
@@ -160,7 +169,7 @@ class EyeGymnasticsTwo(BaseRenderer):
             self.bl_type, self.movement_func.__name__
         )
         try:
-            self.shm = SharedMemoryWriter("frames", 800, 600)
+            self.shm = SharedMemoryWriter("frames", self.display_size[0], self.display_size[1])           
             pygame.init()
             pygame.display.set_mode(self.display_size, DOUBLEBUF | OPENGL | HIDDEN)
             pygame.display.set_caption(f"Eye Gymnastics - {self.bl_type.name}")
@@ -181,7 +190,7 @@ class EyeGymnasticsTwo(BaseRenderer):
                         if event.key == pygame.K_ESCAPE: running = False
 
                 current_time = time.time() - start_time
-                pos1 = self.movement_func(current_time, self.orbit_radius, self.ground_size, self.speed)
+                pos1 = self.movement_func(current_time, self.orbit_radius, self.ground_size* self.edge_margin, self.speed)
                 ball_positions[0] = list(pos1)
                 ball_positions[1] = [-pos1[0], pos1[1], pos1[2]]
 

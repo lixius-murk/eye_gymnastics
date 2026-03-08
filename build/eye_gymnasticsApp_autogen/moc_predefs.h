@@ -63,7 +63,6 @@
 #define __BFLT16_MAX_EXP__ 128
 #define __LDBL_IS_IEC_60559__ 1
 #define QT_QMLINTEGRATION_LIB 1
-#define QT_NO_DEBUG 1
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -96,7 +95,6 @@
 #define __GCC_ATOMIC_CHAR16_T_LOCK_FREE 2
 #define __cpp_aligned_new 201606L
 #define __FLT32_MAX_10_EXP__ 38
-#define BULD_QDS_COMPONENTS true
 #define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
 #define __STDC_HOSTED__ 1
 #define __DEC64_MIN_EXP__ (-382)

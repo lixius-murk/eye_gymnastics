@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsplugin_init_autogen.
 
@@ -70,9 +70,9 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen: imports/eye
 
 imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp: /usr/lib/qt6/libexec/moc
 imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp: imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target eye_gymnasticsplugin_init"
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E cmake_autogen /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/AutogenInfo.json Release
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target eye_gymnasticsplugin_init"
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E cmake_autogen /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/AutogenInfo.json Debug
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp
 
 eye_gymnasticsplugin_init_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen
 eye_gymnasticsplugin_init_autogen: imports/eye_gymnastics/eye_gymnasticsplugin_init_autogen/timestamp
@@ -84,10 +84,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build: e
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/depend
 

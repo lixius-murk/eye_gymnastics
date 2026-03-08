@@ -1,30 +1,29 @@
 {
-	"BUILD_DIR" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen",
-	"CMAKE_BINARY_DIR" : "/home/felix/eye_gymnastics/build/Desktop-Release",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/felix/eye_gymnastics/build/Desktop-Release/content",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/felix/eye_gymnastics/content",
+	"BUILD_DIR" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen",
+	"CMAKE_BINARY_DIR" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/felix/repo/eye_gymnastics/content",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/felix/eye_gymnastics/content/CMakeLists.txt",
+		"/home/felix/repo/eye_gymnastics/content/CMakeLists.txt",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlPluginTemplate.cpp.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/felix/eye_gymnastics",
-	"DEP_FILE" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/felix/repo/eye_gymnastics",
+	"DEP_FILE" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "contentplugin_init_autogen/timestamp",
 	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
 		"QT_DEPRECATED_WARNINGS",
 		"QT_NETWORK_LIB",
-		"QT_NO_DEBUG",
 		"QT_PLUGIN",
 		"QT_QMLINTEGRATION_LIB",
 		"QT_QML_LIB",
@@ -39,7 +38,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/include",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/include",
 		"/usr/include/x86_64-linux-gnu/qt6/QtQml",
 		"/usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration",
 		"/usr/include/x86_64-linux-gnu/qt6/QtNetwork",
@@ -72,33 +71,33 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_App_qml.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_content_raw_qml_0.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_qmake_content.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_qmlcache_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_qmltyperegistrations.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_resources_1_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_resources_2_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/mocs_compilation.cpp"
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_App_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_content_raw_qml_0.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_qmake_content.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_qmlcache_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_qmltyperegistrations.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_resources_1_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_resources_2_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/CMakeFiles/contentplugin_init_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/CMakeFiles/contentplugin_init_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/felix/eye_gymnastics/build/Desktop-Release/content/CMakeFiles/contentplugin_init_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/CMakeFiles/contentplugin_init_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_init.cpp",
+			"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_init.cpp",
 			"MU",
 			null
 		]
@@ -107,16 +106,16 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_App_qml.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_content_raw_qml_0.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_qmake_content.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_qmlcache_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_qmltyperegistrations.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_resources_1_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/content_resources_2_autogen/mocs_compilation.cpp",
-		"/home/felix/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/mocs_compilation.cpp"
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_App_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qmlcache/content_Screen01.ui_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_content_raw_qml_0.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/.rcc/qrc_qmake_content.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_qmlcache_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_qmltyperegistrations.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_resources_1_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/content_resources_2_autogen/mocs_compilation.cpp",
+		"/home/felix/repo/eye_gymnastics/build/Desktop-Release/content/contentplugin_autogen/mocs_compilation.cpp"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

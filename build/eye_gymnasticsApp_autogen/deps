@@ -1,18 +1,16 @@
 eye_gymnasticsApp_autogen/timestamp: \
-	/home/felix/eye_gymnastics/CMakeLists.txt \
-	/home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp \
-	/home/felix/eye_gymnastics/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
-	/home/felix/eye_gymnastics/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
-	/home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
-	/home/felix/eye_gymnastics/insight \
-	/home/felix/eye_gymnastics/qmlcomponents \
-	/home/felix/eye_gymnastics/qmlmodules \
-	/home/felix/eye_gymnastics/src/CameraLogic.cpp \
-	/home/felix/eye_gymnastics/src/CameraLogic.h \
-	/home/felix/eye_gymnastics/src/FrameProvider.h \
-	/home/felix/eye_gymnastics/src/PythonController.cpp \
-	/home/felix/eye_gymnastics/src/PythonController.h \
-	/home/felix/eye_gymnastics/src/main.cpp \
+	/home/felix/repo/eye_gymnastics/CMakeLists.txt \
+	/home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp \
+	/home/felix/repo/eye_gymnastics/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
+	/home/felix/repo/eye_gymnastics/build/CMakeFiles/3.28.3/CMakeSystem.cmake \
+	/home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
+	/home/felix/repo/eye_gymnastics/qmlmodules \
+	/home/felix/repo/eye_gymnastics/src/CameraLogic.cpp \
+	/home/felix/repo/eye_gymnastics/src/CameraLogic.h \
+	/home/felix/repo/eye_gymnastics/src/FrameProvider.h \
+	/home/felix/repo/eye_gymnastics/src/PythonController.cpp \
+	/home/felix/repo/eye_gymnastics/src/PythonController.h \
+	/home/felix/repo/eye_gymnastics/src/main.cpp \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -384,7 +382,6 @@ eye_gymnasticsApp_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
-	/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
@@ -400,12 +397,15 @@ eye_gymnasticsApp_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QCamera \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaCaptureSession \
+	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaRecorder \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QVideoFrame \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QVideoSink \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcamera.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcameradevice.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediacapturesession.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \
@@ -684,11 +684,7 @@ eye_gymnasticsApp_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
 	/usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
-	/usr/share/cmake-3.28/Modules/ExternalProject/shared_internal_commands.cmake \
 	/usr/share/cmake-3.28/Modules/FeatureSummary.cmake \
-	/usr/share/cmake-3.28/Modules/FetchContent.cmake \
-	/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in \
-	/usr/share/cmake-3.28/Modules/FindGit.cmake \
 	/usr/share/cmake-3.28/Modules/FindOpenGL.cmake \
 	/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake \
 	/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/eye_gymnasticsApp.dir/depend.make
@@ -69,23 +69,23 @@ include CMakeFiles/eye_gymnasticsApp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/eye_gymnasticsApp.dir/flags.make
 
-.rcc/qrc_configuration.cpp: /home/felix/eye_gymnastics/qtquickcontrols2.conf
+.rcc/qrc_configuration.cpp: /home/felix/repo/eye_gymnastics/qtquickcontrols2.conf
 .rcc/qrc_configuration.cpp: .rcc/configuration.qrc
 .rcc/qrc_configuration.cpp: /usr/lib/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running rcc for resource configuration"
-	/usr/lib/qt6/libexec/rcc --output /home/felix/eye_gymnastics/build/.rcc/qrc_configuration.cpp --name configuration /home/felix/eye_gymnastics/build/.rcc/configuration.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running rcc for resource configuration"
+	/usr/lib/qt6/libexec/rcc --output /home/felix/repo/eye_gymnastics/build/.rcc/qrc_configuration.cpp --name configuration /home/felix/repo/eye_gymnastics/build/.rcc/configuration.qrc
 
-meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen: /usr/lib/qt6/libexec/moc
-meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen: meta_types/eye_gymnasticsApp_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target eye_gymnasticsApp"
-	/usr/lib/qt6/libexec/moc -o /home/felix/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen --collect-json @/home/felix/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt
-	/usr/bin/cmake -E copy_if_different /home/felix/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen /home/felix/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_release_metatypes.json
+meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen: /usr/lib/qt6/libexec/moc
+meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen: meta_types/eye_gymnasticsApp_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target eye_gymnasticsApp"
+	/usr/lib/qt6/libexec/moc -o /home/felix/repo/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen --collect-json @/home/felix/repo/eye_gymnastics/build/meta_types/eye_gymnasticsApp_json_file_list.txt
+	/usr/bin/cmake -E copy_if_different /home/felix/repo/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen /home/felix/repo/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_debug_metatypes.json
 
-meta_types/qt6eye_gymnasticsapp_release_metatypes.json: meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E touch_nocreate meta_types/qt6eye_gymnasticsapp_release_metatypes.json
+meta_types/qt6eye_gymnasticsapp_debug_metatypes.json: meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E touch_nocreate meta_types/qt6eye_gymnasticsapp_debug_metatypes.json
 
 eye_gymnasticsapp_qmltyperegistrations.cpp: qmltypes/eye_gymnasticsApp_foreign_types.txt
-eye_gymnasticsapp_qmltyperegistrations.cpp: meta_types/qt6eye_gymnasticsapp_release_metatypes.json
+eye_gymnasticsapp_qmltyperegistrations.cpp: meta_types/qt6eye_gymnasticsapp_debug_metatypes.json
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/qt6/libexec/qmltyperegistrar
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6core_none_metatypes.json
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6gui_none_metatypes.json
@@ -95,10 +95,10 @@ eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6qmlmodels_none_metatypes.json
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6opengl_none_metatypes.json
 eye_gymnasticsapp_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6multimedia_none_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Automatic QML type registration for target eye_gymnasticsApp"
-	/usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/eye_gymnastics/build/qml/Main/eye_gymnasticsApp.qmltypes --import-name=Main --major-version=1 --minor-version=0 @/home/felix/eye_gymnastics/build/qmltypes/eye_gymnasticsApp_foreign_types.txt -o /home/felix/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp /home/felix/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_release_metatypes.json
-	/usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/.generated
-	/usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/.generated/eye_gymnasticsApp.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Automatic QML type registration for target eye_gymnasticsApp"
+	/usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/repo/eye_gymnastics/build/qml/Main/eye_gymnasticsApp.qmltypes --import-name=Main --major-version=1 --minor-version=0 @/home/felix/repo/eye_gymnastics/build/qmltypes/eye_gymnasticsApp_foreign_types.txt -o /home/felix/repo/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp /home/felix/repo/eye_gymnastics/build/meta_types/qt6eye_gymnasticsapp_debug_metatypes.json
+	/usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/.generated
+	/usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/.generated/eye_gymnasticsApp.qmltypes
 
 qml/Main/eye_gymnasticsApp.qmltypes: eye_gymnasticsapp_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate qml/Main/eye_gymnasticsApp.qmltypes
@@ -106,165 +106,165 @@ qml/Main/eye_gymnasticsApp.qmltypes: eye_gymnasticsapp_qmltyperegistrations.cpp
 .rcc/qrc_qmake_Main.cpp: qml/Main/qmldir
 .rcc/qrc_qmake_Main.cpp: .rcc/qmake_Main.qrc
 .rcc/qrc_qmake_Main.cpp: /usr/lib/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running rcc for resource qmake_Main"
-	/usr/lib/qt6/libexec/rcc --output /home/felix/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp --name qmake_Main /home/felix/eye_gymnastics/build/.rcc/qmake_Main.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running rcc for resource qmake_Main"
+	/usr/lib/qt6/libexec/rcc --output /home/felix/repo/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp --name qmake_Main /home/felix/repo/eye_gymnastics/build/.rcc/qmake_Main.qrc
 
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: /usr/lib/qt6/libexec/qmlcachegen
-.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: /home/felix/eye_gymnastics/main.qml
+.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: /home/felix/repo/eye_gymnastics/main.qml
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: .rcc/configuration.qrc
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: .rcc/qmake_Main.qrc
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: .rcc/eye_gymnasticsApp_raw_qml_0.qrc
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: qml/Main/eye_gymnasticsApp.qmltypes
 .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp: qml/Main/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp"
-	/usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/.rcc/qmlcache
-	/usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/Main/main.qml -I /home/felix/eye_gymnastics/build -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/eye_gymnastics/build/qml/Main/qmldir --resource /home/felix/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp /home/felix/eye_gymnastics/main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp"
+	/usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache
+	/usr/lib/qt6/libexec/qmlcachegen --bare --resource-path /qt/qml/Main/main.qml -I /home/felix/repo/eye_gymnastics/build -I /usr/lib/x86_64-linux-gnu/qt6/qml -i /home/felix/repo/eye_gymnastics/build/qml/Main/qmldir --resource /home/felix/repo/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp /home/felix/repo/eye_gymnastics/main.qml
 
-.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp: /home/felix/eye_gymnastics/main.qml
+.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp: /home/felix/repo/eye_gymnastics/main.qml
 .rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp: .rcc/eye_gymnasticsApp_raw_qml_0.qrc
 .rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp: /usr/lib/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource eye_gymnasticsApp_raw_qml_0"
-	/usr/lib/qt6/libexec/rcc --output /home/felix/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp --name eye_gymnasticsApp_raw_qml_0 /home/felix/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource eye_gymnasticsApp_raw_qml_0"
+	/usr/lib/qt6/libexec/rcc --output /home/felix/repo/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp --name eye_gymnasticsApp_raw_qml_0 /home/felix/repo/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o: eye_gymnasticsApp_autogen/mocs_compilation.cpp
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o -c /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o -c /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp > CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp > CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
-CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o: /home/felix/eye_gymnastics/src/main.cpp
+CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o: /home/felix/repo/eye_gymnastics/src/main.cpp
 CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o -c /home/felix/eye_gymnastics/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.o -c /home/felix/repo/eye_gymnastics/src/main.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/src/main.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/src/main.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/src/main.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/src/main.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/main.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
-CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o: /home/felix/eye_gymnastics/src/PythonController.cpp
+CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o: /home/felix/repo/eye_gymnastics/src/PythonController.cpp
 CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o -c /home/felix/eye_gymnastics/src/PythonController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.o -c /home/felix/repo/eye_gymnastics/src/PythonController.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/src/PythonController.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/src/PythonController.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/src/PythonController.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/src/PythonController.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/PythonController.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
-CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o: /home/felix/eye_gymnastics/src/CameraLogic.cpp
+CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o: /home/felix/repo/eye_gymnastics/src/CameraLogic.cpp
 CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o -c /home/felix/eye_gymnastics/src/CameraLogic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.o -c /home/felix/repo/eye_gymnastics/src/CameraLogic.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/src/CameraLogic.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/src/CameraLogic.cpp > CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/src/CameraLogic.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/src/CameraLogic.cpp -o CMakeFiles/eye_gymnasticsApp.dir/src/CameraLogic.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o: .rcc/qrc_configuration.cpp
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o -c /home/felix/eye_gymnastics/build/.rcc/qrc_configuration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.o -c /home/felix/repo/eye_gymnastics/build/.rcc/qrc_configuration.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/.rcc/qrc_configuration.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/.rcc/qrc_configuration.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/.rcc/qrc_configuration.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/.rcc/qrc_configuration.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_configuration.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o: eye_gymnasticsapp_qmltyperegistrations.cpp
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o -c /home/felix/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.o -c /home/felix/repo/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp > CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp > CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/eye_gymnasticsapp_qmltyperegistrations.cpp -o CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsapp_qmltyperegistrations.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o: .rcc/qrc_qmake_Main.cpp
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o -c /home/felix/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.o -c /home/felix/repo/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/.rcc/qrc_qmake_Main.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_qmake_Main.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o: .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o -c /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.o -c /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o: .rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o -c /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o -c /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.s
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/flags.make
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o: .rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o: CMakeFiles/eye_gymnasticsApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o -c /home/felix/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o -MF CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o.d -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o -c /home/felix/repo/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp > CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.i
 
 CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp -o CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.s
 
 # Object files for target eye_gymnasticsApp
 eye_gymnasticsApp_OBJECTS = \
@@ -293,36 +293,8 @@ eye_gymnasticsApp: CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymn
 eye_gymnasticsApp: CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qmlcache/eye_gymnasticsApp_main_qml.cpp.o
 eye_gymnasticsApp: CMakeFiles/eye_gymnasticsApp.dir/build/.rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp.o
 eye_gymnasticsApp: CMakeFiles/eye_gymnasticsApp.dir/build.make
-eye_gymnasticsApp: _deps/ds-build/src/imports/components/CMakeFiles/QuickStudioComponentsplugin_init.dir/QuickStudioComponentsplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/effects_qt6/CMakeFiles/QuickStudioEffectsplugin_init.dir/QuickStudioEffectsplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/application/CMakeFiles/QuickStudioApplicationplugin_init.dir/QuickStudioApplicationplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/flowview/CMakeFiles/FlowViewplugin_init.dir/FlowViewplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/logichelper/CMakeFiles/QuickStudioLogicHelperplugin_init.dir/QuickStudioLogicHelperplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/multitext/CMakeFiles/QuickStudioMultiTextplugin_init.dir/QuickStudioMultiTextplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsimulator/CMakeFiles/QuickStudioEventSimulatorplugin_init.dir/QuickStudioEventSimulatorplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsystem/CMakeFiles/QuickStudioEventSystemplugin_init.dir/QuickStudioEventSystemplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/utils/CMakeFiles/QuickStudioUtilsplugin_init.dir/QuickStudioUtilsplugin_init.cpp.o
 eye_gymnasticsApp: content/CMakeFiles/contentplugin_init.dir/contentplugin_init.cpp.o
 eye_gymnasticsApp: imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/components/CMakeFiles/QuickStudioComponents_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_Components.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/components/CMakeFiles/QuickStudioComponents_qmlcache.dir/.rcc/qmlcache/QuickStudioComponents_qmlcache_loader.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/components/CMakeFiles/QuickStudioComponents_resources_2.dir/.rcc/qrc_QuickStudioComponents_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/effects_qt6/CMakeFiles/QuickStudioEffects_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_Effects.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/effects_qt6/CMakeFiles/QuickStudioEffects_resources_2.dir/.rcc/qrc_QuickStudioEffects_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/application/CMakeFiles/QuickStudioApplication_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_Application.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/flowview/CMakeFiles/FlowView_resources_1.dir/.rcc/qrc_FlowView_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/logichelper/CMakeFiles/QuickStudioLogicHelper_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_LogicHelper.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/logichelper/CMakeFiles/QuickStudioLogicHelper_qmlcache.dir/.rcc/qmlcache/QuickStudioLogicHelper_qmlcache_loader.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/logichelper/CMakeFiles/QuickStudioLogicHelper_resources_2.dir/.rcc/qrc_QuickStudioLogicHelper_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/multitext/CMakeFiles/QuickStudioMultiText_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_MultiText.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/multitext/CMakeFiles/QuickStudioMultiText_resources_2.dir/.rcc/qrc_QuickStudioMultiText_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsimulator/CMakeFiles/QuickStudioEventSimulator_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_EventSimulator.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsimulator/CMakeFiles/QuickStudioEventSimulator_resources_2.dir/.rcc/qrc_QuickStudioEventSimulator_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsystem/CMakeFiles/QuickStudioEventSystem_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_EventSystem.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsystem/CMakeFiles/QuickStudioEventSystem_resources_2.dir/.rcc/qrc_QuickStudioEventSystem_raw_qml_0.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/utils/CMakeFiles/QuickStudioUtils_resources_1.dir/.rcc/qrc_qmake_QtQuick_Studio_Utils.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/utils/CMakeFiles/QuickStudioUtils_qmlcache.dir/.rcc/qmlcache/QuickStudioUtils_qmlcache_loader.cpp.o
-eye_gymnasticsApp: _deps/ds-build/src/imports/utils/CMakeFiles/QuickStudioUtils_resources_2.dir/.rcc/qrc_QuickStudioUtils_raw_qml_0.cpp.o
 eye_gymnasticsApp: content/CMakeFiles/content_resources_1.dir/.rcc/qrc_qmake_content.cpp.o
 eye_gymnasticsApp: content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o
 eye_gymnasticsApp: content/CMakeFiles/content_resources_2.dir/.rcc/qrc_content_raw_qml_0.cpp.o
@@ -331,28 +303,10 @@ eye_gymnasticsApp: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir
 eye_gymnasticsApp: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Multimedia.so.6.4.2
-eye_gymnasticsApp: qml/QtQuick/Studio/Components/libQuickStudioComponentsplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/Effects/libQuickStudioEffectsplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/Application/libQuickStudioApplicationplugin.a
-eye_gymnasticsApp: qml/FlowView/libFlowViewplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/LogicHelper/libQuickStudioLogicHelperplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/MultiText/libQuickStudioMultiTextplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/EventSimulator/libQuickStudioEventSimulatorplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/EventSystem/libQuickStudioEventSystemplugin.a
-eye_gymnasticsApp: qml/QtQuick/Studio/Utils/libQuickStudioUtilsplugin.a
 eye_gymnasticsApp: qml/content/libcontentplugin.a
 eye_gymnasticsApp: qml/eye_gymnastics/libeye_gymnasticsplugin.a
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.4.2
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
-eye_gymnasticsApp: _deps/ds-build/src/imports/components/libQuickStudioComponents.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/effects_qt6/libQuickStudioEffects.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/application/libQuickStudioApplication.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/flowview/libFlowView.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/logichelper/libQuickStudioLogicHelper.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/multitext/libQuickStudioMultiText.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsimulator/libQuickStudioEventSimulator.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/tools/eventsystem/libQuickStudioEventSystem.a
-eye_gymnasticsApp: _deps/ds-build/src/imports/utils/libQuickStudioUtils.a
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libGLX.so
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libOpenGL.so
@@ -362,7 +316,7 @@ eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.4.2
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
 eye_gymnasticsApp: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 eye_gymnasticsApp: CMakeFiles/eye_gymnasticsApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable eye_gymnasticsApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable eye_gymnasticsApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eye_gymnasticsApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -378,9 +332,9 @@ CMakeFiles/eye_gymnasticsApp.dir/depend: .rcc/qrc_configuration.cpp
 CMakeFiles/eye_gymnasticsApp.dir/depend: .rcc/qrc_eye_gymnasticsApp_raw_qml_0.cpp
 CMakeFiles/eye_gymnasticsApp.dir/depend: .rcc/qrc_qmake_Main.cpp
 CMakeFiles/eye_gymnasticsApp.dir/depend: eye_gymnasticsapp_qmltyperegistrations.cpp
-CMakeFiles/eye_gymnasticsApp.dir/depend: meta_types/qt6eye_gymnasticsapp_release_metatypes.json
-CMakeFiles/eye_gymnasticsApp.dir/depend: meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen
+CMakeFiles/eye_gymnasticsApp.dir/depend: meta_types/qt6eye_gymnasticsapp_debug_metatypes.json
+CMakeFiles/eye_gymnasticsApp.dir/depend: meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen
 CMakeFiles/eye_gymnasticsApp.dir/depend: qml/Main/eye_gymnasticsApp.qmltypes
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp.dir/depend
 

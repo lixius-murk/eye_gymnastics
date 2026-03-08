@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: eye_gymnasticsApp
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnasticsApp_unscanned_Release
+rule CXX_COMPILER__eye_gymnasticsApp_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__eye_gymnasticsApp_unscanned_Release
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__eye_gymnasticsApp_Release
+rule CXX_EXECUTABLE_LINKER__eye_gymnasticsApp_Debug
   command = $PRE_LINK && /usr/bin/g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponents_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponents_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +51,7 @@ rule CXX_COMPILER__QuickStudioComponents_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponents_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponents_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +60,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponents_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponents_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponents_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule CXX_COMPILER__QuickStudioComponents_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponentsplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponentsplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -80,7 +80,7 @@ rule CXX_COMPILER__QuickStudioComponentsplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponentsplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponentsplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -89,7 +89,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioComponentsplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponents_qmlcache_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponents_qmlcache_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -99,7 +99,7 @@ rule CXX_COMPILER__QuickStudioComponents_qmlcache_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponents_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponents_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -109,7 +109,7 @@ rule CXX_COMPILER__QuickStudioComponents_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioComponentsplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioComponentsplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -119,7 +119,7 @@ rule CXX_COMPILER__QuickStudioComponentsplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEffects_unscanned_Release
+rule CXX_COMPILER__QuickStudioEffects_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -129,7 +129,7 @@ rule CXX_COMPILER__QuickStudioEffects_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffects_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffects_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -138,7 +138,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffects_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEffects_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioEffects_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -148,7 +148,7 @@ rule CXX_COMPILER__QuickStudioEffects_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEffectsplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioEffectsplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -158,7 +158,7 @@ rule CXX_COMPILER__QuickStudioEffectsplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffectsplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffectsplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -167,7 +167,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEffectsplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEffects_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioEffects_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -177,7 +177,7 @@ rule CXX_COMPILER__QuickStudioEffects_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEffectsplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioEffectsplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -187,7 +187,7 @@ rule CXX_COMPILER__QuickStudioEffectsplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FlowView_unscanned_Release
+rule CXX_COMPILER__FlowView_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -197,7 +197,7 @@ rule CXX_COMPILER__FlowView_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__FlowView_Release
+rule CXX_STATIC_LIBRARY_LINKER__FlowView_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -206,7 +206,7 @@ rule CXX_STATIC_LIBRARY_LINKER__FlowView_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FlowViewplugin_unscanned_Release
+rule CXX_COMPILER__FlowViewplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -216,7 +216,7 @@ rule CXX_COMPILER__FlowViewplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__FlowViewplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__FlowViewplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -225,7 +225,7 @@ rule CXX_STATIC_LIBRARY_LINKER__FlowViewplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FlowView_resources_1_unscanned_Release
+rule CXX_COMPILER__FlowView_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -235,7 +235,7 @@ rule CXX_COMPILER__FlowView_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__FlowViewplugin_init_unscanned_Release
+rule CXX_COMPILER__FlowViewplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -245,7 +245,7 @@ rule CXX_COMPILER__FlowViewplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelper_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelper_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -255,7 +255,7 @@ rule CXX_COMPILER__QuickStudioLogicHelper_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelper_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelper_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -264,7 +264,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelper_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelper_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelper_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -274,7 +274,7 @@ rule CXX_COMPILER__QuickStudioLogicHelper_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelperplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelperplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -284,7 +284,7 @@ rule CXX_COMPILER__QuickStudioLogicHelperplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelperplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelperplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -293,7 +293,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioLogicHelperplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelper_qmlcache_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelper_qmlcache_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -303,7 +303,7 @@ rule CXX_COMPILER__QuickStudioLogicHelper_qmlcache_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelper_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelper_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -313,7 +313,7 @@ rule CXX_COMPILER__QuickStudioLogicHelper_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioLogicHelperplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioLogicHelperplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -323,7 +323,7 @@ rule CXX_COMPILER__QuickStudioLogicHelperplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioMultiText_unscanned_Release
+rule CXX_COMPILER__QuickStudioMultiText_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -333,7 +333,7 @@ rule CXX_COMPILER__QuickStudioMultiText_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiText_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiText_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -342,7 +342,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiText_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioMultiText_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioMultiText_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -352,7 +352,7 @@ rule CXX_COMPILER__QuickStudioMultiText_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioMultiTextplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioMultiTextplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -362,7 +362,7 @@ rule CXX_COMPILER__QuickStudioMultiTextplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiTextplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiTextplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -371,7 +371,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioMultiTextplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioMultiText_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioMultiText_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -381,7 +381,7 @@ rule CXX_COMPILER__QuickStudioMultiText_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioMultiTextplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioMultiTextplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -391,7 +391,7 @@ rule CXX_COMPILER__QuickStudioMultiTextplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSimulator_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSimulator_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -401,7 +401,7 @@ rule CXX_COMPILER__QuickStudioEventSimulator_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulator_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulator_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -410,7 +410,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulator_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSimulator_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSimulator_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -420,7 +420,7 @@ rule CXX_COMPILER__QuickStudioEventSimulator_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSimulatorplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSimulatorplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -430,7 +430,7 @@ rule CXX_COMPILER__QuickStudioEventSimulatorplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulatorplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulatorplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -439,7 +439,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSimulatorplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSimulator_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSimulator_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -449,7 +449,7 @@ rule CXX_COMPILER__QuickStudioEventSimulator_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSimulatorplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSimulatorplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -459,7 +459,7 @@ rule CXX_COMPILER__QuickStudioEventSimulatorplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSystem_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSystem_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -469,7 +469,7 @@ rule CXX_COMPILER__QuickStudioEventSystem_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystem_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystem_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -478,7 +478,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystem_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSystem_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSystem_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -488,7 +488,7 @@ rule CXX_COMPILER__QuickStudioEventSystem_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSystemplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSystemplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -498,7 +498,7 @@ rule CXX_COMPILER__QuickStudioEventSystemplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystemplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystemplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -507,7 +507,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioEventSystemplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSystem_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSystem_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -517,7 +517,7 @@ rule CXX_COMPILER__QuickStudioEventSystem_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioEventSystemplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioEventSystemplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -527,7 +527,7 @@ rule CXX_COMPILER__QuickStudioEventSystemplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioApplication_unscanned_Release
+rule CXX_COMPILER__QuickStudioApplication_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -537,7 +537,7 @@ rule CXX_COMPILER__QuickStudioApplication_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplication_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplication_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -546,7 +546,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplication_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioApplication_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioApplication_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -556,7 +556,7 @@ rule CXX_COMPILER__QuickStudioApplication_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioApplicationplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioApplicationplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -566,7 +566,7 @@ rule CXX_COMPILER__QuickStudioApplicationplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplicationplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplicationplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -575,7 +575,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioApplicationplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioApplicationplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioApplicationplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -585,7 +585,7 @@ rule CXX_COMPILER__QuickStudioApplicationplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtils_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtils_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -595,7 +595,7 @@ rule CXX_COMPILER__QuickStudioUtils_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtils_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtils_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -604,7 +604,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtils_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtils_resources_1_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtils_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -614,7 +614,7 @@ rule CXX_COMPILER__QuickStudioUtils_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtilsplugin_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtilsplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -624,7 +624,7 @@ rule CXX_COMPILER__QuickStudioUtilsplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtilsplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtilsplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -633,7 +633,7 @@ rule CXX_STATIC_LIBRARY_LINKER__QuickStudioUtilsplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtils_qmlcache_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtils_qmlcache_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -643,7 +643,7 @@ rule CXX_COMPILER__QuickStudioUtils_qmlcache_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtils_resources_2_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtils_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -653,7 +653,7 @@ rule CXX_COMPILER__QuickStudioUtils_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__QuickStudioUtilsplugin_init_unscanned_Release
+rule CXX_COMPILER__QuickStudioUtilsplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -663,7 +663,7 @@ rule CXX_COMPILER__QuickStudioUtilsplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__content_unscanned_Release
+rule CXX_COMPILER__content_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -673,7 +673,7 @@ rule CXX_COMPILER__content_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__content_Release
+rule CXX_STATIC_LIBRARY_LINKER__content_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -682,7 +682,7 @@ rule CXX_STATIC_LIBRARY_LINKER__content_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__content_resources_1_unscanned_Release
+rule CXX_COMPILER__content_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -692,7 +692,7 @@ rule CXX_COMPILER__content_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__contentplugin_unscanned_Release
+rule CXX_COMPILER__contentplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -702,7 +702,7 @@ rule CXX_COMPILER__contentplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__contentplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__contentplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -711,7 +711,7 @@ rule CXX_STATIC_LIBRARY_LINKER__contentplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__content_qmlcache_unscanned_Release
+rule CXX_COMPILER__content_qmlcache_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -721,7 +721,7 @@ rule CXX_COMPILER__content_qmlcache_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__content_resources_2_unscanned_Release
+rule CXX_COMPILER__content_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -731,7 +731,7 @@ rule CXX_COMPILER__content_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__contentplugin_init_unscanned_Release
+rule CXX_COMPILER__contentplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -741,7 +741,7 @@ rule CXX_COMPILER__contentplugin_init_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnastics_unscanned_Release
+rule CXX_COMPILER__eye_gymnastics_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -751,7 +751,7 @@ rule CXX_COMPILER__eye_gymnastics_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__eye_gymnastics_Release
+rule CXX_STATIC_LIBRARY_LINKER__eye_gymnastics_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -760,7 +760,7 @@ rule CXX_STATIC_LIBRARY_LINKER__eye_gymnastics_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnastics_resources_1_unscanned_Release
+rule CXX_COMPILER__eye_gymnastics_resources_1_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -770,7 +770,7 @@ rule CXX_COMPILER__eye_gymnastics_resources_1_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnasticsplugin_unscanned_Release
+rule CXX_COMPILER__eye_gymnasticsplugin_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -780,7 +780,7 @@ rule CXX_COMPILER__eye_gymnasticsplugin_unscanned_Release
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__eye_gymnasticsplugin_Release
+rule CXX_STATIC_LIBRARY_LINKER__eye_gymnasticsplugin_Debug
   command = $PRE_LINK && /usr/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -789,7 +789,7 @@ rule CXX_STATIC_LIBRARY_LINKER__eye_gymnasticsplugin_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnastics_qmlcache_unscanned_Release
+rule CXX_COMPILER__eye_gymnastics_qmlcache_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -799,7 +799,7 @@ rule CXX_COMPILER__eye_gymnastics_qmlcache_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnastics_resources_2_unscanned_Release
+rule CXX_COMPILER__eye_gymnastics_resources_2_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -809,7 +809,7 @@ rule CXX_COMPILER__eye_gymnastics_resources_2_unscanned_Release
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__eye_gymnasticsplugin_init_unscanned_Release
+rule CXX_COMPILER__eye_gymnasticsplugin_init_unscanned_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/usr/bin/g++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -820,7 +820,7 @@ rule CXX_COMPILER__eye_gymnasticsplugin_init_unscanned_Release
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/felix/eye_gymnastics -B/home/felix/eye_gymnastics/build/Desktop-Release
+  command = /usr/bin/cmake --regenerate-during-build -S/home/felix/repo/eye_gymnastics -B/home/felix/repo/eye_gymnastics/build/Desktop-Release
   description = Re-running CMake...
   generator = 1
 

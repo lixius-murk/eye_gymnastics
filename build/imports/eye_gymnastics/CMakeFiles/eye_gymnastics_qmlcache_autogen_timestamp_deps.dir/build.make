@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnastics_qmlcache_autogen_timestamp_deps.
 
@@ -74,8 +74,8 @@ imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp: /usr/li
 imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp: imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qml_loader_file_list.rsp
 imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp: imports/eye_gymnastics/.rcc/qmake_eye_gymnastics.qrc
 imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp: imports/eye_gymnastics/.rcc/eye_gymnastics_raw_qml_0.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp"
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_eye_gymnastics --resource /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmake_eye_gymnastics.qrc --resource /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/eye_gymnastics_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp @/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qml_loader_file_list.rsp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp"
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_eye_gymnastics --resource /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmake_eye_gymnastics.qrc --resource /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/eye_gymnastics_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp @/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qml_loader_file_list.rsp
 
 eye_gymnastics_qmlcache_autogen_timestamp_deps: imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp
 eye_gymnastics_qmlcache_autogen_timestamp_deps: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps
@@ -87,10 +87,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/depend
 

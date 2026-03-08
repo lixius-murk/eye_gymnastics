@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_other_files.
 
@@ -74,10 +74,10 @@ content/CMakeFiles/content_other_files.dir/build: content_other_files
 .PHONY : content/CMakeFiles/content_other_files.dir/build
 
 content/CMakeFiles/content_other_files.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_other_files.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_other_files.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_other_files.dir/clean
 
 content/CMakeFiles/content_other_files.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_other_files.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_other_files.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_other_files.dir/depend
 

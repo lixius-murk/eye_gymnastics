@@ -1,5 +1,5 @@
-/home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_CameraLogic.cpp: /home/felix/eye_gymnastics/src/CameraLogic.h \
-  /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
+/home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_CameraLogic.cpp: /home/felix/repo/eye_gymnastics/src/CameraLogic.h \
+  /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -368,7 +368,6 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
@@ -384,12 +383,15 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QCamera \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaCaptureSession \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaRecorder \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QVideoFrame \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QVideoSink \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcamera.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qcameradevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediacapturesession.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediaenumdebug.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimedia-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qtmultimediaglobal.h \

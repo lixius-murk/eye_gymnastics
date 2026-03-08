@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_qmlcache_autogen_timestamp_deps.
 
@@ -74,8 +74,8 @@ content/.rcc/qmlcache/content_qmlcache_loader.cpp: /usr/lib/qt6/libexec/qmlcache
 content/.rcc/qmlcache/content_qmlcache_loader.cpp: content/.rcc/qmlcache/content_qml_loader_file_list.rsp
 content/.rcc/qmlcache/content_qmlcache_loader.cpp: content/.rcc/qmake_content.qrc
 content/.rcc/qmlcache/content_qmlcache_loader.cpp: content/.rcc/content_raw_qml_0.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/content_qmlcache_loader.cpp"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_content --resource /home/felix/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp @/home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_qml_loader_file_list.rsp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/content_qmlcache_loader.cpp"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmlcachegen --resource-name qmlcache_content --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/qmake_content.qrc --resource /home/felix/repo/eye_gymnastics/build/content/.rcc/content_raw_qml_0.qrc -o /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp @/home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_qml_loader_file_list.rsp
 
 content_qmlcache_autogen_timestamp_deps: content/.rcc/qmlcache/content_qmlcache_loader.cpp
 content_qmlcache_autogen_timestamp_deps: content/CMakeFiles/content_qmlcache_autogen_timestamp_deps
@@ -87,10 +87,10 @@ content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/build: content_qm
 .PHONY : content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/build
 
 content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/clean
 
 content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_qmlcache_autogen_timestamp_deps.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Include any dependencies generated for this target.
 include content/CMakeFiles/content_qmlcache.dir/depend.make
@@ -72,30 +72,30 @@ include content/CMakeFiles/content_qmlcache.dir/flags.make
 content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o: content/CMakeFiles/content_qmlcache.dir/flags.make
 content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o: content/content_qmlcache_autogen/mocs_compilation.cpp
 content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o: content/CMakeFiles/content_qmlcache.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o -MF CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o -c /home/felix/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o -MF CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp
 
 content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp > CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp > CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.i
 
 content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp -o CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/content_qmlcache_autogen/mocs_compilation.cpp -o CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.s
 
 content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o: content/CMakeFiles/content_qmlcache.dir/flags.make
 content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o: content/.rcc/qmlcache/content_qmlcache_loader.cpp
 content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o: content/CMakeFiles/content_qmlcache.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o -MF CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o.d -o CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o -c /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o -MF CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o.d -o CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp
 
 content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp > CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp > CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.i
 
 content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp -o CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/.rcc/qmlcache/content_qmlcache_loader.cpp -o CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.s
 
 content_qmlcache: content/CMakeFiles/content_qmlcache.dir/content_qmlcache_autogen/mocs_compilation.cpp.o
 content_qmlcache: content/CMakeFiles/content_qmlcache.dir/.rcc/qmlcache/content_qmlcache_loader.cpp.o
@@ -107,10 +107,10 @@ content/CMakeFiles/content_qmlcache.dir/build: content_qmlcache
 .PHONY : content/CMakeFiles/content_qmlcache.dir/build
 
 content/CMakeFiles/content_qmlcache.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmlcache.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmlcache.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_qmlcache.dir/clean
 
 content/CMakeFiles/content_qmlcache.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_qmlcache.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_qmlcache.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_qmlcache.dir/depend
 

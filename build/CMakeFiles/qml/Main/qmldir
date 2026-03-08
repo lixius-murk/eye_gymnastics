@@ -1,0 +1,4 @@
+module Main
+typeinfo eye_gymnasticsApp.qmltypes
+prefer :/qt/qml/Main/
+

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_tooling.
 
@@ -66,9 +66,9 @@ include CMakeFiles/eye_gymnasticsApp_tooling.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/eye_gymnasticsApp_tooling.dir/progress.make
 
-qml/Main/main.qml: /home/felix/eye_gymnastics/main.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qml/Main/main.qml"
-	cd /home/felix/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/main.qml /home/felix/eye_gymnastics/build/qml/Main/main.qml
+qml/Main/main.qml: /home/felix/repo/eye_gymnastics/main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qml/Main/main.qml"
+	cd /home/felix/repo/eye_gymnastics && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/main.qml /home/felix/repo/eye_gymnastics/build/qml/Main/main.qml
 
 eye_gymnasticsApp_tooling: qml/Main/main.qml
 eye_gymnasticsApp_tooling: CMakeFiles/eye_gymnasticsApp_tooling.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/eye_gymnasticsApp_tooling.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_tooling.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_tooling.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_tooling.dir/depend
 

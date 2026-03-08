@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_qmllint_json.
 
@@ -67,8 +67,8 @@ include CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/compiler_depend.make
 include CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/progress.make
 
 CMakeFiles/eye_gymnasticsApp_qmllint_json: /usr/lib/qt6/bin/qmllint
-CMakeFiles/eye_gymnasticsApp_qmllint_json: /home/felix/eye_gymnastics/main.qml
-	cd /home/felix/eye_gymnastics && /usr/lib/qt6/bin/qmllint --bare -I /home/felix/eye_gymnastics/build -I /home/felix/eye_gymnastics/build/qml -I /usr/lib/x86_64-linux-gnu/qt6/qml --resource /home/felix/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc /home/felix/eye_gymnastics/main.qml --json /home/felix/eye_gymnastics/build/eye_gymnasticsApp_qmllint.json
+CMakeFiles/eye_gymnasticsApp_qmllint_json: /home/felix/repo/eye_gymnastics/main.qml
+	cd /home/felix/repo/eye_gymnastics && /usr/lib/qt6/bin/qmllint --bare -I /home/felix/repo/eye_gymnastics/build -I /home/felix/repo/eye_gymnastics/build/qml -I /usr/lib/x86_64-linux-gnu/qt6/qml --resource /home/felix/repo/eye_gymnastics/build/.rcc/configuration.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/qmake_Main.qrc --resource /home/felix/repo/eye_gymnastics/build/.rcc/eye_gymnasticsApp_raw_qml_0.qrc /home/felix/repo/eye_gymnastics/main.qml --json /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_qmllint.json
 
 eye_gymnasticsApp_qmllint_json: CMakeFiles/eye_gymnasticsApp_qmllint_json
 eye_gymnasticsApp_qmllint_json: CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_qmllint_json.dir/depend
 

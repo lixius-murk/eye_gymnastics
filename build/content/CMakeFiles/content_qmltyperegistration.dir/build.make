@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_qmltyperegistration.
 
@@ -70,32 +70,32 @@ content/CMakeFiles/content_qmltyperegistration: content/content_qmltyperegistrat
 content/CMakeFiles/content_qmltyperegistration: qml/content/content.qmltypes
 
 content/content_qmltyperegistrations.cpp: content/qmltypes/content_foreign_types.txt
-content/content_qmltyperegistrations.cpp: content/meta_types/qt6content_release_metatypes.json
+content/content_qmltyperegistrations.cpp: content/meta_types/qt6content_debug_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/qt6/libexec/qmltyperegistrar
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6qml_none_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6core_none_metatypes.json
 content/content_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6network_none_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target content"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/eye_gymnastics/build/qml/content/content.qmltypes --import-name=content --major-version=1 --minor-version=0 @/home/felix/eye_gymnastics/build/content/qmltypes/content_foreign_types.txt -o /home/felix/eye_gymnastics/build/content/content_qmltyperegistrations.cpp /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/content/.generated
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/content/.generated/content.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target content"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/repo/eye_gymnastics/build/qml/content/content.qmltypes --import-name=content --major-version=1 --minor-version=0 @/home/felix/repo/eye_gymnastics/build/content/qmltypes/content_foreign_types.txt -o /home/felix/repo/eye_gymnastics/build/content/content_qmltyperegistrations.cpp /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/content/.generated
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/content/.generated/content.qmltypes
 
 qml/content/content.qmltypes: content/content_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate qml/content/content.qmltypes
 
-content/meta_types/qt6content_release_metatypes.json.gen: /usr/lib/qt6/libexec/moc
-content/meta_types/qt6content_release_metatypes.json.gen: content/meta_types/content_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target content"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/moc -o /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json.gen --collect-json @/home/felix/eye_gymnastics/build/content/meta_types/content_json_file_list.txt
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E copy_if_different /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json.gen /home/felix/eye_gymnastics/build/content/meta_types/qt6content_release_metatypes.json
+content/meta_types/qt6content_debug_metatypes.json.gen: /usr/lib/qt6/libexec/moc
+content/meta_types/qt6content_debug_metatypes.json.gen: content/meta_types/content_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target content"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/moc -o /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json.gen --collect-json @/home/felix/repo/eye_gymnastics/build/content/meta_types/content_json_file_list.txt
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E copy_if_different /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json.gen /home/felix/repo/eye_gymnastics/build/content/meta_types/qt6content_debug_metatypes.json
 
-content/meta_types/qt6content_release_metatypes.json: content/meta_types/qt6content_release_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E touch_nocreate content/meta_types/qt6content_release_metatypes.json
+content/meta_types/qt6content_debug_metatypes.json: content/meta_types/qt6content_debug_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E touch_nocreate content/meta_types/qt6content_debug_metatypes.json
 
 content_qmltyperegistration: content/CMakeFiles/content_qmltyperegistration
 content_qmltyperegistration: content/content_qmltyperegistrations.cpp
-content_qmltyperegistration: content/meta_types/qt6content_release_metatypes.json
-content_qmltyperegistration: content/meta_types/qt6content_release_metatypes.json.gen
+content_qmltyperegistration: content/meta_types/qt6content_debug_metatypes.json
+content_qmltyperegistration: content/meta_types/qt6content_debug_metatypes.json.gen
 content_qmltyperegistration: qml/content/content.qmltypes
 content_qmltyperegistration: content/CMakeFiles/content_qmltyperegistration.dir/build.make
 .PHONY : content_qmltyperegistration
@@ -105,10 +105,10 @@ content/CMakeFiles/content_qmltyperegistration.dir/build: content_qmltyperegistr
 .PHONY : content/CMakeFiles/content_qmltyperegistration.dir/build
 
 content/CMakeFiles/content_qmltyperegistration.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmltyperegistration.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_qmltyperegistration.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_qmltyperegistration.dir/clean
 
 content/CMakeFiles/content_qmltyperegistration.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_qmltyperegistration.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-src/src/imports
+# Install script for directory: /home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-src/src/imports
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,41 +44,41 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/components/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/components/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/effects_qt6/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/effects_qt6/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/flowview/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/flowview/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/logichelper/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/logichelper/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/multitext/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/multitext/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/tools/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/tools/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/application/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/application/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/utils/cmake_install.cmake")
+  include("/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-build/src/imports/utils/cmake_install.cmake")
 endif()
 

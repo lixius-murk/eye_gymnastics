@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt-project.org/imports/QtQuick/Studio/LogicHelper">
-    <file alias="qmldir">/home/felix/eye_gymnastics/build/qml/QtQuick/Studio/LogicHelper/qmldir</file>
-  </qresource>
-</RCC>
-

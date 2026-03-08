@@ -16,8 +16,8 @@ file(REMOVE_RECURSE
   "content_qmltyperegistrations.cpp"
   "libcontent.a"
   "libcontent.pdb"
-  "meta_types/qt6content_release_metatypes.json"
-  "meta_types/qt6content_release_metatypes.json.gen"
+  "meta_types/qt6content_debug_metatypes.json"
+  "meta_types/qt6content_debug_metatypes.json.gen"
 )
 
 # Per-language clean rules from dependency scanning.

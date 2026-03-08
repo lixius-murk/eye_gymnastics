@@ -1,2 +1,0 @@
-/home/felix/eye_gymnastics/build/Desktop-Release/eye_gymnasticsApp_autogen/include/../UVLADIE3JM/moc_CameraLogic.cpp.json
-/home/felix/eye_gymnastics/build/Desktop-Release/eye_gymnasticsApp_autogen/include/../UVLADIE3JM/moc_PythonController.cpp.json

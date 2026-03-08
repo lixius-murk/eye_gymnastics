@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/felix/eye_gymnastics/build/CMakeFiles /home/felix/eye_gymnastics/build/imports/eye_gymnastics//CMakeFiles/progress.marks
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/felix/eye_gymnastics/build/CMakeFiles 0
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/felix/repo/eye_gymnastics/build/CMakeFiles /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics//CMakeFiles/progress.marks
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/felix/repo/eye_gymnastics/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/clean
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/preinstall
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/preinstall
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ eye_gymnastics: imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/rule
 
 # fast build rule for target.
 eye_gymnastics/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build
 .PHONY : eye_gymnastics/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,12 @@ eye_gymnastics_automoc_json_extraction: imports/eye_gymnastics/CMakeFiles/eye_gy
 
 # fast build rule for target.
 eye_gymnastics_automoc_json_extraction/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_automoc_json_extraction.dir/build
 .PHONY : eye_gymnastics_automoc_json_extraction/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/rule
 
 # Convenience name for target.
@@ -200,12 +200,12 @@ eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/CMakeFiles/eye_gymnas
 
 # fast build rule for target.
 eye_gymnastics_qmltyperegistration/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build
 .PHONY : eye_gymnastics_qmltyperegistration/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/rule
 
 # Convenience name for target.
@@ -214,12 +214,12 @@ eye_gymnastics_other_files: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_oth
 
 # fast build rule for target.
 eye_gymnastics_other_files/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_other_files.dir/build
 .PHONY : eye_gymnastics_other_files/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/rule
 
 # Convenience name for target.
@@ -228,12 +228,12 @@ eye_gymnastics_resources_1: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_res
 
 # fast build rule for target.
 eye_gymnastics_resources_1/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build
 .PHONY : eye_gymnastics_resources_1/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/rule
 
 # Convenience name for target.
@@ -242,12 +242,12 @@ eye_gymnasticsplugin: imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir
 
 # fast build rule for target.
 eye_gymnasticsplugin/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build
 .PHONY : eye_gymnasticsplugin/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/rule
 
 # Convenience name for target.
@@ -256,12 +256,12 @@ eye_gymnastics_qmllint: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint
 
 # fast build rule for target.
 eye_gymnastics_qmllint/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint.dir/build
 .PHONY : eye_gymnastics_qmllint/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/rule
 
 # Convenience name for target.
@@ -270,12 +270,12 @@ eye_gymnastics_qmllint_json: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qm
 
 # fast build rule for target.
 eye_gymnastics_qmllint_json/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build
 .PHONY : eye_gymnastics_qmllint_json/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ eye_gymnastics_qmlcache: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcac
 
 # fast build rule for target.
 eye_gymnastics_qmlcache/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build
 .PHONY : eye_gymnastics_qmlcache/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/rule
 
 # Convenience name for target.
@@ -298,12 +298,12 @@ eye_gymnastics_resources_2: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_res
 
 # fast build rule for target.
 eye_gymnastics_resources_2/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build
 .PHONY : eye_gymnastics_resources_2/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/rule
 
 # Convenience name for target.
@@ -312,12 +312,12 @@ eye_gymnasticsplugin_init: imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugi
 
 # fast build rule for target.
 eye_gymnasticsplugin_init/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build
 .PHONY : eye_gymnasticsplugin_init/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -326,12 +326,12 @@ eye_gymnastics_autogen_timestamp_deps: imports/eye_gymnastics/CMakeFiles/eye_gym
 
 # fast build rule for target.
 eye_gymnastics_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnastics_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/rule
 
 # Convenience name for target.
@@ -340,12 +340,12 @@ eye_gymnastics_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen
 
 # fast build rule for target.
 eye_gymnastics_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/build
 .PHONY : eye_gymnastics_autogen/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -354,12 +354,12 @@ eye_gymnastics_resources_1_autogen_timestamp_deps: imports/eye_gymnastics/CMakeF
 
 # fast build rule for target.
 eye_gymnastics_resources_1_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnastics_resources_1_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/rule
 
 # Convenience name for target.
@@ -368,12 +368,12 @@ eye_gymnastics_resources_1_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnas
 
 # fast build rule for target.
 eye_gymnastics_resources_1_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1_autogen.dir/build
 .PHONY : eye_gymnastics_resources_1_autogen/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -382,12 +382,12 @@ eye_gymnasticsplugin_autogen_timestamp_deps: imports/eye_gymnastics/CMakeFiles/e
 
 # fast build rule for target.
 eye_gymnasticsplugin_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnasticsplugin_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/rule
 
 # Convenience name for target.
@@ -396,12 +396,12 @@ eye_gymnasticsplugin_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnasticspl
 
 # fast build rule for target.
 eye_gymnasticsplugin_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_autogen.dir/build
 .PHONY : eye_gymnasticsplugin_autogen/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -410,12 +410,12 @@ eye_gymnastics_qmlcache_autogen_timestamp_deps: imports/eye_gymnastics/CMakeFile
 
 # fast build rule for target.
 eye_gymnastics_qmlcache_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnastics_qmlcache_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/rule
 
 # Convenience name for target.
@@ -424,12 +424,12 @@ eye_gymnastics_qmlcache_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnastic
 
 # fast build rule for target.
 eye_gymnastics_qmlcache_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache_autogen.dir/build
 .PHONY : eye_gymnastics_qmlcache_autogen/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -438,12 +438,12 @@ eye_gymnastics_resources_2_autogen_timestamp_deps: imports/eye_gymnastics/CMakeF
 
 # fast build rule for target.
 eye_gymnastics_resources_2_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnastics_resources_2_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/rule
 
 # Convenience name for target.
@@ -452,12 +452,12 @@ eye_gymnastics_resources_2_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnas
 
 # fast build rule for target.
 eye_gymnastics_resources_2_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2_autogen.dir/build
 .PHONY : eye_gymnastics_resources_2_autogen/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -466,12 +466,12 @@ eye_gymnasticsplugin_init_autogen_timestamp_deps: imports/eye_gymnastics/CMakeFi
 
 # fast build rule for target.
 eye_gymnasticsplugin_init_autogen_timestamp_deps/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen_timestamp_deps.dir/build
 .PHONY : eye_gymnasticsplugin_init_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/rule:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/rule
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/rule
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/rule
 
 # Convenience name for target.
@@ -480,7 +480,7 @@ eye_gymnasticsplugin_init_autogen: imports/eye_gymnastics/CMakeFiles/eye_gymnast
 
 # fast build rule for target.
 eye_gymnasticsplugin_init_autogen/fast:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init_autogen.dir/build
 .PHONY : eye_gymnasticsplugin_init_autogen/fast
 
 .rcc/qmlcache/eye_gymnastics_Constants_qml.o: .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.o
@@ -488,7 +488,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.o
 .PHONY : .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.o
 
 .rcc/qmlcache/eye_gymnastics_Constants_qml.i: .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.i
@@ -496,7 +496,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.i
 .PHONY : .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.i
 
 .rcc/qmlcache/eye_gymnastics_Constants_qml.s: .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.s
@@ -504,7 +504,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.s
 .PHONY : .rcc/qmlcache/eye_gymnastics_Constants_qml.cpp.s
 
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.o: .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.o
@@ -512,7 +512,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.o
 .PHONY : .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.o
 
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.i: .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.i
@@ -520,7 +520,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.i
 .PHONY : .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.i
 
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.s: .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.s
@@ -528,7 +528,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.s
 .PHONY : .rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp.s
 
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.o: .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.o
@@ -536,7 +536,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.o
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.o
 
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.i: .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.i
@@ -544,7 +544,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.i
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.i
 
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.s: .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.s
@@ -552,7 +552,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.s
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp.s
 
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.o: .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.o
@@ -560,7 +560,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.o
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.o
 
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.i: .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.i
@@ -568,7 +568,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.i
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.i
 
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.s: .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.s
@@ -576,7 +576,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.s
 .PHONY : .rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp.s
 
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.o: .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o
@@ -584,7 +584,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o
 .PHONY : .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.o
 
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.i: .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.i
@@ -592,7 +592,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.i
 .PHONY : .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.i
 
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.s: .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.s
@@ -600,7 +600,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/.rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.s
 .PHONY : .rcc/qmlcache/eye_gymnastics_qmlcache_loader.cpp.s
 
 .rcc/qrc_eye_gymnastics_raw_qml_0.o: .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o
@@ -608,7 +608,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o
 .PHONY : .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.o
 
 .rcc/qrc_eye_gymnastics_raw_qml_0.i: .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.i
@@ -616,7 +616,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.i
 .PHONY : .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.i
 
 .rcc/qrc_eye_gymnastics_raw_qml_0.s: .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.s
@@ -624,7 +624,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp.s
 .PHONY : .rcc/qrc_eye_gymnastics_raw_qml_0.cpp.s
 
 .rcc/qrc_qmake_eye_gymnastics.o: .rcc/qrc_qmake_eye_gymnastics.cpp.o
@@ -632,7 +632,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to build an object file
 .rcc/qrc_qmake_eye_gymnastics.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o
 .PHONY : .rcc/qrc_qmake_eye_gymnastics.cpp.o
 
 .rcc/qrc_qmake_eye_gymnastics.i: .rcc/qrc_qmake_eye_gymnastics.cpp.i
@@ -640,7 +640,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to preprocess a source file
 .rcc/qrc_qmake_eye_gymnastics.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.i
 .PHONY : .rcc/qrc_qmake_eye_gymnastics.cpp.i
 
 .rcc/qrc_qmake_eye_gymnastics.s: .rcc/qrc_qmake_eye_gymnastics.cpp.s
@@ -648,7 +648,7 @@ eye_gymnasticsplugin_init_autogen/fast:
 
 # target to generate assembly for a file
 .rcc/qrc_qmake_eye_gymnastics.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.s
 .PHONY : .rcc/qrc_qmake_eye_gymnastics.cpp.s
 
 eye_gymnastics_autogen/mocs_compilation.o: eye_gymnastics_autogen/mocs_compilation.cpp.o
@@ -656,7 +656,7 @@ eye_gymnastics_autogen/mocs_compilation.o: eye_gymnastics_autogen/mocs_compilati
 
 # target to build an object file
 eye_gymnastics_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnastics_autogen/mocs_compilation.cpp.o
 
 eye_gymnastics_autogen/mocs_compilation.i: eye_gymnastics_autogen/mocs_compilation.cpp.i
@@ -664,7 +664,7 @@ eye_gymnastics_autogen/mocs_compilation.i: eye_gymnastics_autogen/mocs_compilati
 
 # target to preprocess a source file
 eye_gymnastics_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnastics_autogen/mocs_compilation.cpp.i
 
 eye_gymnastics_autogen/mocs_compilation.s: eye_gymnastics_autogen/mocs_compilation.cpp.s
@@ -672,7 +672,7 @@ eye_gymnastics_autogen/mocs_compilation.s: eye_gymnastics_autogen/mocs_compilati
 
 # target to generate assembly for a file
 eye_gymnastics_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnastics_autogen/mocs_compilation.cpp.s
 
 eye_gymnastics_qmlcache_autogen/mocs_compilation.o: eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o
@@ -680,7 +680,7 @@ eye_gymnastics_qmlcache_autogen/mocs_compilation.o: eye_gymnastics_qmlcache_auto
 
 # target to build an object file
 eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.o
 
 eye_gymnastics_qmlcache_autogen/mocs_compilation.i: eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.i
@@ -688,7 +688,7 @@ eye_gymnastics_qmlcache_autogen/mocs_compilation.i: eye_gymnastics_qmlcache_auto
 
 # target to preprocess a source file
 eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.i
 
 eye_gymnastics_qmlcache_autogen/mocs_compilation.s: eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.s
@@ -696,7 +696,7 @@ eye_gymnastics_qmlcache_autogen/mocs_compilation.s: eye_gymnastics_qmlcache_auto
 
 # target to generate assembly for a file
 eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmlcache.dir/eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnastics_qmlcache_autogen/mocs_compilation.cpp.s
 
 eye_gymnastics_qmltyperegistrations.o: eye_gymnastics_qmltyperegistrations.cpp.o
@@ -704,7 +704,7 @@ eye_gymnastics_qmltyperegistrations.o: eye_gymnastics_qmltyperegistrations.cpp.o
 
 # target to build an object file
 eye_gymnastics_qmltyperegistrations.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.o
 .PHONY : eye_gymnastics_qmltyperegistrations.cpp.o
 
 eye_gymnastics_qmltyperegistrations.i: eye_gymnastics_qmltyperegistrations.cpp.i
@@ -712,7 +712,7 @@ eye_gymnastics_qmltyperegistrations.i: eye_gymnastics_qmltyperegistrations.cpp.i
 
 # target to preprocess a source file
 eye_gymnastics_qmltyperegistrations.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.i
 .PHONY : eye_gymnastics_qmltyperegistrations.cpp.i
 
 eye_gymnastics_qmltyperegistrations.s: eye_gymnastics_qmltyperegistrations.cpp.s
@@ -720,7 +720,7 @@ eye_gymnastics_qmltyperegistrations.s: eye_gymnastics_qmltyperegistrations.cpp.s
 
 # target to generate assembly for a file
 eye_gymnastics_qmltyperegistrations.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics.dir/eye_gymnastics_qmltyperegistrations.cpp.s
 .PHONY : eye_gymnastics_qmltyperegistrations.cpp.s
 
 eye_gymnastics_resources_1_autogen/mocs_compilation.o: eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o
@@ -728,7 +728,7 @@ eye_gymnastics_resources_1_autogen/mocs_compilation.o: eye_gymnastics_resources_
 
 # target to build an object file
 eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o
 
 eye_gymnastics_resources_1_autogen/mocs_compilation.i: eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.i
@@ -736,7 +736,7 @@ eye_gymnastics_resources_1_autogen/mocs_compilation.i: eye_gymnastics_resources_
 
 # target to preprocess a source file
 eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.i
 
 eye_gymnastics_resources_1_autogen/mocs_compilation.s: eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.s
@@ -744,7 +744,7 @@ eye_gymnastics_resources_1_autogen/mocs_compilation.s: eye_gymnastics_resources_
 
 # target to generate assembly for a file
 eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.s
 
 eye_gymnastics_resources_2_autogen/mocs_compilation.o: eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.o
@@ -752,7 +752,7 @@ eye_gymnastics_resources_2_autogen/mocs_compilation.o: eye_gymnastics_resources_
 
 # target to build an object file
 eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.o
 
 eye_gymnastics_resources_2_autogen/mocs_compilation.i: eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.i
@@ -760,7 +760,7 @@ eye_gymnastics_resources_2_autogen/mocs_compilation.i: eye_gymnastics_resources_
 
 # target to preprocess a source file
 eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.i
 
 eye_gymnastics_resources_2_autogen/mocs_compilation.s: eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.s
@@ -768,7 +768,7 @@ eye_gymnastics_resources_2_autogen/mocs_compilation.s: eye_gymnastics_resources_
 
 # target to generate assembly for a file
 eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_2.dir/eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnastics_resources_2_autogen/mocs_compilation.cpp.s
 
 eye_gymnasticsplugin_autogen/mocs_compilation.o: eye_gymnasticsplugin_autogen/mocs_compilation.cpp.o
@@ -776,7 +776,7 @@ eye_gymnasticsplugin_autogen/mocs_compilation.o: eye_gymnasticsplugin_autogen/mo
 
 # target to build an object file
 eye_gymnasticsplugin_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnasticsplugin_autogen/mocs_compilation.cpp.o
 
 eye_gymnasticsplugin_autogen/mocs_compilation.i: eye_gymnasticsplugin_autogen/mocs_compilation.cpp.i
@@ -784,7 +784,7 @@ eye_gymnasticsplugin_autogen/mocs_compilation.i: eye_gymnasticsplugin_autogen/mo
 
 # target to preprocess a source file
 eye_gymnasticsplugin_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnasticsplugin_autogen/mocs_compilation.cpp.i
 
 eye_gymnasticsplugin_autogen/mocs_compilation.s: eye_gymnasticsplugin_autogen/mocs_compilation.cpp.s
@@ -792,7 +792,7 @@ eye_gymnasticsplugin_autogen/mocs_compilation.s: eye_gymnasticsplugin_autogen/mo
 
 # target to generate assembly for a file
 eye_gymnasticsplugin_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnasticsplugin_autogen/mocs_compilation.cpp.s
 
 eye_gymnasticsplugin_eye_gymnasticsPlugin.o: eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.o
@@ -800,7 +800,7 @@ eye_gymnasticsplugin_eye_gymnasticsPlugin.o: eye_gymnasticsplugin_eye_gymnastics
 
 # target to build an object file
 eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.o
 .PHONY : eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.o
 
 eye_gymnasticsplugin_eye_gymnasticsPlugin.i: eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.i
@@ -808,7 +808,7 @@ eye_gymnasticsplugin_eye_gymnasticsPlugin.i: eye_gymnasticsplugin_eye_gymnastics
 
 # target to preprocess a source file
 eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.i
 .PHONY : eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.i
 
 eye_gymnasticsplugin_eye_gymnasticsPlugin.s: eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.s
@@ -816,7 +816,7 @@ eye_gymnasticsplugin_eye_gymnasticsPlugin.s: eye_gymnasticsplugin_eye_gymnastics
 
 # target to generate assembly for a file
 eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin.dir/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.s
 .PHONY : eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp.s
 
 eye_gymnasticsplugin_init.o: eye_gymnasticsplugin_init.cpp.o
@@ -824,7 +824,7 @@ eye_gymnasticsplugin_init.o: eye_gymnasticsplugin_init.cpp.o
 
 # target to build an object file
 eye_gymnasticsplugin_init.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.o
 .PHONY : eye_gymnasticsplugin_init.cpp.o
 
 eye_gymnasticsplugin_init.i: eye_gymnasticsplugin_init.cpp.i
@@ -832,7 +832,7 @@ eye_gymnasticsplugin_init.i: eye_gymnasticsplugin_init.cpp.i
 
 # target to preprocess a source file
 eye_gymnasticsplugin_init.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.i
 .PHONY : eye_gymnasticsplugin_init.cpp.i
 
 eye_gymnasticsplugin_init.s: eye_gymnasticsplugin_init.cpp.s
@@ -840,7 +840,7 @@ eye_gymnasticsplugin_init.s: eye_gymnasticsplugin_init.cpp.s
 
 # target to generate assembly for a file
 eye_gymnasticsplugin_init.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init.cpp.s
 .PHONY : eye_gymnasticsplugin_init.cpp.s
 
 eye_gymnasticsplugin_init_autogen/mocs_compilation.o: eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o
@@ -848,7 +848,7 @@ eye_gymnasticsplugin_init_autogen/mocs_compilation.o: eye_gymnasticsplugin_init_
 
 # target to build an object file
 eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o
 .PHONY : eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.o
 
 eye_gymnasticsplugin_init_autogen/mocs_compilation.i: eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.i
@@ -856,7 +856,7 @@ eye_gymnasticsplugin_init_autogen/mocs_compilation.i: eye_gymnasticsplugin_init_
 
 # target to preprocess a source file
 eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.i:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.i
 .PHONY : eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.i
 
 eye_gymnasticsplugin_init_autogen/mocs_compilation.s: eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.s
@@ -864,7 +864,7 @@ eye_gymnasticsplugin_init_autogen/mocs_compilation.s: eye_gymnasticsplugin_init_
 
 # target to generate assembly for a file
 eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.s:
-	cd /home/felix/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build && $(MAKE) $(MAKESILENT) -f imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/build.make imports/eye_gymnastics/CMakeFiles/eye_gymnasticsplugin_init.dir/eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.s
 .PHONY : eye_gymnasticsplugin_init_autogen/mocs_compilation.cpp.s
 
 # Help Target
@@ -962,6 +962,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnastics_qmllint_json.
 
@@ -67,11 +67,11 @@ include imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/compil
 include imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/progress.make
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /usr/lib/qt6/bin/qmllint
-imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/eye_gymnastics/imports/eye_gymnastics/Constants.qml
-imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml
-imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml
-imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml
-	cd /home/felix/eye_gymnastics/imports/eye_gymnastics && /usr/lib/qt6/bin/qmllint --bare -I /home/felix/eye_gymnastics/build/qml -I /home/felix/eye_gymnastics/build/qml -I /usr/lib/x86_64-linux-gnu/qt6/qml --resource /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmake_eye_gymnastics.qrc --resource /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/eye_gymnastics_raw_qml_0.qrc /home/felix/eye_gymnastics/imports/eye_gymnastics/Constants.qml /home/felix/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml /home/felix/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml --json /home/felix/eye_gymnastics/build/eye_gymnastics_qmllint.json
+imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/Constants.qml
+imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml
+imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml
+imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json: /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml
+	cd /home/felix/repo/eye_gymnastics/imports/eye_gymnastics && /usr/lib/qt6/bin/qmllint --bare -I /home/felix/repo/eye_gymnastics/build/qml -I /home/felix/repo/eye_gymnastics/build/qml -I /usr/lib/x86_64-linux-gnu/qt6/qml --resource /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmake_eye_gymnastics.qrc --resource /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/eye_gymnastics_raw_qml_0.qrc /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/Constants.qml /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/DirectoryFontLoader.qml /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListModel.qml /home/felix/repo/eye_gymnastics/imports/eye_gymnastics/EventListSimulator.qml --json /home/felix/repo/eye_gymnastics/build/eye_gymnastics_qmllint.json
 
 eye_gymnastics_qmllint_json: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json
 eye_gymnastics_qmllint_json: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build.make
@@ -82,10 +82,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build: eye_gym
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmllint_json.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmllint_json.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmllint_json.dir/depend
 

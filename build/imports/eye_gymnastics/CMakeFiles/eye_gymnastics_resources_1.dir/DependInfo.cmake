@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o.d"
-  "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o.d"
+  "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/.rcc/qrc_qmake_eye_gymnastics.cpp.o.d"
+  "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o" "gcc" "imports/eye_gymnastics/CMakeFiles/eye_gymnastics_resources_1.dir/eye_gymnastics_resources_1_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

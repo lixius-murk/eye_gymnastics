@@ -1,5 +1,5 @@
-/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_autogen/include/eye_gymnasticsplugin_eye_gymnasticsPlugin.moc: /home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp \
-  /home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_autogen/moc_predefs.h \
+/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_autogen/include/eye_gymnasticsplugin_eye_gymnasticsPlugin.moc: /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_eye_gymnasticsPlugin.cpp \
+  /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnasticsplugin_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

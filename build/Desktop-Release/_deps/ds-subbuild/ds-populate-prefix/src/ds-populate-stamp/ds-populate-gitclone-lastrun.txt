@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-P;/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/tmp/ds-populate-gitclone.cmake
-source_dir=/home/felix/eye_gymnastics/build/Desktop-Release/_deps/ds-src
-work_dir=/home/felix/eye_gymnastics/build/Desktop-Release/_deps
+command=/usr/bin/cmake;-P;/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-subbuild/ds-populate-prefix/tmp/ds-populate-gitclone.cmake
+source_dir=/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps/ds-src
+work_dir=/home/felix/repo/eye_gymnastics/build/Desktop-Release/_deps
 repository=https://code.qt.io/qt-labs/qtquickdesigner-components.git
 remote=origin
 init_submodules=TRUE

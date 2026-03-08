@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt-project.org/imports/QtQuick/Studio/Components">
-    <file alias="qmldir">/home/felix/eye_gymnastics/build/qml/QtQuick/Studio/Components/qmldir</file>
-  </qresource>
-</RCC>
-

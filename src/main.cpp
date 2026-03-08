@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     FrameProvider *provider = new FrameProvider();
     engine.addImageProvider("frameprovider", provider);
 
-    CameraLogic     camera;
+    CameraLogic camera;
     PythonController python;
 
     engine.rootContext()->setContextProperty("cameraLogic", &camera);

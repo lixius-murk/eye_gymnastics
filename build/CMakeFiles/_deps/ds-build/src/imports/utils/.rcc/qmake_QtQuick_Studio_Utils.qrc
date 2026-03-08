@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/QtQuick/Studio/Utils">
+    <file alias="qmldir">/home/felix/repo/eye_gymnastics/build/CMakeFiles/qml/QtQuick/Studio/Utils/qmldir</file>
+  </qresource>
+</RCC>
+

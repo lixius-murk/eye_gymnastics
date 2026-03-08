@@ -1,7 +1,7 @@
 CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.o: \
- /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp \
+ /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_CameraLogic.cpp \
+ /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_CameraLogic.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -71,8 +71,6 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/13/bits/shared_ptr_base.h /usr/include/c++/13/typeinfo \
  /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/bits/refwrap.h \
@@ -118,7 +116,7 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/../../../src/CameraLogic.h \
+ /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/../../../src/CameraLogic.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
@@ -171,11 +169,7 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
- /usr/include/x86_64-linux-gnu/bits/select-decl.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/limits \
  /usr/include/c++/13/tr1/gamma.tcc \
  /usr/include/c++/13/tr1/special_function_util.h \
@@ -218,8 +212,6 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
  /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
@@ -243,11 +235,9 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/13/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/13/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
@@ -349,12 +339,13 @@ CMakeFiles/eye_gymnasticsApp.dir/eye_gymnasticsApp_autogen/mocs_compilation.cpp.
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideosink.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QVideoFrame \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qvideoframe.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaCaptureSession \
  /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediacapturesession.h \
- /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_PythonController.cpp \
- /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/../../../src/PythonController.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/QMediaRecorder \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediarecorder.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtMultimedia/qmediametadata.h \
+ /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_PythonController.cpp \
+ /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/../../../src/PythonController.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h

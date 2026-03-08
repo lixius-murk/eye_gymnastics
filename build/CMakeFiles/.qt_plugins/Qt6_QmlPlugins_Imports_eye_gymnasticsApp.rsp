@@ -1,0 +1,15 @@
+-rootPath
+/home/felix/repo/eye_gymnastics
+-cmake-output
+-output-file
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake
+-importPath
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/qml/Main
+-importPath
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/qml
+-importPath
+/usr/lib/x86_64-linux-gnu/qt6/qml
+-qrcFiles
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/.rcc/configuration.qrc
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/.rcc/qmake_Main.qrc
+/home/felix/repo/eye_gymnastics/build/CMakeFiles/.rcc/eye_gymnasticsApp_raw_qml_0.qrc

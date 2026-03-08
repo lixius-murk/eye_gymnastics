@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnastics_qmltyperegistration.
 
@@ -70,32 +70,32 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration: imports/ey
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration: qml/eye_gymnastics/eye_gymnastics.qmltypes
 
 imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: imports/eye_gymnastics/qmltypes/eye_gymnastics_foreign_types.txt
-imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json
+imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json
 imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: /usr/lib/qt6/libexec/qmltyperegistrar
 imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6qml_none_metatypes.json
 imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6core_none_metatypes.json
 imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp: /usr/lib/x86_64-linux-gnu/metatypes/qt6network_none_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target eye_gymnastics"
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/eye_gymnastics/build/qml/eye_gymnastics/eye_gymnastics.qmltypes --import-name=eye_gymnastics --major-version=1 --minor-version=0 @/home/felix/eye_gymnastics/build/imports/eye_gymnastics/qmltypes/eye_gymnastics_foreign_types.txt -o /home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp /home/felix/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E make_directory /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.generated
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/imports/eye_gymnastics/.generated/eye_gymnastics.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target eye_gymnastics"
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/qmltyperegistrar --generate-qmltypes=/home/felix/repo/eye_gymnastics/build/qml/eye_gymnastics/eye_gymnastics.qmltypes --import-name=eye_gymnastics --major-version=1 --minor-version=0 @/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/qmltypes/eye_gymnastics_foreign_types.txt -o /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E make_directory /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.generated
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.generated/eye_gymnastics.qmltypes
 
 qml/eye_gymnastics/eye_gymnastics.qmltypes: imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate qml/eye_gymnastics/eye_gymnastics.qmltypes
 
-imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen: /usr/lib/qt6/libexec/moc
-imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen: imports/eye_gymnastics/meta_types/eye_gymnastics_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target eye_gymnastics"
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/moc -o /home/felix/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen --collect-json @/home/felix/eye_gymnastics/build/imports/eye_gymnastics/meta_types/eye_gymnastics_json_file_list.txt
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E copy_if_different /home/felix/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen /home/felix/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json
+imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen: /usr/lib/qt6/libexec/moc
+imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen: imports/eye_gymnastics/meta_types/eye_gymnastics_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running moc --collect-json for target eye_gymnastics"
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/lib/qt6/libexec/moc -o /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen --collect-json @/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/meta_types/eye_gymnastics_json_file_list.txt
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && /usr/bin/cmake -E copy_if_different /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json
 
-imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E touch_nocreate imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json
+imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E touch_nocreate imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json
 
 eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration
 eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp
-eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json
-eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_release_metatypes.json.gen
+eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json
+eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/meta_types/qt6eye_gymnastics_debug_metatypes.json.gen
 eye_gymnastics_qmltyperegistration: qml/eye_gymnastics/eye_gymnastics.qmltypes
 eye_gymnastics_qmltyperegistration: imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build.make
 .PHONY : eye_gymnastics_qmltyperegistration
@@ -105,10 +105,10 @@ imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build: 
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/build
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/clean:
-	cd /home/felix/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmltyperegistration.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics && $(CMAKE_COMMAND) -P CMakeFiles/eye_gymnastics_qmltyperegistration.dir/cmake_clean.cmake
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/clean
 
 imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/imports/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/imports/eye_gymnastics /home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics /home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : imports/eye_gymnastics/CMakeFiles/eye_gymnastics_qmltyperegistration.dir/depend
 

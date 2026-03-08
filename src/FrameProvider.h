@@ -14,13 +14,14 @@
 #include <unistd.h>
 #endif
 
+static constexpr int HEADER_SIZE = 13; // 4 counter + 1 flag + 4 width + 4 height
+static constexpr int MAX_W = 3840;
+static constexpr int MAX_H = 2160;
+static constexpr int BUF_SIZE = MAX_W * MAX_H * 3 + HEADER_SIZE;
+
 class FrameProvider : public QQuickImageProvider
 {
 public:
-    static constexpr int W          = 800;
-    static constexpr int H          = 600;
-    static constexpr int FRAME_SIZE = W * H * 3;
-    static constexpr int BUF_SIZE   = FRAME_SIZE + 5;
 
     explicit FrameProvider()
         : QQuickImageProvider(QQuickImageProvider::Image)
@@ -35,16 +36,22 @@ public:
 
         const uchar *data = static_cast<const uchar *>(m_data);
 
-        if (data[4]) return blackFrame(size);
+        //if (data[4]) return blackFrame(size);
 
-        quint32 counter;
-        memcpy(&counter, data, 4);
+        quint32 w, h;
+        memcpy(&w, data + 5, 4);
+        memcpy(&h, data + 9, 4);
 
-        QImage img(data + 5, W, H, W * 3, QImage::Format_RGB888);
+        if (w == 0 || h == 0 || w > MAX_W || h > MAX_H)
+            return blackFrame(size);
+
+        QImage img(data + HEADER_SIZE, w, h, w * 3, QImage::Format_RGB888);
         QImage copy = img.copy();
         if (size) *size = copy.size();
         return copy;
     }
+
+
 
 private:
     void        *m_data = nullptr;
@@ -117,7 +124,7 @@ private:
 
     QImage blackFrame(QSize *size)
     {
-        QImage img(W, H, QImage::Format_RGB888);
+        QImage img(640, 480, QImage::Format_RGB888);
         img.fill(Qt::black);
         if (size) *size = img.size();
         return img;

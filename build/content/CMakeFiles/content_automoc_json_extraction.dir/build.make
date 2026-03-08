@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_automoc_json_extraction.
 
@@ -67,8 +67,8 @@ include content/CMakeFiles/content_automoc_json_extraction.dir/compiler_depend.m
 include content/CMakeFiles/content_automoc_json_extraction.dir/progress.make
 
 content/CMakeFiles/content_automoc_json_extraction: /usr/lib/qt6/libexec/cmake_automoc_parser
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running AUTOMOC file extraction for target content"
-	cd /home/felix/eye_gymnastics/build/content && /usr/lib/qt6/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/felix/eye_gymnastics/build/content/CMakeFiles/content_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/felix/eye_gymnastics/build/content/CMakeFiles/content_autogen.dir/AutogenInfo.json --output-file-path /home/felix/eye_gymnastics/build/content/meta_types/content_json_file_list.txt --timestamp-file-path /home/felix/eye_gymnastics/build/content/meta_types/content_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/felix/eye_gymnastics/build/content/content_autogen/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running AUTOMOC file extraction for target content"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/lib/qt6/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_autogen.dir/AutogenInfo.json --output-file-path /home/felix/repo/eye_gymnastics/build/content/meta_types/content_json_file_list.txt --timestamp-file-path /home/felix/repo/eye_gymnastics/build/content/meta_types/content_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/felix/repo/eye_gymnastics/build/content/content_autogen/include
 
 content_automoc_json_extraction: content/CMakeFiles/content_automoc_json_extraction
 content_automoc_json_extraction: content/CMakeFiles/content_automoc_json_extraction.dir/build.make
@@ -79,10 +79,10 @@ content/CMakeFiles/content_automoc_json_extraction.dir/build: content_automoc_js
 .PHONY : content/CMakeFiles/content_automoc_json_extraction.dir/build
 
 content/CMakeFiles/content_automoc_json_extraction.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_automoc_json_extraction.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_automoc_json_extraction.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_automoc_json_extraction.dir/clean
 
 content/CMakeFiles/content_automoc_json_extraction.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_automoc_json_extraction.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_automoc_json_extraction.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_automoc_json_extraction.dir/depend
 

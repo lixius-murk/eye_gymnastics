@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/">
-    <file alias="qtquickcontrols2.conf">/home/felix/eye_gymnastics/qtquickcontrols2.conf</file>
+    <file alias="qtquickcontrols2.conf">/home/felix/repo/eye_gymnastics/qtquickcontrols2.conf</file>
   </qresource>
 </RCC>
 

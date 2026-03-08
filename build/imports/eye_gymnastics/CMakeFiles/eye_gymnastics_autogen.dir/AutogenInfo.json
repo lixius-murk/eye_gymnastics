@@ -1,29 +1,28 @@
 {
-	"BUILD_DIR" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen",
-	"CMAKE_BINARY_DIR" : "/home/felix/eye_gymnastics/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/felix/eye_gymnastics/imports/eye_gymnastics",
+	"BUILD_DIR" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen",
+	"CMAKE_BINARY_DIR" : "/home/felix/repo/eye_gymnastics/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/felix/repo/eye_gymnastics/imports/eye_gymnastics",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/felix/eye_gymnastics/imports/eye_gymnastics/CMakeLists.txt",
+		"/home/felix/repo/eye_gymnastics/imports/eye_gymnastics/CMakeLists.txt",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6QmlPluginTemplate.cpp.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/felix/eye_gymnastics",
-	"DEP_FILE" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/felix/repo/eye_gymnastics",
+	"DEP_FILE" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "eye_gymnastics_autogen/timestamp",
 	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
 		"QT_NETWORK_LIB",
-		"QT_NO_DEBUG",
 		"QT_QMLINTEGRATION_LIB",
 		"QT_QML_LIB"
 	],
@@ -36,7 +35,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/felix/eye_gymnastics/imports/eye_gymnastics",
+		"/home/felix/repo/eye_gymnastics/imports/eye_gymnastics",
 		"/usr/include/x86_64-linux-gnu/qt6/QtQml/6.4.2",
 		"/usr/include/x86_64-linux-gnu/qt6/QtQml/6.4.2/QtQml",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore/6.4.2",
@@ -73,38 +72,38 @@
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp"
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/felix/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/CMakeFiles/eye_gymnastics_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : [],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp",
-		"/home/felix/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp"
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_Constants_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_DirectoryFontLoader_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListModel_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qmlcache/eye_gymnastics_EventListSimulator_qml.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_eye_gymnastics_raw_qml_0.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/.rcc/qrc_qmake_eye_gymnastics.cpp",
+		"/home/felix/repo/eye_gymnastics/build/imports/eye_gymnastics/eye_gymnastics_qmltyperegistrations.cpp"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

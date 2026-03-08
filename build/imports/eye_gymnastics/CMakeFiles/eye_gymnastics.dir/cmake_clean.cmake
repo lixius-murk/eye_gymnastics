@@ -22,8 +22,8 @@ file(REMOVE_RECURSE
   "eye_gymnastics_qmltyperegistrations.cpp"
   "libeye_gymnastics.a"
   "libeye_gymnastics.pdb"
-  "meta_types/qt6eye_gymnastics_release_metatypes.json"
-  "meta_types/qt6eye_gymnastics_release_metatypes.json.gen"
+  "meta_types/qt6eye_gymnastics_debug_metatypes.json"
+  "meta_types/qt6eye_gymnastics_debug_metatypes.json.gen"
 )
 
 # Per-language clean rules from dependency scanning.

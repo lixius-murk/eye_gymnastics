@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for eye_gymnasticsApp_qmlimportscan.
 
@@ -72,9 +72,9 @@ CMakeFiles/eye_gymnasticsApp_qmlimportscan: .qt_plugins/Qt6_QmlPlugins_Imports_e
 .qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake: .rcc/configuration.qrc
 .qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake: .rcc/qmake_Main.qrc
 .qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake: .rcc/eye_gymnasticsApp_raw_qml_0.qrc
-.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake: /home/felix/eye_gymnastics/main.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for eye_gymnasticsApp"
-	cd /home/felix/eye_gymnastics && /usr/lib/qt6/libexec/qmlimportscanner @/home/felix/eye_gymnastics/build/.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.rsp
+.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake: /home/felix/repo/eye_gymnastics/main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for eye_gymnasticsApp"
+	cd /home/felix/repo/eye_gymnastics && /usr/lib/qt6/libexec/qmlimportscanner @/home/felix/repo/eye_gymnastics/build/.qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.rsp
 
 eye_gymnasticsApp_qmlimportscan: .qt_plugins/Qt6_QmlPlugins_Imports_eye_gymnasticsApp.cmake
 eye_gymnasticsApp_qmlimportscan: CMakeFiles/eye_gymnasticsApp_qmlimportscan
@@ -90,6 +90,6 @@ CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/clean:
 .PHONY : CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/clean
 
 CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/eye_gymnasticsApp_qmlimportscan.dir/depend
 

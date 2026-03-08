@@ -1,7 +1,7 @@
 contentplugin_autogen/timestamp: \
-	/home/felix/eye_gymnastics/build/content/contentplugin_autogen/moc_predefs.h \
-	/home/felix/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp \
-	/home/felix/eye_gymnastics/content/CMakeLists.txt \
+	/home/felix/repo/eye_gymnastics/build/content/contentplugin_autogen/moc_predefs.h \
+	/home/felix/repo/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp \
+	/home/felix/repo/eye_gymnastics/content/CMakeLists.txt \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/assert.h \

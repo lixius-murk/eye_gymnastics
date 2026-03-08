@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/eye_gymnasticsApp_qmltyperegistration"
   "eye_gymnasticsapp_qmltyperegistrations.cpp"
-  "meta_types/qt6eye_gymnasticsapp_release_metatypes.json"
-  "meta_types/qt6eye_gymnasticsapp_release_metatypes.json.gen"
+  "meta_types/qt6eye_gymnasticsapp_debug_metatypes.json"
+  "meta_types/qt6eye_gymnasticsapp_debug_metatypes.json.gen"
   "qml/Main/eye_gymnasticsApp.qmltypes"
 )
 

@@ -1,5 +1,5 @@
-/home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_PythonController.cpp: /home/felix/eye_gymnastics/src/PythonController.h \
-  /home/felix/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
+/home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/UVLADIE3JM/moc_PythonController.cpp: /home/felix/repo/eye_gymnastics/src/PythonController.h \
+  /home/felix/repo/eye_gymnastics/build/eye_gymnasticsApp_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

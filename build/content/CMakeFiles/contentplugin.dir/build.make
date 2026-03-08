@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Include any dependencies generated for this target.
 include content/CMakeFiles/contentplugin.dir/depend.make
@@ -72,30 +72,30 @@ include content/CMakeFiles/contentplugin.dir/flags.make
 content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o: content/CMakeFiles/contentplugin.dir/flags.make
 content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o: content/contentplugin_autogen/mocs_compilation.cpp
 content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o: content/CMakeFiles/contentplugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o -MF CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o -c /home/felix/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o -MF CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp
 
 content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp > CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp > CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.i
 
 content/CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp -o CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/contentplugin_autogen/mocs_compilation.cpp -o CMakeFiles/contentplugin.dir/contentplugin_autogen/mocs_compilation.cpp.s
 
 content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o: content/CMakeFiles/contentplugin.dir/flags.make
 content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o: content/contentplugin_contentPlugin.cpp
 content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o: content/CMakeFiles/contentplugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o -MF CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o.d -o CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o -c /home/felix/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o -MF CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o.d -o CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o -c /home/felix/repo/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp
 
 content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.i"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp > CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.i
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/felix/repo/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp > CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.i
 
 content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.s"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp -o CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.s
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/felix/repo/eye_gymnastics/build/content/contentplugin_contentPlugin.cpp -o CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.s
 
 # Object files for target contentplugin
 contentplugin_OBJECTS = \
@@ -109,19 +109,19 @@ qml/content/libcontentplugin.a: content/CMakeFiles/contentplugin.dir/contentplug
 qml/content/libcontentplugin.a: content/CMakeFiles/contentplugin.dir/contentplugin_contentPlugin.cpp.o
 qml/content/libcontentplugin.a: content/CMakeFiles/contentplugin.dir/build.make
 qml/content/libcontentplugin.a: content/CMakeFiles/contentplugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../qml/content/libcontentplugin.a"
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/contentplugin.dir/cmake_clean_target.cmake
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/contentplugin.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library ../qml/content/libcontentplugin.a"
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/contentplugin.dir/cmake_clean_target.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/contentplugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 content/CMakeFiles/contentplugin.dir/build: qml/content/libcontentplugin.a
 .PHONY : content/CMakeFiles/contentplugin.dir/build
 
 content/CMakeFiles/contentplugin.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/contentplugin.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/contentplugin.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/contentplugin.dir/clean
 
 content/CMakeFiles/contentplugin.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/contentplugin.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/contentplugin.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/contentplugin.dir/depend
 

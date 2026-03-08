@@ -1,8 +1,8 @@
 <RCC>
   <qresource prefix="/qt/qml/content/">
-    <file alias="App.qml">/home/felix/eye_gymnastics/content/App.qml</file>
-    <file alias="Screen01.ui.qml">/home/felix/eye_gymnastics/content/Screen01.ui.qml</file>
-    <file alias="fonts/fonts.txt">/home/felix/eye_gymnastics/content/fonts/fonts.txt</file>
+    <file alias="App.qml">/home/felix/repo/eye_gymnastics/content/App.qml</file>
+    <file alias="Screen01.ui.qml">/home/felix/repo/eye_gymnastics/content/Screen01.ui.qml</file>
+    <file alias="fonts/fonts.txt">/home/felix/repo/eye_gymnastics/content/fonts/fonts.txt</file>
   </qresource>
 </RCC>
 

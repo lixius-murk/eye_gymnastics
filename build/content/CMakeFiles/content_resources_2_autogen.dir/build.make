@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_resources_2_autogen.
 
@@ -70,9 +70,9 @@ content/CMakeFiles/content_resources_2_autogen: content/content_resources_2_auto
 
 content/content_resources_2_autogen/timestamp: /usr/lib/qt6/libexec/moc
 content/content_resources_2_autogen/timestamp: content/CMakeFiles/content_resources_2_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target content_resources_2"
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E cmake_autogen /home/felix/eye_gymnastics/build/content/CMakeFiles/content_resources_2_autogen.dir/AutogenInfo.json Release
-	cd /home/felix/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/eye_gymnastics/build/content/content_resources_2_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target content_resources_2"
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E cmake_autogen /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_resources_2_autogen.dir/AutogenInfo.json Debug
+	cd /home/felix/repo/eye_gymnastics/build/content && /usr/bin/cmake -E touch /home/felix/repo/eye_gymnastics/build/content/content_resources_2_autogen/timestamp
 
 content_resources_2_autogen: content/CMakeFiles/content_resources_2_autogen
 content_resources_2_autogen: content/content_resources_2_autogen/timestamp
@@ -84,10 +84,10 @@ content/CMakeFiles/content_resources_2_autogen.dir/build: content_resources_2_au
 .PHONY : content/CMakeFiles/content_resources_2_autogen.dir/build
 
 content/CMakeFiles/content_resources_2_autogen.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_resources_2_autogen.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_resources_2_autogen.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_resources_2_autogen.dir/clean
 
 content/CMakeFiles/content_resources_2_autogen.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_resources_2_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_resources_2_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_resources_2_autogen.dir/depend
 

@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_PythonController_t {
-    uint offsetsAndSizes[18];
+    uint offsetsAndSizes[22];
     char stringdata0[17];
     char stringdata1[15];
     char stringdata2[1];
@@ -34,8 +34,10 @@ struct qt_meta_stringdata_PythonController_t {
     char stringdata4[13];
     char stringdata5[7];
     char stringdata6[9];
-    char stringdata7[13];
-    char stringdata8[8];
+    char stringdata7[6];
+    char stringdata8[7];
+    char stringdata9[13];
+    char stringdata10[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_PythonController_t::offsetsAndSizes) + ofs), len 
@@ -48,8 +50,10 @@ Q_CONSTINIT static const qt_meta_stringdata_PythonController_t qt_meta_stringdat
         QT_MOC_LITERAL(47, 12),  // "rendererType"
         QT_MOC_LITERAL(60, 6),  // "blType"
         QT_MOC_LITERAL(67, 8),  // "movement"
-        QT_MOC_LITERAL(76, 12),  // "stopRenderer"
-        QT_MOC_LITERAL(89, 7)   // "running"
+        QT_MOC_LITERAL(76, 5),  // "width"
+        QT_MOC_LITERAL(82, 6),  // "height"
+        QT_MOC_LITERAL(89, 12),  // "stopRenderer"
+        QT_MOC_LITERAL(102, 7)   // "running"
     },
     "PythonController",
     "runningChanged",
@@ -58,6 +62,8 @@ Q_CONSTINIT static const qt_meta_stringdata_PythonController_t qt_meta_stringdat
     "rendererType",
     "blType",
     "movement",
+    "width",
+    "height",
     "stopRenderer",
     "running"
 };
@@ -71,7 +77,7 @@ Q_CONSTINIT static const uint qt_meta_data_PythonController[] = {
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
-       1,   41, // properties
+       1,   45, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -81,18 +87,18 @@ Q_CONSTINIT static const uint qt_meta_data_PythonController[] = {
        1,    0,   32,    2, 0x06,    2 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    3,   33,    2, 0x02,    3 /* Public */,
-       7,    0,   40,    2, 0x02,    7 /* Public */,
+       3,    5,   33,    2, 0x02,    3 /* Public */,
+       9,    0,   44,    2, 0x02,    9 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
 
  // methods: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    4,    5,    6,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    4,    5,    6,    7,    8,
     QMetaType::Void,
 
  // properties: name, type, flags
-       8, QMetaType::Bool, 0x00015001, uint(0), 0,
+      10, QMetaType::Bool, 0x00015001, uint(0), 0,
 
        0        // eod
 };
@@ -115,6 +121,8 @@ Q_CONSTINIT const QMetaObject PythonController::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'stopRenderer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -128,7 +136,7 @@ void PythonController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         (void)_t;
         switch (_id) {
         case 0: _t->runningChanged(); break;
-        case 1: _t->startRenderer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 1: _t->startRenderer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5]))); break;
         case 2: _t->stopRenderer(); break;
         default: ;
         }

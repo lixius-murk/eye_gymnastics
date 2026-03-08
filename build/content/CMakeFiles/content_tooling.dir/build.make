@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/felix/eye_gymnastics
+CMAKE_SOURCE_DIR = /home/felix/repo/eye_gymnastics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/felix/eye_gymnastics/build
+CMAKE_BINARY_DIR = /home/felix/repo/eye_gymnastics/build
 
 # Utility rule file for content_tooling.
 
@@ -66,17 +66,17 @@ include content/CMakeFiles/content_tooling.dir/compiler_depend.make
 # Include the progress variables for this target.
 include content/CMakeFiles/content_tooling.dir/progress.make
 
-qml/content/App.qml: /home/felix/eye_gymnastics/content/App.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../qml/content/App.qml"
-	cd /home/felix/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/content/App.qml /home/felix/eye_gymnastics/build/qml/content/App.qml
+qml/content/App.qml: /home/felix/repo/eye_gymnastics/content/App.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../qml/content/App.qml"
+	cd /home/felix/repo/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/content/App.qml /home/felix/repo/eye_gymnastics/build/qml/content/App.qml
 
-qml/content/Screen01.ui.qml: /home/felix/eye_gymnastics/content/Screen01.ui.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../qml/content/Screen01.ui.qml"
-	cd /home/felix/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/content/Screen01.ui.qml /home/felix/eye_gymnastics/build/qml/content/Screen01.ui.qml
+qml/content/Screen01.ui.qml: /home/felix/repo/eye_gymnastics/content/Screen01.ui.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ../qml/content/Screen01.ui.qml"
+	cd /home/felix/repo/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/content/Screen01.ui.qml /home/felix/repo/eye_gymnastics/build/qml/content/Screen01.ui.qml
 
-qml/content/fonts/fonts.txt: /home/felix/eye_gymnastics/content/fonts/fonts.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../qml/content/fonts/fonts.txt"
-	cd /home/felix/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/eye_gymnastics/content/fonts/fonts.txt /home/felix/eye_gymnastics/build/qml/content/fonts/fonts.txt
+qml/content/fonts/fonts.txt: /home/felix/repo/eye_gymnastics/content/fonts/fonts.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/felix/repo/eye_gymnastics/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ../qml/content/fonts/fonts.txt"
+	cd /home/felix/repo/eye_gymnastics/content && /usr/bin/cmake -E copy /home/felix/repo/eye_gymnastics/content/fonts/fonts.txt /home/felix/repo/eye_gymnastics/build/qml/content/fonts/fonts.txt
 
 content_tooling: qml/content/App.qml
 content_tooling: qml/content/Screen01.ui.qml
@@ -89,10 +89,10 @@ content/CMakeFiles/content_tooling.dir/build: content_tooling
 .PHONY : content/CMakeFiles/content_tooling.dir/build
 
 content/CMakeFiles/content_tooling.dir/clean:
-	cd /home/felix/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_tooling.dir/cmake_clean.cmake
+	cd /home/felix/repo/eye_gymnastics/build/content && $(CMAKE_COMMAND) -P CMakeFiles/content_tooling.dir/cmake_clean.cmake
 .PHONY : content/CMakeFiles/content_tooling.dir/clean
 
 content/CMakeFiles/content_tooling.dir/depend:
-	cd /home/felix/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/eye_gymnastics /home/felix/eye_gymnastics/content /home/felix/eye_gymnastics/build /home/felix/eye_gymnastics/build/content /home/felix/eye_gymnastics/build/content/CMakeFiles/content_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/felix/repo/eye_gymnastics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/felix/repo/eye_gymnastics /home/felix/repo/eye_gymnastics/content /home/felix/repo/eye_gymnastics/build /home/felix/repo/eye_gymnastics/build/content /home/felix/repo/eye_gymnastics/build/content/CMakeFiles/content_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : content/CMakeFiles/content_tooling.dir/depend
 

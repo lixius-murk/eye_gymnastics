@@ -375,8 +375,8 @@ Q_UNUSED(argumentsPtr)
 QString r11_1;
 QObject *r7_1;
 QString r2_2;
-QObject *r2_1;
 QUrl r2_3;
+QObject *r2_1;
 QUrl r10_1;
 // generate_LoadQmlContextPropertyLookup
 while (!aotContext->loadSingletonLookup(0, &r2_1)) {
@@ -449,8 +449,8 @@ Q_UNUSED(aotContext)
 Q_UNUSED(argumentsPtr)
 QString r7_1;
 QString r8_1;
-QStringList r2_2;
 QString r2_1;
+QStringList r2_2;
 // generate_LoadRuntimeString
 r2_1 = QStringLiteral("*.ttf");
 // generate_StoreReg
