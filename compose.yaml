@@ -1,0 +1,15 @@
+services:
+  eye_gymnastics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: eye-gymnastics
+    volumes:
+      - .:/workspace                      # mount project live
+      - /tmp/.X11-unix:/tmp/.X11-unix     # X11 for GUI
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host                    # needed for X11 + shared memory
+    stdin_open: true
+    tty: true
+    command: /bin/bash
