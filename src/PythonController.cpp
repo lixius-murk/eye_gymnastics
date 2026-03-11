@@ -5,12 +5,14 @@
 #include <QGuiApplication>
 #include <QScreen>
 #include <QDebug>
+#include <QString>
+
 
 PythonController::PythonController(QObject *parent) : QObject(parent)
 {
     m_process.setProcessChannelMode(QProcess::MergedChannels);
     connect(&m_process, &QProcess::readyReadStandardOutput, [this](){
-        qDebug() << "Python:" << m_process.readAllStandardOutput();
+        //qDebug() << "Python:" << m_process.readAllStandardOutput();
     });
     connect(&m_process, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
             [this](int code, QProcess::ExitStatus){
@@ -37,14 +39,24 @@ void PythonController::startRenderer(const QString &rendererType,
         dir.cdUp();
 
     QString projectRoot = dir.absolutePath();
-    QString cleanScript = projectRoot + "/clean.sh";
     QString workDir = projectRoot + "/python_renderer";
-    QString python = workDir + "/.venv/bin/python3";
-    QString script = workDir + "/renderer.py";
+    #ifdef Q_OS_WIN
+        QString python      = workDir + "/.venv/Scripts/python.exe";
+        QString cleanScript = projectRoot + "/clean.bat";
+        QProcess::execute("cmd", {"/c", cleanScript});
+        QString venvBin = workDir + "/.venv/Scripts";
+    #else
+        QString python      = workDir + "/.venv/bin/python3";
+        QString cleanScript = projectRoot + "/clean.sh";
+        QProcess::execute("bash", {cleanScript});
+        QString venvBin = workDir + "/.venv/bin";
+    #endif
 
     qDebug() << "Project root:" << projectRoot;
 
-    QProcess::execute("bash", {cleanScript});
+    QString script = workDir + "/renderer.py";
+
+    qDebug() << "Project root:" << projectRoot;
 
     if (!QFile::exists(python)) python = "python3";
     if (!QFile::exists(script)) { qWarning() << "Script not found:" << script; return; }
@@ -54,8 +66,8 @@ void PythonController::startRenderer(const QString &rendererType,
     QString h = QString::number(height);
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
     env.insert("VIRTUAL_ENV", workDir + "/.venv");
-    env.insert("PATH",        workDir + "/.venv/bin:" + env.value("PATH"));
-    env.insert("PYTHONPATH",  workDir);
+    env.insert("PATH", workDir + "/.venv/bin:" + env.value("PATH"));
+    env.insert("PYTHONPATH", workDir);
 
     m_process.setWorkingDirectory(workDir);
     m_process.setProcessEnvironment(env);

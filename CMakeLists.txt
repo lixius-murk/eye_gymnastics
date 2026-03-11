@@ -6,11 +6,16 @@ option(BUILD_QDS_COMPONENTS "Build design studio components" ON)
 project(eye_gymnasticsApp LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
-
+if(WIN32)
+    find_package(Qt6 REQUIRED COMPONENTS MultimediaWidgets)
+endif()
 find_package(Qt6 6.2 REQUIRED COMPONENTS Core Gui Qml Quick Multimedia)
 if (Qt6_VERSION VERSION_GREATER_EQUAL 6.3)
     qt_standard_project_setup()
 endif()
+
+
+
 
 qt_add_executable(eye_gymnasticsApp src/main.cpp
     src/PythonController.h src/PythonController.cpp
