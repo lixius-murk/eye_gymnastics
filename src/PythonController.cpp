@@ -10,7 +10,7 @@ PythonController::PythonController(QObject *parent) : QObject(parent)
 {
     m_process.setProcessChannelMode(QProcess::MergedChannels);
     connect(&m_process, &QProcess::readyReadStandardOutput, [this](){
-        qDebug() << "Python:" << m_process.readAllStandardOutput();
+        //qDebug() << "Python:" << m_process.readAllStandardOutput();
     });
     connect(&m_process, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
             [this](int code, QProcess::ExitStatus){
