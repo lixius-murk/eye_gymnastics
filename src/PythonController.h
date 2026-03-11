@@ -1,6 +1,8 @@
 #ifndef PYTHONCONTROLLER_H
 #define PYTHONCONTROLLER_H
 
+
+
 #include <QObject>
 #include <QProcess>
 
