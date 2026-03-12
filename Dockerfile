@@ -1,7 +1,4 @@
-# syntax=docker/dockerfile:1
-# Eye Gymnastics — Qt6 + Python OpenGL build & run environment
-# Base: Ubuntu 22.04 (required for Qt 6.5 + GStreamer + OpenGL)
-
+#
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -9,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV TZ=UTC
 
-# ── System dependencies ────────────────────────────────────────────────────────
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     # Build tools
     build-essential \
@@ -58,20 +55,38 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     p7zip-full \
     && rm -rf /var/lib/apt/lists/*
 
-# ── Install Qt 6.5.0 via aqtinstall ───────────────────────────────────────────
+
 RUN pip3 install aqtinstall
 
-RUN aqt install-qt linux desktop 6.5.0 gcc_64 \
-    --outputdir /opt/Qt \
-    --modules qtmultimedia qtshadertools
+RUN mkdir -p /root/.config/aqt && cat > /root/.config/aqt/settings.ini << 'EOF'
+[requests]
+max_retries_to_retrieve_hash = 0
+connection_timeout = 300
+response_timeout = 300
 
+[mirrors]
+trusted_mirrors = https://download.qt.io
+EOF
+
+ENV XDG_CONFIG_HOME=/root/.config
+
+#RUN aqt install-qt linux desktop 6.5.0 gcc_64 \
+ #   --outputdir /opt/Qt \
+  #  --modules qtmultimedia qtshadertools
 ENV Qt6_DIR=/opt/Qt/6.5.0/gcc_64
 ENV PATH=/opt/Qt/6.5.0/gcc_64/bin:$PATH
 ENV LD_LIBRARY_PATH=/opt/Qt/6.5.0/gcc_64/lib:$LD_LIBRARY_PATH
 ENV QML_IMPORT_PATH=/opt/Qt/6.5.0/gcc_64/qml
 ENV QT_PLUGIN_PATH=/opt/Qt/6.5.0/gcc_64/plugins
 
-# ── Python venv with renderer dependencies ────────────────────────────────────
+   
+ENV Qt6_DIR=/opt/Qt/6.5.0/gcc_64
+ENV PATH=/opt/Qt/6.5.0/gcc_64/bin:$PATH
+ENV LD_LIBRARY_PATH=/opt/Qt/6.5.0/gcc_64/lib:$LD_LIBRARY_PATH
+ENV QML_IMPORT_PATH=/opt/Qt/6.5.0/gcc_64/qml
+ENV QT_PLUGIN_PATH=/opt/Qt/6.5.0/gcc_64/plugins
+
+
 RUN python3.10 -m venv /opt/venv
 ENV PATH=/opt/venv/bin:$PATH
 ENV VIRTUAL_ENV=/opt/venv
@@ -79,10 +94,10 @@ ENV VIRTUAL_ENV=/opt/venv
 COPY python_renderer/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
-# ── Workspace ─────────────────────────────────────────────────────────────────
+
 WORKDIR /workspace
 
-# ── Default: interactive shell for local dev ──────────────────────────────────
+
 # Local dev usage:
 #   docker run -it \
 #     -e DISPLAY=$DISPLAY \
@@ -90,5 +105,5 @@ WORKDIR /workspace
 #     -v ~/repo/eye_gymnastics:/workspace \
 #     eye-gymnastics
 #
-# CI usage: override CMD with build commands
+
 CMD ["/bin/bash"]

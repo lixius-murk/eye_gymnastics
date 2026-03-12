@@ -1,0 +1,16 @@
+services:
+  eye_gymnastics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: eye-gymnastics
+    volumes:
+      - .:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/Qt/6.5.0/gcc_64:/opt/Qt/6.5.0/gcc_64:ro 
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: /bin/bash
