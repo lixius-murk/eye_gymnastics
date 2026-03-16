@@ -1,15 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
 
-
-
-
-
 pip install aqtinstall
-aqt install-qt windows desktop 6.5.0 win64_msvc2019_64 ^
+
+python -m aqt install-qt windows desktop 6.5.0 win64_msvc2019_64 ^
     --outputdir C:\Qt ^
     --modules qtmultimedia qtshadertools
-
+   
 if %ERRORLEVEL% neq 0 (
     echo ERROR: Qt installation failed
     exit /b 1
