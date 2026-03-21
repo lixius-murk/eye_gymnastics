@@ -14,6 +14,12 @@ from datamanager.datamanager import DataManager
 
 from sharedMemoryFileWriter import SharedMemoryWriter
 
+# стрелка часов
+# самолёт по небу
+# звезда на небе
+# змейка
+# жучок на листе
+
 
 def create_fbo(w, h):
     tex = glGenTextures(1)
