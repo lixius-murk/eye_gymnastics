@@ -68,9 +68,9 @@ include CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: .rcc/qmlcache/eye_gymnasticsApp_qmlcache_loader.cpp
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
+CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Multimedia.so.6.4.2
-CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/content/libcontentplugin.a
 CMakeFiles/eye_gymnasticsApp_autogen_timestamp_deps: qml/eye_gymnastics/libeye_gymnasticsplugin.a
 

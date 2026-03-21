@@ -54,7 +54,7 @@ ApplicationWindow {
                         Image {
                             id: liveStream
                             anchors.fill: parent
-                            fillMode: Image.PreserveAspectFit
+                            fillMode: Image.Stretch
                             source: "image://frameprovider/frame_" + renderRect.frameTag
                             cache: false
                         }

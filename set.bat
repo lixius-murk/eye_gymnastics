@@ -11,20 +11,6 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-echo Deploying Qt DLLs...
-set WINDEPLOYQT=C:\Qt\6.5.0\msvc2019_64\bin\windeployqt6.exe
-
-if not exist "%WINDEPLOYQT%" (
-    echo ERROR: windeployqt6.exe not found at %WINDEPLOYQT%
-    exit /b 1
-)
-
-"%WINDEPLOYQT%" ^
-    --release ^
-    --qmldir . ^
-    --no-translations ^
-    build\Release\eye_gymnasticsApp.exe
-
 cd python_renderer
 py -3.10 -m venv .venv
 .venv\Scripts\pip install ^
@@ -63,7 +49,19 @@ if %ERRORLEVEL% neq 0 (
     echo ERROR: Build failed
     exit /b 1
 )
-
+echo Deploying Qt DLLs...
+set WINDEPLOYQT=C:\Qt\6.5.0\msvc2019_64\bin\windeployqt6.exe
+ 
+if not exist "%WINDEPLOYQT%" (
+    echo ERROR: windeployqt6.exe not found at %WINDEPLOYQT%
+    exit /b 1
+)
+ 
+"%WINDEPLOYQT%" ^
+    --release ^
+    --qmldir . ^
+    --no-translations ^
+    build\Release\eye_gymnasticsApp.exe
 
 COPY build.sh /usr/local/bin/build.sh
 RUN chmod +x /usr/local/bin/build.sh

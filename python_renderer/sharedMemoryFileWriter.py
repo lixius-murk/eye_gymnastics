@@ -20,7 +20,7 @@ class SharedMemoryWriter:
         self.frame_id = 0
 
         if sys.platform == "win32":
-            self.map_file = mmap.mmap(-1, self.buffer_size, tagname=f"Global\\{name}")
+            self.map_file = mmap.mmap(-1, self.buffer_size, tagname=f"Local\\{name}")
         else:
             self.path = f"/dev/shm/{name}"
             try:

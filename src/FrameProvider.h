@@ -19,6 +19,8 @@ static constexpr int MAX_W = 3840;
 static constexpr int MAX_H = 2160;
 static constexpr int BUF_SIZE = MAX_W * MAX_H * 3 + HEADER_SIZE;
 
+
+
 class FrameProvider : public QQuickImageProvider
 {
 public:
@@ -74,13 +76,18 @@ private:
     bool ensureAttached()
     {
         if (m_data) return true;
-
-        m_hMap = OpenFileMappingA(FILE_MAP_READ, FALSE, "Global\\frames");
+        m_hMap = OpenFileMappingA(FILE_MAP_READ, FALSE, "Local\\frames");
         if (!m_hMap) return false;
 
-        m_data = MapViewOfFile(m_hMap, FILE_MAP_READ, 0, 0, BUF_SIZE);
-        if (!m_data) { CloseHandle(m_hMap); m_hMap = nullptr; return false; }
-
+        // pass 0 to map the whole object regardless of size
+        m_data = MapViewOfFile(m_hMap, FILE_MAP_READ, 0, 0, 0);
+        if (!m_data) {
+            qDebug() << "MapViewOfFile failed, error:" << GetLastError();
+            CloseHandle(m_hMap);
+            m_hMap = nullptr;
+            return false;
+        }
+        qDebug() << "Shared memory attached successfully";
         return true;
     }
 

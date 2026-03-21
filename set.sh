@@ -1,12 +1,11 @@
 #!/bin/bash
-
 set -e
 
-xhost + local:docker
-
-
-# Add user to docker group (requires logout/login to take effect)
+xhost +local:docker
 sudo usermod -aG docker $USER
 
-# Build and enter container
-docker compose up --build
+
+docker compose build
+
+echo "Starting interactive shell in container..."
+docker compose run --rm eye_gymnastics
