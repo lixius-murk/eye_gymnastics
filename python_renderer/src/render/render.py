@@ -6,6 +6,7 @@ from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 import numpy as np
+import PIL as pil
 
 from enumData.bltype import blType
 
@@ -17,8 +18,56 @@ from sharedMemoryFileWriter import SharedMemoryWriter
 # стрелка часов
 # самолёт по небу
 # звезда на небе
-# змейка
+# змейка``
 # жучок на листе
+
+ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../assets")
+
+
+#todo: cach of images
+class SceneSetter:
+    def __init__(self):
+        self.textures = {}
+    def load_texture(self, filename:str, tint:np.double[3]):
+        if filename in self.textures:
+            return self.textures[filename]
+        
+        path = os.path.join(ASSETS_DIR, "textures", filename)
+        img = pil.open(path).convert("RGBA")
+        img_array = np.array(img, dtype=np.float32)
+
+        img_array[:, :, 0] *= tint[0]
+        img_array[:, :, 1] *= tint[1]
+        img_array[:, :, 2] *= tint[2]
+        img_array = np.clip(img_array, 0, 255).astype(np.uint8)
+
+        tex_id = glGenTextures(1)
+        glBindTexture(GL_TEXTURE_2D, tex_id)
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA,
+                     img.width, img.height, 0,
+                     GL_RGBA, GL_UNSIGNED_BYTE, img_array)
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
+        glBindTexture(GL_TEXTURE_2D, 0)
+
+        self.textures[filename] = tex_id
+        return tex_id
+    def load_scene(self, scene_json_path, bl_type):
+        with open(scene_json_path) as f:
+            data = json.load(f)
+        
+        scene_name = list(data.keys())[0]
+        scene = data[scene_name]
+        bl_key = bl_type.name
+
+        return {
+            "bg_tex":self.load_texture(
+                        scene["bg"]["texture"],
+                        scene["bg"]["tint"][bl_key]),
+            "object_tex":self.load_texture(
+                        scene["object"]["texture"],
+                        scene["object"]["tint"][bl_key]),
+        }
 
 
 def create_fbo(w, h):
