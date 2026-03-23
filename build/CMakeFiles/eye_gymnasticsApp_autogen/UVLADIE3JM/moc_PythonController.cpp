@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_PythonController_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[24];
     char stringdata0[17];
     char stringdata1[15];
     char stringdata2[1];
@@ -35,9 +35,10 @@ struct qt_meta_stringdata_PythonController_t {
     char stringdata5[7];
     char stringdata6[9];
     char stringdata7[6];
-    char stringdata8[7];
-    char stringdata9[13];
-    char stringdata10[8];
+    char stringdata8[6];
+    char stringdata9[7];
+    char stringdata10[13];
+    char stringdata11[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_PythonController_t::offsetsAndSizes) + ofs), len 
@@ -50,10 +51,11 @@ Q_CONSTINIT static const qt_meta_stringdata_PythonController_t qt_meta_stringdat
         QT_MOC_LITERAL(47, 12),  // "rendererType"
         QT_MOC_LITERAL(60, 6),  // "blType"
         QT_MOC_LITERAL(67, 8),  // "movement"
-        QT_MOC_LITERAL(76, 5),  // "width"
-        QT_MOC_LITERAL(82, 6),  // "height"
-        QT_MOC_LITERAL(89, 12),  // "stopRenderer"
-        QT_MOC_LITERAL(102, 7)   // "running"
+        QT_MOC_LITERAL(76, 5),  // "scene"
+        QT_MOC_LITERAL(82, 5),  // "width"
+        QT_MOC_LITERAL(88, 6),  // "height"
+        QT_MOC_LITERAL(95, 12),  // "stopRenderer"
+        QT_MOC_LITERAL(108, 7)   // "running"
     },
     "PythonController",
     "runningChanged",
@@ -62,6 +64,7 @@ Q_CONSTINIT static const qt_meta_stringdata_PythonController_t qt_meta_stringdat
     "rendererType",
     "blType",
     "movement",
+    "scene",
     "width",
     "height",
     "stopRenderer",
@@ -77,7 +80,7 @@ Q_CONSTINIT static const uint qt_meta_data_PythonController[] = {
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
-       1,   45, // properties
+       1,   47, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -87,18 +90,18 @@ Q_CONSTINIT static const uint qt_meta_data_PythonController[] = {
        1,    0,   32,    2, 0x06,    2 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    5,   33,    2, 0x02,    3 /* Public */,
-       9,    0,   44,    2, 0x02,    9 /* Public */,
+       3,    6,   33,    2, 0x02,    3 /* Public */,
+      10,    0,   46,    2, 0x02,   10 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
 
  // methods: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    4,    5,    6,    7,    8,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    4,    5,    6,    7,    8,    9,
     QMetaType::Void,
 
  // properties: name, type, flags
-      10, QMetaType::Bool, 0x00015001, uint(0), 0,
+      11, QMetaType::Bool, 0x00015001, uint(0), 0,
 
        0        // eod
 };
@@ -121,6 +124,7 @@ Q_CONSTINIT const QMetaObject PythonController::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'stopRenderer'
@@ -136,7 +140,7 @@ void PythonController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         (void)_t;
         switch (_id) {
         case 0: _t->runningChanged(); break;
-        case 1: _t->startRenderer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5]))); break;
+        case 1: _t->startRenderer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6]))); break;
         case 2: _t->stopRenderer(); break;
         default: ;
         }

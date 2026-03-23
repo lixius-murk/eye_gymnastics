@@ -12,7 +12,7 @@ PythonController::PythonController(QObject *parent) : QObject(parent)
 {
     m_process.setProcessChannelMode(QProcess::MergedChannels);
     connect(&m_process, &QProcess::readyReadStandardOutput, [this](){
-        //qDebug() << "Python:" << m_process.readAllStandardOutput();
+        qDebug() << "Python:" << m_process.readAllStandardOutput();
     });
     connect(&m_process, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished),
             [this](int code, QProcess::ExitStatus){
@@ -28,6 +28,7 @@ PythonController::PythonController(QObject *parent) : QObject(parent)
 void PythonController::startRenderer(const QString &rendererType,
                                      const QString &blType,
                                      const QString &movement,
+                                     const QString &scene,
                                      int width,
                                      int height)
 {
@@ -71,7 +72,7 @@ void PythonController::startRenderer(const QString &rendererType,
 
     m_process.setWorkingDirectory(workDir);
     m_process.setProcessEnvironment(env);
-    m_process.start(python, {script, rendererType, blType, movement, w, h});
+    m_process.start(python, {script, rendererType, blType, movement, scene, w, h});
 }
 
 void PythonController::stopRenderer()

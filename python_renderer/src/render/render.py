@@ -9,7 +9,8 @@ import numpy as np
 from PIL import Image
 
 import json
-import src.render.scenes
+from src.render.scenes import scenes
+from src.render.scenes import assert_dir
 
 from enumData.bltype import blType
 
@@ -24,11 +25,8 @@ from sharedMemoryFileWriter import SharedMemoryWriter
 # змейка``
 # жучок на листе
 
-ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../assets")
-SCENE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../scenes")
 
 #todo автоматизация перевода строки в директорию
-
 
 
 
@@ -40,7 +38,7 @@ class SceneSetter:
         if filename in self.textures:
             return self.textures[filename]
         
-        path = os.path.join(ASSETS_DIR, filename)
+        path = os.path.join(assert_dir(filename))
         img = Image.open(path).convert("RGBA")
         img_array = np.array(img, dtype=np.float32)
 
@@ -66,7 +64,6 @@ class SceneSetter:
         
         scene_name = list(data.keys())[0]
         scene = data[scene_name]
-        #todo giving bl type
         bl_key = bl_type.name
 
         return {
@@ -127,8 +124,7 @@ class BaseRenderer:
 
     def draw_scene(self, position):
         w, h = self.display_size
-        self.scene_data = self.scene_setter.load_scene(self.scene_type, self.bl_type)
-        # координаты позиции [-ground_size..ground_size] -> пиксели
+        #self.scene_data = self.scene_setter.load_scene(self.scene_type, self.bl_type)
         px = (position[0] / (self.ground_size * self.edge_margin) + 1.0) * 0.5 * w
         py = (position[2] / (self.ground_size * self.edge_margin) + 1.0) * 0.5 * h
 
@@ -136,7 +132,6 @@ class BaseRenderer:
 
         glClear(GL_COLOR_BUFFER_BIT)
 
-        # 1. фон — на весь экран
         glEnable(GL_TEXTURE_2D)
         glColor3f(1, 1, 1)
         glBindTexture(GL_TEXTURE_2D, self.scene_data["bg_tex"])
@@ -147,7 +142,6 @@ class BaseRenderer:
         glTexCoord2f(0, 1); glVertex2f(0, h)
         glEnd()
 
-        # 2. объект — спрайт с прозрачностью
         glEnable(GL_BLEND)
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
         glBindTexture(GL_TEXTURE_2D, self.scene_data["object_tex"])
@@ -207,8 +201,7 @@ class EyeGymnasticsOne(BaseRenderer):
 
                 w, h = self.display_size
                 raw = glReadPixels(0, 0, w, h, GL_RGB, GL_UNSIGNED_BYTE)
-                img = np.frombuffer(raw, dtype=np.uint8)
-                img = np.reshape((h, w, 3))
+                img = np.frombuffer(raw, dtype=np.uint8).reshape((h, w, 3))                
                 raw = np.flipud(img).tobytes()
                 self.shm.write_frame(raw)    
                 time.sleep(0.001)

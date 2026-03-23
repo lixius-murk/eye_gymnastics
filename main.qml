@@ -84,9 +84,15 @@ ApplicationWindow {
                             }
 
                             ComboBox {
-                                id: movementBox
+                                id: movementBox                                
                                 model: ["circle_right", "circle_left", "diagonal_up", "diagonal_down",
                                         "horizontal", "vertical", "zigzag", "clock", "two_diagonals", "rectangle"]
+                            }
+
+                            ComboBox {
+                                id: sceneBox
+                                model:["boat", "bubble", "bug-on-grass", "butterfly",
+                                    "mouse", "plane-in-sky", "star-in-sky"]
                             }
 
                             ComboBox {
@@ -105,6 +111,7 @@ ApplicationWindow {
                                             rendererBox.currentText,
                                             blTypeBox.currentText,
                                             movementBox.currentText,
+                                            sceneBox.currentText,
                                             renderRect.width - 100,
                                             renderRect.height + 100
                                         )

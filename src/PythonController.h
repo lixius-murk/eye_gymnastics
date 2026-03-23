@@ -19,6 +19,8 @@ public:
     Q_INVOKABLE void startRenderer(const QString &rendererType,
                                    const QString &blType,
                                    const QString &movement,
+                                   const QString &scene,
+
                                    int width,
                                    int height);
     Q_INVOKABLE void stopRenderer();

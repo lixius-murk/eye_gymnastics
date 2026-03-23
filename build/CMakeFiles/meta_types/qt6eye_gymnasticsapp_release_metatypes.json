@@ -91,6 +91,10 @@
                                 "type": "QString"
                             },
                             {
+                                "name": "scene",
+                                "type": "QString"
+                            },
+                            {
                                 "name": "width",
                                 "type": "int"
                             },
