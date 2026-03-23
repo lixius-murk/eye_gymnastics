@@ -1,0 +1,4 @@
+{"asctime": "2026-03-23 21:18:04", "levelname": "INFO", "session_id": "20260323_211753", "bl_type": "Healthy", "movement": "calc_cur_coordinates_hotizontal", "duration": 10.873841524124146, "x_coord": 0, "y_coord": 0, "error_msg": ""}
+{"asctime": "2026-03-23 21:25:34", "levelname": "INFO", "session_id": "20260323_212509", "bl_type": "Healthy", "movement": "calc_cur_coordinates_zigzag", "duration": 24.291900396347046, "x_coord": 0, "y_coord": 0, "error_msg": ""}
+{"asctime": "2026-03-23 21:28:13", "levelname": "INFO", "session_id": "20260323_212800", "bl_type": "Healthy", "movement": "calc_cur_coordinates_circle_right", "duration": 13.182323694229126, "x_coord": 0, "y_coord": 0, "error_msg": ""}
+{"asctime": "2026-03-23 21:30:46", "levelname": "INFO", "session_id": "20260323_213031", "bl_type": "Healthy", "movement": "calc_cur_coordinates_two_diagonals", "duration": 14.975188970565796, "x_coord": 0, "y_coord": 0, "error_msg": ""}

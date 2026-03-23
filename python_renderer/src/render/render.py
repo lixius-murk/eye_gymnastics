@@ -198,6 +198,7 @@ class EyeGymnasticsOne(BaseRenderer):
 
                 glBindFramebuffer(GL_FRAMEBUFFER, self.fbo)
                 self.draw_scene(ball_position)
+                self.session_manager.log_coordinates(ball_position)
 
                 w, h = self.display_size
                 raw = glReadPixels(0, 0, w, h, GL_RGB, GL_UNSIGNED_BYTE)

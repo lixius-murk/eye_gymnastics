@@ -6,6 +6,8 @@ import logging
 from pythonjsonlogger import jsonlogger
 from pathlib import Path
 from enumData.bltype import blType
+import ctypes
+
 
 class DataManager:
     def __init__(self, data_dir: str = "data"):
@@ -13,7 +15,7 @@ class DataManager:
         self.data_dir = base_path / data_dir
         self.data_dir.mkdir(exist_ok=True)
         self.start_timestamp = None
-        self.frame_count = 0
+        self.frame_count = ctypes.c_uint32(0)
         self.coordinates_buffer = []
         self.session_data = {}
         
@@ -63,7 +65,7 @@ class DataManager:
         self.frame_count += 1
 
         self.session_data["coordinates"].append({
-            'time': round(current_time, 3),
+            'frame': self.frame_count,
             'x':    round(coord[0], 3),
             'y':    round(coord[1], 3),
         })
@@ -109,35 +111,35 @@ class DataManager:
             )
         
         
-    def end_session(self, session_data: dict):
-            if self.start_timestamp:
-                duration = time.time() - self.start_timestamp
-            else:
-                duration = 0
+    # def end_session(self, session_data: dict):
+    #         if self.start_timestamp:
+    #             duration = time.time() - self.start_timestamp
+    #         else:
+    #             duration = 0
             
-            self.logger.info(
-                "Session ended",
-                extra={
-                    'session_id': session_data.get('session_id', 'unknown'),
-                    'bl_type': session_data.get('color_blindness_type', 'unknown'),
-                    'movement': session_data.get('movement_function', 'unknown'),
-                    'duration': duration,
-                    'x_coord': 0,
-                    'y_coord': 0,
-                    'error_msg': ''
-                }
-            )
+    #         self.logger.info(
+    #             "Session ended",
+    #             extra={
+    #                 'session_id': session_data.get('session_id', 'unknown'),
+    #                 'bl_type': session_data.get('color_blindness_type', 'unknown'),
+    #                 'movement': session_data.get('movement_function', 'unknown'),
+    #                 'duration': duration,
+    #                 'x_coord': 0,
+    #                 'y_coord': 0,
+    #                 'error_msg': ''
+    #             }
+    #         )
             
-            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = self.data_dir / f"session_{timestamp}.json"
+    #         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    #         filename = self.data_dir / f"session_{timestamp}.json"
             
-            session_data.update({
-                "session_end": datetime.datetime.now().isoformat(),
-                "duration_seconds": round(duration, 2),
-                "total_frames": self.frame_count
-            })
+    #         session_data.update({
+    #             "session_end": datetime.datetime.now().isoformat(),
+    #             "duration_seconds": round(duration, 2),
+    #             "total_frames": self.frame_count
+    #         })
             
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(session_data, f, ensure_ascii=False, indent=4)
+    #         with open(filename, 'w', encoding='utf-8') as f:
+    #             json.dump(session_data, f, ensure_ascii=False, indent=4)
             
-            return session_data
+    #         return session_data
