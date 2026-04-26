@@ -30,7 +30,7 @@ class ExercisePlan:
     scene: str = DEFAULT_SCENE
     bl_type: str = "Healthy"
     object_scale: float = 1.0
-    speed_ms: int = 30
+    speed_ms: float = 2.0
     exercises: list = field(default_factory=list)
     notes: list = field(default_factory=list)
 

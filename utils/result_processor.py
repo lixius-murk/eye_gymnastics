@@ -116,7 +116,7 @@ class ResultProcessor:
             "bl_type": profile.color_blindness,
             "scene": "star",
             "object_scale": 1.0,
-            "speed_ms": 30,
+            "speed_ms": 2.0,
             "exercises":[
                 {"name": "circle_right", "speed": "medium"},
                 {"name": "horizontal",   "speed": "medium"},

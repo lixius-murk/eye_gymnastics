@@ -40,10 +40,10 @@ class DiseaseConfig:
         )
 
     @property
-    def speed_ms(self) -> int:
+    def speed_ms(self) -> float:
         """Скорость в мс для таймера упражнения"""
-        return {"very_slow": 80, "slow": 50, "medium": 30}.get(
-            self.exercises[0].speed if self.exercises else "medium", 30
+        return {"very_slow": 0.3, "slow": 0.5, "medium": 2.0}.get(
+            self.exercises[0].speed if self.exercises else "medium", 2.0
         )
 
     @property

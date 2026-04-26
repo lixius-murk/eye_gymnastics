@@ -1,16 +1,280 @@
+import mmap 
 import os
-from datetime import datetime
+from datetime import datetime, time
+import sys
+import json
+import time
+import random
 
+import numpy as np
+
+import struct
 import subprocess
 from pathlib import Path
+import threading
 
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel,
     QPushButton, QScrollArea, QFrame, QGridLayout,
-    QGraphicsDropShadowEffect, QSizePolicy
+    QGraphicsDropShadowEffect, QSizePolicy, QGraphicsScene,
+    QGraphicsPixmapItem, QGraphicsView
 )
-from PySide6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QRect, Signal, QProcess
-from PySide6.QtGui import QFont, QColor, QLinearGradient, QPainter, QPen
+from PySide6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QRect, Signal, QProcess, QThread, QTimer
+from PySide6.QtGui import QFont, QColor, QLinearGradient, QPainter, QPen, QPixmap, QImage
+from python_renderer.sharedMemoryFileWriter import SharedMemoryWriter
+from tabs.validation import ExerciseValidator
+
+
+
+class SharedMemoryReader:
+    def __init__(self, name="frames"):
+        self.name = name
+        self.map_file = None
+        self.fd = None
+        self.last_frame_id = -1
+        self.HEADER_SIZE = SharedMemoryWriter.HEADER_SIZE
+        self.HEADER_FORMAT = SharedMemoryWriter.HEADER_FORMAT
+        self.total_size = 0
+        
+        if sys.platform == "win32":
+            self.path = name
+        else:
+            self.path = f"/dev/shm/{self.name}"
+
+    def _connect(self):
+        if self.map_file:
+            return True
+
+        try:
+            if sys.platform == "win32":
+                self.map_file = mmap.mmap(-1, 0, self.name)
+                return True
+            else:
+                if not os.path.exists(self.path):
+                    return False
+                
+                self.fd = os.open(self.path, os.O_RDONLY)
+                header = os.read(self.fd, self.HEADER_SIZE)
+                if len(header) < self.HEADER_SIZE:
+                    os.close(self.fd)
+                    self.fd = None
+                    return False
+
+                counter, flag, w, h = struct.unpack(self.HEADER_FORMAT, header)
+
+                if w == 0 or h == 0:
+                    os.close(self.fd)
+                    self.fd = None
+                    return False
+
+                frame_size = w * h * 3
+                self.total_size = self.HEADER_SIZE + frame_size
+                
+                self.map_file = mmap.mmap(self.fd, self.total_size, mmap.MAP_SHARED, mmap.PROT_READ)
+                self.last_frame_id = counter - 1
+
+                print(f"[SharedMemoryReader] Connected ({w}x{h})")
+                return True
+
+        except Exception as e:
+            print(f"[SharedMemoryReader] Connect error: {e}")
+            if self.fd:
+                os.close(self.fd)
+                self.fd = None
+            return False
+
+    # def _connect(self):
+    #     if self.map_file:
+    #         return True
+
+    #     try:
+    #         if sys.platform == "win32":
+    #             import win32file
+    #             import win32con
+    #             self.map_file = mmap.mmap(-1, 0, self.name)
+    #         else:
+    #             if not os.path.exists(self.path):
+    #                 return False
+                
+    #             self.fd = os.open(self.path, os.O_RDONLY)
+    #             header = os.read(self.fd, self.HEADER_SIZE)
+    #             if len(header) < self.HEADER_SIZE:
+    #                 os.close(self.fd)
+    #                 self.fd = None
+    #                 return False
+
+    #             counter, flag, w, h = struct.unpack(self.HEADER_FORMAT, header)
+
+    #             if w == 0 or h == 0:
+    #                 os.close(self.fd)
+    #                 self.fd = None
+    #                 return False
+
+    #             frame_size = w * h * 3
+    #             self.total_size = self.HEADER_SIZE + frame_size
+                
+    #             self.map_file = mmap.mmap(self.fd, self.total_size, mmap.MAP_SHARED, mmap.PROT_READ)
+    #             self.last_frame_id = counter - 1
+
+    #             print(f"[SharedMemoryReader] Connected ({w}x{h})")
+    #             return True
+
+    #     except Exception as e:
+    #         print(f"[SharedMemoryReader] Connect error: {e}")
+    #         if self.fd:
+    #             os.close(self.fd)
+    #             self.fd = None
+    #         return False
+    def read_frame(self):
+        if not self._connect():
+            return None
+
+        try:
+            for _ in range(5):
+                self.map_file.seek(0)
+                header = self.map_file.read(self.HEADER_SIZE)
+                counter, flag, w, h = struct.unpack(self.HEADER_FORMAT, header)
+
+                if flag:
+                    continue  
+
+                frame_size = w * h * 3
+
+                self.map_file.seek(self.HEADER_SIZE)
+                frame_data = self.map_file.read(frame_size)
+
+                self.map_file.seek(0)
+                header2 = self.map_file.read(self.HEADER_SIZE)
+                counter2, flag2, _, _ = struct.unpack(self.HEADER_FORMAT, header2)
+
+                if flag2:
+                    continue
+
+                if counter != counter2:
+                    continue
+
+                if counter == self.last_frame_id:
+                    return None
+
+                self.last_frame_id = counter
+
+                frame = np.frombuffer(frame_data, dtype=np.uint8)
+                return frame.reshape((h, w, 3))
+
+            return None
+
+        except Exception as e:
+            print(f"[SharedMemoryReader] Read error: {e}")
+            return None
+
+    def close(self):
+        if self.map_file:
+            self.map_file.close()
+            self.map_file = None
+        if self.fd:
+            os.close(self.fd)
+            self.fd = None
+
+
+class ProcessMonitorThread(QThread):
+    def __init__(self, process):
+        super().__init__()
+        self.process = process
+        self._running = True
+
+    def _read_stream(self, stream, prefix):
+        """Read from binary stream and decode"""
+        while self._running:
+            try:
+                line = stream.readline()
+                if not line:
+                    break
+                if isinstance(line, bytes):
+                    line = line.decode('utf-8', errors='ignore')
+                if line.strip():
+                    print(f"{prefix} {line.rstrip()}")
+            except Exception as e:
+                break
+
+    def run(self):
+        threads = []
+        
+        if self.process.stdout:
+            t_out = threading.Thread(
+                target=self._read_stream,
+                args=(self.process.stdout, "[Renderer]"),
+                daemon=True
+            )
+            t_out.start()
+            threads.append(t_out)
+
+        if self.process.stderr:
+            t_err = threading.Thread(
+                target=self._read_stream,
+                args=(self.process.stderr, "[Renderer STDERR]"),
+                daemon=True
+            )
+            t_err.start()
+            threads.append(t_err)
+
+        self.process.wait()
+        self._running = False
+
+        for t in threads:
+            t.join(timeout=1)
+
+        print(f"[ProcessMonitorThread] Exit code: {self.process.poll()}")
+
+    def stop(self):
+        self._running = False
+        self.wait(2000)
+
+
+class FrameReaderThread(QThread):
+    frameReady = Signal(QPixmap)
+
+    def __init__(self, cyclegan_transform=None):
+
+        super().__init__()
+        self.reader = SharedMemoryReader("frames")
+        self.running = False
+        self.transform = cyclegan_transform  
+
+    def run(self):
+        self.running = True
+        while self.running:
+            frame = self.reader.read_frame()
+            if frame is None:
+                time.sleep(0.01)
+                continue
+
+            try:
+                if self.transform is not None:
+                    frame = self.transform.transform(frame)
+
+                h, w = frame.shape[:2]
+                if not frame.flags['C_CONTIGUOUS']:
+                    frame = np.ascontiguousarray(frame)
+
+                qt_image = QImage(frame.data, w, h, 3 * w, QImage.Format.Format_RGB888)
+                pixmap = QPixmap.fromImage(qt_image.copy())
+                if not pixmap.isNull():
+                    self.frameReady.emit(pixmap)
+
+            except Exception as e:
+                print(f"[FrameReaderThread] Error: {e}")
+
+            except Exception as e:
+                print(f"[FrameReaderThread] Error: {e}")
+
+        self.reader.close()
+
+    def stop(self):
+        self.running = False
+        self.wait(2000)
+
+
+
 
 def _shadow(blur=24, dy=6, alpha=80):
     s = QGraphicsDropShadowEffect()
@@ -81,7 +345,7 @@ class ExerciseCard(QFrame):
         super().__init__(parent)
         self.setFixedHeight(56)
 
-        speed = exercise.get("speed", "medium")
+        speed = exercise.get("speed_ms", "medium")
         name = exercise.get("name", "")
         label, color = self.SPEED_LABELS.get(speed, ("Стандартно", "#3DB87A"))
         ex_label = self.EXERCISE_LABELS.get(name, name)
@@ -188,8 +452,11 @@ class TrainingTab(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self._exercise_plan   = {}
+        self._exercise_plan = {}
         self._current_user_id = None
+        self._renderer_process = None
+        self._frame_reader_thread = None
+        self._process_monitor_thread = None
         self._build_ui()
 
     def _build_ui(self):
@@ -197,6 +464,42 @@ class TrainingTab(QWidget):
         root.setContentsMargins(0, 0, 0, 0)
         root.setSpacing(0)
 
+        self._video_frame = QFrame()
+        self._video_frame.setVisible(False)
+        self._video_frame.setStyleSheet("background: #000000; border: none;")
+        self._video_frame.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        
+        video_lay = QVBoxLayout(self._video_frame)
+        video_lay.setContentsMargins(0, 0, 0, 0)
+        
+        self._graphics_view = QGraphicsView()
+        self._graphics_view.setStyleSheet("background: #000000; border: none;")
+        self._graphics_view.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self._graphics_view.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self._graphics_view.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        
+        self._graphics_scene = QGraphicsScene()
+        self._graphics_view.setScene(self._graphics_scene)
+        self._graphics_pixmap_item = QGraphicsPixmapItem()
+        self._graphics_scene.addItem(self._graphics_pixmap_item)
+        
+        video_lay.addWidget(self._graphics_view)
+        
+        stop_btn_container = QFrame()
+        stop_btn_container.setFixedHeight(60)
+        stop_btn_container.setStyleSheet("background: rgba(0, 0, 0, 200); border: none;")
+        stop_lay = QHBoxLayout(stop_btn_container)
+        stop_lay.setContentsMargins(24, 0, 24, 0)
+        stop_lay.addStretch()
+        
+        self._stop_btn = LaunchButton("Остановить")
+        self._stop_btn.setFixedWidth(200)
+        self._stop_btn.clicked.connect(self._stop_training)
+        stop_lay.addWidget(self._stop_btn)
+        video_lay.addWidget(stop_btn_container, alignment=Qt.AlignmentFlag.AlignBottom)
+        
+        root.addWidget(self._video_frame)
+        
         scroll = QScrollArea()
         scroll.setWidgetResizable(True)
         scroll.setStyleSheet("QScrollArea { border: none; background: transparent; }")
@@ -272,13 +575,22 @@ class TrainingTab(QWidget):
         lay.addWidget(self._exercises_frame)
         lay.addSpacing(32)
 
-
         scroll.setWidget(container)
         root.addWidget(scroll)
 
     def apply_plan(self, plan: dict, user_id: int = None):
         self._exercise_plan = plan
         self._current_user_id = user_id
+        
+        if "speed_ms" in self._exercise_plan:
+            try:
+                speed_raw = self._exercise_plan["speed_ms"]
+                if isinstance(speed_raw, (int, float)):
+                    self._exercise_plan["speed_ms"] = int(speed_raw)
+                else:
+                    self._exercise_plan["speed_ms"] = int(float(str(speed_raw)))
+            except (ValueError, TypeError):
+                self._exercise_plan["speed_ms"] = 30
 
         disease = plan.get("disease", "")
         level = plan.get("level", "")
@@ -291,10 +603,12 @@ class TrainingTab(QWidget):
 
         self._clear_grid()
 
+        speed_display = self._exercise_plan.get("speed_ms", 30)
         params = [
             ("Диагноз", f"{disease_ru} {level}", "#5B8DEF"),
             ("Сцена", scene_ru, "#7C5CBF"),
             ("Цветовое зрение", bl_ru, "#48CAE4"),
+            ("Скорость", f"{speed_display} мс", "#F4A261"),
         ]
 
         for i, (label, value, accent) in enumerate(params):
@@ -304,12 +618,13 @@ class TrainingTab(QWidget):
         self._params_frame.setVisible(True)
 
         self._clear_exercises()
-        exercises = plan.get("exercises",[])
+        exercises = plan.get("exercises", [])
         self._ex_count.setText(f"{len(exercises)} упражнений")
         for i, ex in enumerate(exercises, 1):
             card = ExerciseCard(ex, i)
             self._exercises_lay.addWidget(card)
         self._exercises_frame.setVisible(bool(exercises))
+
 
 
     def _clear_grid(self):
@@ -342,45 +657,249 @@ class TrainingTab(QWidget):
             "scene": "star",
             "object_scale": 1.0,
             "speed_ms": 30,
+            "bl_type": "Healthy",
         }
 
     def _launch_gymnastics(self):
-        current_dir = Path(__file__).resolve().parent
-        project_root = current_dir.parent
-        exe_path = project_root / "eye_gymnastics" / "build" / "Release" / "eye_gymnasticsApp.exe"
+        if self._renderer_process or self._frame_reader_thread or self._process_monitor_thread:
+            print("[TrainingTab] Cleaning up existing training session...")
+            self._stop_training()
+            time.sleep(1.0)
+        
+        if sys.platform != "win32":
+            shm_path = "/dev/shm/frames"
+            if os.path.exists(shm_path):
+                try:
+                    os.remove(shm_path)
+                    print(f"[TrainingTab] Removed existing shared memory: {shm_path}")
+                except Exception as e:
+                    print(f"[TrainingTab] Could not remove shared memory: {e}")
 
-        if not exe_path.exists():
-            print(f"[TrainingTab] exe не найден по пути: {exe_path}")
+        exercises = self._exercise_plan.get("exercises", [])
+        if not exercises:
+            print("[TrainingTab] No exercises in plan")
             return
+            
+        exercise = exercises[0]
+        exercise_name = exercise.get("name", "circle_right")
+        bl_type = self._exercise_plan.get("bl_type", "Healthy")
+        scene = self._exercise_plan.get("scene", "star")
+        speed_raw = self._exercise_plan.get("speed_ms", 30)
+        
+        try:
+            if isinstance(speed_raw, (int, float)):
+                speed_ms = int(speed_raw)  
+            else:
+                speed_ms = int(float(str(speed_raw))) 
+        except (ValueError, TypeError):
+            speed_ms = 2 
+        
+        print(f"[TrainingTab] Speed raw: {speed_raw} ({type(speed_raw)}) -> converted: {speed_ms}")
+        
+        width, height = 1280, 720
 
-        self.process = QProcess()
-        self.process.setProgram(str(exe_path))
-        self.process.finished.connect(self._on_gymnastics_closed)
-        self.process.start()
-
-    def _on_gymnastics_closed(self):
-            print("Гимнастика завершена. Начинаем анализ...")
-
-            log_path = Path("eye_gymnastics/data/logs/target_log.json")
-
-            if not log_path.exists():
-                print("Лог цели не найден!")
-                return
-
+        renderer_dir = Path(__file__).resolve().parent.parent / "python_renderer"
+        
+        if sys.platform == "win32":
+            python_exe = renderer_dir / ".venv" / "Scripts" / "python.exe"
+            clean_script = renderer_dir.parent / "clean.bat"
+            venv_path = renderer_dir / ".venv" / "Scripts"
+        else:
+            python_exe = renderer_dir / ".venv" / "bin" / "python3"
+            clean_script = renderer_dir.parent / "clean.sh"
+            venv_path = renderer_dir / ".venv" / "bin"
+        
+        renderer_script = renderer_dir / "renderer.py"
+        
+        if clean_script.exists() and not hasattr(self, '_cleaned'):
             try:
-                with open(log_path, "r") as f:
-                    target_data = json.load(f)
-
-                gaze_data = self._generate_fake_gaze(target_data)
-
-                validator = ExerciseValidator(threshold=2.5, window_size=10)
-                report = validator.validate(target_data, gaze_data)
-
-                self.training_finished.emit(report)
-
+                if sys.platform == "win32":
+                    p = subprocess.Popen([str(clean_script)], shell=True)
+                else:
+                    p = subprocess.Popen([str(clean_script)])
+                p.wait(timeout=5)
+                print(f"[TrainingTab] Cleaned environment")
+                self._cleaned = True
             except Exception as e:
-                print(f"Ошибка при анализе: {e}")
+                print(f"[TrainingTab] Warning: Clean script failed: {e}")
 
+        args = [
+            str(python_exe),
+            str(renderer_script),
+            "1",
+            bl_type,
+            exercise_name,
+            scene,
+            str(speed_ms),
+            str(width),
+            str(height),
+        ]
+
+        print("[TrainingTab] Launching renderer", args)
+        
+        env = os.environ.copy()
+        if venv_path.exists():
+            env["VIRTUAL_ENV"] = str(renderer_dir / ".venv")
+            env["PATH"] = f"{str(venv_path)}:{env.get('PATH', '')}"
+        env["PYTHONPATH"] = str(renderer_dir.parent)
+
+        if hasattr(self, '_graphics_pixmap_item'):
+            self._graphics_pixmap_item.setPixmap(QPixmap())
+
+        self._renderer_process = subprocess.Popen(
+            args,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            cwd=str(renderer_dir),
+            env=env
+        )
+        
+        self._video_frame.setVisible(True)
+        self._video_frame.raise_()
+        
+        self._process_monitor_thread = ProcessMonitorThread(self._renderer_process)
+        self._process_monitor_thread.start()
+        
+        time.sleep(0.5)
+        self._frame_reader_thread = FrameReaderThread()
+        self._frame_reader_thread.frameReady.connect(
+            self._update_frame, 
+            Qt.ConnectionType.QueuedConnection
+        )
+        self._frame_reader_thread.start()
+
+    def _stop_training(self):
+        print("[TrainingTab] Stopping training")
+        
+        if self._frame_reader_thread:
+            print("[TrainingTab] Stopping frame reader...")
+            self._frame_reader_thread.stop()
+            self._frame_reader_thread = None
+        
+        if self._process_monitor_thread:
+            print("[TrainingTab] Stopping process monitor...")
+            self._process_monitor_thread.stop()
+            self._process_monitor_thread = None
+        
+        if self._renderer_process:
+            print("[TrainingTab] Terminating renderer process...")
+            try:
+                self._renderer_process.terminate()
+                self._renderer_process.wait(timeout=3)
+                if self._renderer_process.poll() is None:
+                    print("[TrainingTab] Force killing renderer...")
+                    self._renderer_process.kill()
+                    self._renderer_process.wait()
+            except Exception as e:
+                print(f"[TrainingTab] Error terminating process: {e}")
+                try:
+                    self._renderer_process.kill()
+                except:
+                    pass
+            finally:
+                self._renderer_process = None
+        
+        if hasattr(self, '_graphics_pixmap_item'):
+            self._graphics_pixmap_item.setPixmap(QPixmap())
+        
+        self._video_frame.setVisible(False)
+        
+        print("[TrainingTab] Training stopped")
+
+    def _cleanup(self):
+        print("[TrainingTab] Cleaning up resources...")
+        try:
+            self._stop_training()
+            if sys.platform != "win32":
+                shm_path = "/dev/shm/frames"
+                if os.path.exists(shm_path):
+                    try:
+                        os.remove(shm_path)
+                        print(f"[TrainingTab] Removed shared memory: {shm_path}")
+                    except:
+                        pass
+        except Exception as e:
+            print(f"[TrainingTab] Error during cleanup: {e}")
+        print("[TrainingTab] Cleanup complete")
+
+    def _update_frame(self, pixmap: QPixmap):
+        if pixmap.isNull():
+            return
+        
+        self._graphics_pixmap_item.setPixmap(pixmap)
+        QTimer.singleShot(10, self._fit_view_to_pixmap)
+
+    def _fit_view_to_pixmap(self):
+        if hasattr(self, '_graphics_pixmap_item') and self._graphics_pixmap_item:
+            pixmap = self._graphics_pixmap_item.pixmap()
+            if pixmap and not pixmap.isNull():
+                self._graphics_view.fitInView(
+                    self._graphics_pixmap_item,
+                    Qt.AspectRatioMode.KeepAspectRatio
+                )
+
+    def _stop_training(self):
+        print("[TrainingTab] Stopping training")
+        
+        if self._frame_reader_thread:
+            self._frame_reader_thread.stop()
+            self._frame_reader_thread = None
+        
+        if self._process_monitor_thread:
+            self._process_monitor_thread.stop()
+            self._process_monitor_thread = None
+        
+        if self._renderer_process:
+            try:
+                self._renderer_process.terminate()
+                self._renderer_process.wait(timeout=2)
+                if self._renderer_process.poll() is None:
+                    self._renderer_process.kill()
+            except Exception as e:
+                print(f"[TrainingTab] Error terminating process: {e}")
+            finally:
+                self._renderer_process = None
+        
+        renderer_dir = Path(__file__).resolve().parent.parent / "python_renderer"
+        
+        if sys.platform == "win32":
+            clean_script = renderer_dir.parent / "clean.bat"
+        else:
+            clean_script = renderer_dir.parent / "clean.sh"
+        
+        
+        if clean_script.exists():
+            try:
+                if sys.platform == "win32":
+                    p = subprocess.Popen([str(clean_script)], shell=True)
+                else:
+                    p = subprocess.Popen([str(clean_script)])
+                p.wait(timeout=5)
+                print(f"[TrainingTab] Cleaned environment")
+            except Exception as e:
+                print(f"[TrainingTab] Warning: Clean script failed: {e}")
+
+
+        if hasattr(self, '_graphics_pixmap_item'):
+            self._graphics_pixmap_item.setPixmap(QPixmap())
+        
+        self._video_frame.setVisible(False)
+        
+        print("[TrainingTab] Training stopped")
+
+    def _cleanup(self):
+        print("[TrainingTab] Cleaning up resources...")
+        try:
+            self._stop_training()
+        except Exception as e:
+            print(f"[TrainingTab] Error during cleanup: {e}")
+        print("[TrainingTab] Cleanup complete")
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if self._video_frame.isVisible() and hasattr(self, '_graphics_pixmap_item'):
+            QTimer.singleShot(50, self._fit_view_to_pixmap)
+    
     def _generate_fake_gaze(self, target_data):
         gaze = []
         for p in target_data:
@@ -444,9 +963,8 @@ class TrainingTab(QWidget):
             except Exception as e:
                 print(f"Ошибка парсинга лога: {e}")
 
-    def _cleanup(self):
-        pass
 
     def closeEvent(self, event):
         self._cleanup()
+        super().closeEvent(event)
         super().closeEvent(event)
