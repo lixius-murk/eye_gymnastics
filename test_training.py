@@ -2,10 +2,10 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent / "python_survey"))
+#sys.path.insert(0, str(Path(__file__).parent))
 
 from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
-from python_survey.tabs.training_tab import TrainingTab
+from tabs.training_tab import TrainingTab
 
 def main():
     app = QApplication(sys.argv)
@@ -24,7 +24,7 @@ def main():
         "speed_ms": 2,
         "bl_type": "Deuteranopia",
         "exercises": [
-            {"name": "circle_right", "speed": "medium"}
+            {"name": "circle_right", "speed": "slow"}
         ],
         "notes": ["Test exercise"]
     }

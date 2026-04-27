@@ -17,7 +17,7 @@ from enumData.bltype import blType
 from src.render.colorsystem import ColorSystem
 from datamanager.datamanager import DataManager
 
-from sharedMemoryFileWriter import SharedMemoryWriter
+from utils.sharedMemoryFileWriter import SharedMemoryWriter
 
 # стрелка часов
 # самолёт по небу
@@ -165,6 +165,8 @@ class EyeGymnasticsOne(BaseRenderer):
             
             pygame.init()
             pygame.display.set_mode(self.display_size, DOUBLEBUF | OPENGL | HIDDEN)
+            #pygame.display.set_mode(self.display_size)
+
             pygame.display.set_caption(f"Eye Gymnastics - {self.bl_type.name}")
             
             self._init_opengl()
