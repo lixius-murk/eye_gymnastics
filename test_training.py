@@ -5,7 +5,7 @@ from pathlib import Path
 #sys.path.insert(0, str(Path(__file__).parent))
 
 from PySide6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
-from tabs.training_tab import TrainingTab
+from tabs.training_tab.training_tab import TrainingTab
 
 def main():
     app = QApplication(sys.argv)
