@@ -6,6 +6,7 @@ import json
 import time
 import random
 
+from colab_api import ColabSDMTransform
 import numpy as np
 
 import struct
@@ -88,11 +89,8 @@ class FrameReaderThread(QThread):
         super().__init__()
         self.reader = SharedMemoryReader("frames")
         self.running = False
-        self._cyclegan = ColabLTXTransform(
-            api_url="https://your-ngrok-url.ngrok-free.app",
-            prompt="photorealistic nature scene, smooth motion, vivid colors",
-            strength=0.65,  # lower = closer to original motion, higher = more stylized
-    )
+        self._cyclegan = ColabSDMTransform(api_url="https://send-krypton-straining.ngrok-free.dev")
+        self._cyclegan.check_connection() 
     def run(self):
         self.running = True
         while self.running:
@@ -102,12 +100,12 @@ class FrameReaderThread(QThread):
                 continue
 
             try:
-                if self._cyclegan is not None:
-                    frame = self._cyclegan.transform(frame)
+                frame = self._cyclegan.transform(frame)
+                print(f"[FrameReaderThread] transformed frame shape: {frame.shape}, dtype: {frame.dtype}")
 
                 h, w = frame.shape[:2]
-                if not frame.flags['C_CONTIGUOUS']:
-                    frame = np.ascontiguousarray(frame)
+                # if not frame.flags['C_CONTIGUOUS']:
+                #     frame = np.ascontiguousarray(frame)
 
                 qt_image = QImage(frame.data, w, h, 3 * w, QImage.Format.Format_RGB888)
                 pixmap = QPixmap.fromImage(qt_image.copy())

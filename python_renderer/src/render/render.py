@@ -19,12 +19,12 @@ from datamanager.datamanager import DataManager
 
 from utils.sharedMemoryFileWriter import SharedMemoryWriter
 
-# стрелка часов
-# самолёт по небу
-# звезда на небе
-# змейка``
-# жучок на листе
-
+class SceneSetterTest:
+    def load_scene(self, scene_json_path, bl_type):
+        return {
+            "bg_tex": self.load_texture("test_bg.png", [1.0, 1.0, 1.0]),
+            "object_tex": self.load_texture("test_object.png", [1.0, 1.0, 1.0]),
+        }
 
 
 #todo: cach of images
@@ -100,8 +100,10 @@ class BaseRenderer:
         self.ball_radius = 1.0
         self.speed = speed 
         self.edge_margin = 0.85
-
-        self.scene_setter = SceneSetter()
+        if bl_type == blType.test:
+            self.scene_setter = SceneSetterTest()
+        else:
+            self.scene_setter = SceneSetter()
         self.scene_data = None
         self.scene_type = scene_type
         self.fbo = None
@@ -181,7 +183,7 @@ class EyeGymnasticsOne(BaseRenderer):
             clock = pygame.time.Clock()
             running = True
             frame_count = 0
-            max_duration = 60 
+            max_duration = 40 
             while running:
                 elapsed = time.time() - start_time
                 

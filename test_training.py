@@ -16,7 +16,7 @@ def main():
     
     training_tab = TrainingTab()
     test_plan = {
-        "disease": "Deuteranopia",
+        "disease": "test",
         "level": "+1",
         "background": "star.json",
         "object_hex": "#FF0000",
