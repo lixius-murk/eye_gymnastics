@@ -33,7 +33,7 @@ class ColabSDMTransform:
             threading.Thread(
                 target=self._call_api, args=(frame.copy(),), daemon=True
             ).start()
-
+        print(f"[SDMTransform] Request sent, in-flight: {self._in_flight}")
         #latest stylized frame or raw fallback
         with self._lock:
             return self._latest if self._latest is not None else frame

@@ -454,6 +454,7 @@ import struct
 import subprocess
 from pathlib import Path
 import threading
+from colab_api import ColabSDMTransform
 
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel,
@@ -496,6 +497,9 @@ class FrameReaderThread(QThread):
         super().__init__()
         self.reader = SharedMemoryReader("frames")
         self.running = False
+        self._sdm = ColabSDMTransform(api_url="https://send-krypton-straining.ngrok-free.dev")
+        self._sdm.check_connection()
+
 
     def run(self):
         self.running = True
@@ -514,6 +518,8 @@ class FrameReaderThread(QThread):
 
                 qt_image = QImage(frame.data, w, h, 3 * w, QImage.Format.Format_RGB888)
                 pixmap = QPixmap.fromImage(qt_image.copy())
+                self._sdm.transform(frame)
+                
                 if not pixmap.isNull():
                     self.frameReady.emit(pixmap)
             except Exception as e:
@@ -525,8 +531,8 @@ class FrameReaderThread(QThread):
 
     def stop(self):
         self.running = False
-        # Don't wait too long
         self.wait(1000)
+
 def _shadow(blur=24, dy=6, alpha=80):
     s = QGraphicsDropShadowEffect()
     s.setBlurRadius(blur)
@@ -704,6 +710,7 @@ class TrainingTab(QWidget):
         self._renderer_process = None
         self._frame_reader_thread = None
         self._process_monitor_thread = None
+
         self._build_ui()
 
     def _build_ui(self):
