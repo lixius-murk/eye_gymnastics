@@ -16,18 +16,16 @@ def main():
     
     training_tab = TrainingTab()
     test_plan = {
-        "disease": "test",
-        "level": "+1",
-        "background": "star.json",
-        "object_hex": "#FF0000",
-        "object_scale": 1.0,
-        "speed_ms": 2,
-        "bl_type": "Deuteranopia",
-        "exercises": [
-            {"name": "circle_right", "speed": "slow"}
-        ],
-        "notes": ["Test exercise"]
-    }
+            "disease": "Healthy",
+            "scene": "test",
+            "bl_type": "Healthy",
+            "object_scale": 1.0,
+            "speed_factor": 1.0,
+            "exercise_duration": 60,
+            "exercises": [
+                {"name": "circle_left", "speed": "slow"}
+            ],
+            "notes": ["This is a test plan for the training tab."]}
     training_tab.apply_plan(test_plan)
     
     window.setCentralWidget(training_tab)

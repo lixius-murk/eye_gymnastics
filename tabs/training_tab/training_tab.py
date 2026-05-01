@@ -449,6 +449,9 @@ import sys
 import json
 import time
 import random
+import traceback
+from PIL import Image
+import cv2
 import numpy as np
 import struct
 import subprocess
@@ -464,10 +467,11 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt, Signal, QThread, QTimer
 from PySide6.QtGui import QFont, QColor, QPixmap, QImage
+from python_renderer import renderer
 from utils.sharedMemoryFileWriter import SharedMemoryWriter
 from utils.sharedMemoryFileReader import SharedMemoryReader
 from tabs.validation import ExerciseValidator
-
+    
 
 class ProcessMonitorThread(QThread):
     finished_naturally = Signal()
@@ -497,42 +501,80 @@ class FrameReaderThread(QThread):
         super().__init__()
         self.reader = SharedMemoryReader("frames")
         self.running = False
-        self._sdm = ColabSDMTransform(api_url="https://send-krypton-straining.ngrok-free.dev")
+        self._sdm = ColabSDMTransform(api_url="https://send-krypton-straining.ngrok-free.dev", timeout=300)
         self._sdm.check_connection()
-
+        self.frame_counter = 0
 
     def run(self):
         self.running = True
         print("[FrameReaderThread] Started")
         
+        frame_buffer = []
+        BATCH_SIZE = 4
+        
         while self.running:
             frame = self.reader.read_frame()
+            
             if frame is None:
-                time.sleep(0.01)
+                time.sleep(0.001)
                 continue
-
-            try:
-                h, w = frame.shape[:2]
-                if not frame.flags['C_CONTIGUOUS']:
-                    frame = np.ascontiguousarray(frame)
-
-                qt_image = QImage(frame.data, w, h, 3 * w, QImage.Format.Format_RGB888)
-                pixmap = QPixmap.fromImage(qt_image.copy())
-                self._sdm.transform(frame)
-                
-                if not pixmap.isNull():
-                    self.frameReady.emit(pixmap)
-            except Exception as e:
-                print(f"[FrameReaderThread] Error: {e}")
-
-        if self.reader:
-            self.reader.close()
-        print("[FrameReaderThread] Stopped")
-
+            
+            if not frame.flags['C_CONTIGUOUS']:
+                frame = np.ascontiguousarray(frame)
+            
+            if frame is not None and frame.size > 0:
+                frame_buffer.append(frame)
+                print(f"[FrameReaderThread] Buffered frame, buffer size: {len(frame_buffer)}")
+            
+            if len(frame_buffer) >= BATCH_SIZE:
+                try:
+                    print(f"[FrameReaderThread] Processing batch of {len(frame_buffer)} frames...")
+                    
+                    valid_frames = [f for f in frame_buffer if f is not None and f.size > 0]
+                    
+                    if len(valid_frames) == 0:
+                        print("[FrameReaderThread] No valid frames in buffer")
+                        frame_buffer = []
+                        continue
+                    
+                    if len(valid_frames) != len(frame_buffer):
+                        print(f"[FrameReaderThread] Warning: filtered {len(frame_buffer) - len(valid_frames)} invalid frames")
+                    
+                    generated_images = self._sdm.send_batch_sync(valid_frames)
+                    
+                    if generated_images:
+                        print(f"[FrameReaderThread] Received {len(generated_images)} generated images")
+                        
+                        for idx, gen_img in enumerate(generated_images):
+                            if gen_img is not None:
+                                os.makedirs('test_dir', exist_ok=True)
+                                save_path = f"test_dir/generated_{self.frame_counter + idx:06d}.png"
+                                Image.fromarray(gen_img).save(save_path)
+                                
+                                h, w = valid_frames[idx].shape[:2]
+                                gen_img_resized = cv2.resize(gen_img, (w, h), interpolation=cv2.INTER_LINEAR)
+                                
+                                bytes_per_line = 3 * w
+                                qimage = QImage(gen_img_resized.data, w, h, bytes_per_line, QImage.Format_RGB888)
+                                pixmap = QPixmap.fromImage(qimage)
+                                self.frameReady.emit(pixmap)
+                            else:
+                                print(f"[FrameReaderThread] Frame {idx} generation failed")
+                        
+                        self.frame_counter += len(valid_frames)
+                    else:
+                        print("[FrameReaderThread] No generated images received")
+                    
+                    frame_buffer = []
+                    
+                except Exception as e:
+                    print(f"[FrameReaderThread] Batch processing error: {e}")
+                    traceback.print_exc()
+                    frame_buffer = []
     def stop(self):
         self.running = False
-        self.wait(1000)
-
+        self.wait(5000) 
+        
 def _shadow(blur=24, dy=6, alpha=80):
     s = QGraphicsDropShadowEffect()
     s.setBlurRadius(blur)
