@@ -53,7 +53,6 @@ class TestingTab(QWidget):
         self.cp.btnNext.clicked.connect(self._on_next)
         self.cp.btnFinish.clicked.connect(self._on_finish)
 
-    # ── Skip logic ────────────────────────────────────────────────────────────
 
     def _should_skip(self, q: dict) -> bool:
         skip_if = q.get("skip_if")
@@ -106,7 +105,6 @@ class TestingTab(QWidget):
                 return pos
         return pos
 
-    # ── Survey flow ───────────────────────────────────────────────────────────
 
     def _on_start(self):
         loader      = SurveyLoader()
@@ -160,7 +158,6 @@ class TestingTab(QWidget):
         self._save_answer()
         self._finish()
 
-    # ── Display ───────────────────────────────────────────────────────────────
 
     def _show_question(self):
         q     = self.questions[self.current_idx]

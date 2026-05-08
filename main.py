@@ -16,7 +16,6 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QMessageBox
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QIcon
 
-# Import tabs
 from tabs.testing_tab.testing_tab import TestingTab
 from tabs.diagnosis_tab import DiagnosisTab
 from tabs.training_tab.training_tab import TrainingTab
