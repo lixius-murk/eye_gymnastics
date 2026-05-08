@@ -526,16 +526,16 @@ class FrameReaderThread(QThread):
             
             if frame is not None and frame.size > 0:
                 try:
-                    output = self._hypergan.transform(frame)
+                    # output = self._hypergan.transform(frame)
                     
-                    if output is not None:
+                    if frame is not None:
                         os.makedirs('test_dir', exist_ok=True)
                         save_path = f"test_dir/generated_{self.frame_counter:06d}.png"
-                        Image.fromarray(output).save(save_path)
+                        #Image.fromarray(frame).save(save_path)
                         
-                        h, w = output.shape[:2]
+                        h, w = frame.shape[:2]
                         bytes_per_line = 3 * w
-                        qimage = QImage(output.data, w, h, bytes_per_line, QImage.Format_RGB888)
+                        qimage = QImage(frame.data, w, h, bytes_per_line, QImage.Format_RGB888)
                         pixmap = QPixmap.fromImage(qimage)
                         self.frameReady.emit(pixmap)
                         
@@ -555,6 +555,144 @@ class FrameReaderThread(QThread):
     def stop(self):
         self.running = False
         self.wait(5000)
+
+
+class CameraRecorderThread(QThread):
+    recording_started = Signal()
+    recording_error = Signal(str)
+
+    def __init__(self, output_path: str = None):
+        super().__init__()
+        self.running = False
+        self.cap = None
+        self.writer = None
+        self.output_path = output_path or self._get_default_output_path()
+        self.fps = 30
+        self.frame_width = 640
+        self.frame_height = 480
+        self.frame_count = 0
+
+    def _get_default_output_path(self) -> str:
+        from datetime import datetime as dt
+        timestamp = dt.now().strftime("%Y%m%d_%H%M%S")
+        data_dir = Path(__file__).resolve().parent.parent.parent / "data" / "videos"
+        data_dir.mkdir(parents=True, exist_ok=True)
+        return str(data_dir / f"camera_recording_{timestamp}.avi")
+
+    def _init_video_writer(self):
+        import platform
+        
+        codecs = []
+        if platform.system() == "Linux":
+            codecs = [
+                ('MJPG', 'avi'),
+                ('XVID', 'avi'),
+                ('WMV1', 'avi'),
+            ]
+        elif platform.system() == "Darwin":
+            codecs = [
+                ('mp4v', 'mp4'),
+                ('avc1', 'mp4'),
+                ('MJPG', 'avi'),
+            ]
+        else:  
+            codecs = [
+                ('mp4v', 'mp4'),
+                ('XVID', 'avi'),
+                ('MJPG', 'avi'),
+            ]
+
+        for codec_code, ext in codecs:
+            try:
+                fourcc = cv2.VideoWriter_fourcc(*codec_code)
+                output_path = self.output_path.rsplit('.', 1)[0] + f'.{ext}'
+                
+                writer = cv2.VideoWriter(
+                    output_path,
+                    fourcc,
+                    self.fps,
+                    (self.frame_width, self.frame_height)
+                )
+                
+                if writer.isOpened():
+                    print(f"[CameraRecorderThread] Using codec: {codec_code} with extension: {ext}")
+                    self.output_path = output_path
+                    return writer
+            except Exception as e:
+                print(f"[CameraRecorderThread] Codec {codec_code} failed: {e}")
+                continue
+
+        raise RuntimeError("No suitable video codec found")
+
+    def run(self):
+        self.running = True
+        try:
+            self.cap = cv2.VideoCapture(0)
+            if not self.cap.isOpened():
+                self.recording_error.emit("Failed to open camera")
+                return
+
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.frame_width)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.frame_height)
+            self.cap.set(cv2.CAP_PROP_FPS, self.fps)
+
+            self.writer = self._init_video_writer()
+
+            if not self.writer or not self.writer.isOpened():
+                self.recording_error.emit(f"Failed to open video writer at {self.output_path}")
+                if self.cap:
+                    self.cap.release()
+                return
+
+            print(f"[CameraRecorderThread] Started recording to {self.output_path}")
+            self.recording_started.emit()
+
+            frame_skip = 0
+            while self.running:
+                ret, frame = self.cap.read()
+                if not ret:
+                    print("[CameraRecorderThread] Failed to read frame from camera")
+                    import time as time_module
+                    time_module.sleep(0.01)
+                    continue
+
+                if frame.shape[1] != self.frame_width or frame.shape[0] != self.frame_height:
+                    frame = cv2.resize(frame, (self.frame_width, self.frame_height))
+
+                self.writer.write(frame)
+                self.frame_count += 1
+                
+                if self.frame_count % 1 == 0:
+                    try:
+                        _ = self.writer.get(cv2.CAP_PROP_FRAME_COUNT)
+                    except:
+                        pass
+                
+                import time as time_module
+                time_module.sleep(1.0 / self.fps)
+
+        except Exception as e:
+            self.recording_error.emit(f"Camera recording error: {str(e)}")
+            print(f"[CameraRecorderThread] Error: {e}")
+            traceback.print_exc()
+        finally:
+            self._cleanup()
+            print(f"[CameraRecorderThread] Stopped (recorded {self.frame_count} frames)")
+
+    def _cleanup(self):
+        self.writer = None
+        
+        if self.cap:
+            try:
+                self.cap.release()
+            except:
+                pass
+            self.cap = None
+
+    def stop(self):
+        self.running = False
+        self.wait(3000)
+
 
 def _shadow(blur=24, dy=6, alpha=80):
     s = QGraphicsDropShadowEffect()
@@ -733,6 +871,7 @@ class TrainingTab(QWidget):
         self._renderer_process = None
         self._frame_reader_thread = None
         self._process_monitor_thread = None
+        self._camera_recorder_thread = None
 
         self._build_ui()
 
@@ -940,6 +1079,13 @@ class TrainingTab(QWidget):
     def _stop_training(self):
         print("[TrainingTab] Stopping training")
         self._current_ex_index = 0
+        
+        # Stop camera recording
+        if self._camera_recorder_thread:
+            print("[TrainingTab] Stopping camera recorder...")
+            self._camera_recorder_thread.stop()
+            self._camera_recorder_thread = None
+        
         if self._frame_reader_thread:
             self._frame_reader_thread.stop()
             self._frame_reader_thread = None
@@ -1053,10 +1199,25 @@ class TrainingTab(QWidget):
             Qt.ConnectionType.QueuedConnection
         )
         self._frame_reader_thread.start()
+        
+        # Start camera recording
+        self._camera_recorder_thread = CameraRecorderThread()
+        self._camera_recorder_thread.recording_started.connect(self._on_camera_recording_started)
+        self._camera_recorder_thread.recording_error.connect(self._on_camera_recording_error)
+        self._camera_recorder_thread.start()
+        print("[TrainingTab] Camera recording started")
 
     def _on_renderer_finished(self):
         print("[TrainingTab] Plan finished")
         self._stop_training()
+
+    def _on_camera_recording_started(self):
+        """Called when camera recording has started successfully"""
+        print("[TrainingTab] Camera recording has started successfully")
+
+    def _on_camera_recording_error(self, error_msg: str):
+        """Called when camera recording encounters an error"""
+        print(f"[TrainingTab] Camera recording error: {error_msg}")
 
     def _update_frame(self, pixmap: QPixmap):
         if pixmap.isNull():
