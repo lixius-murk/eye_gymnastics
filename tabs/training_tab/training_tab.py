@@ -457,7 +457,7 @@ import struct
 import subprocess
 from pathlib import Path
 import threading
-from colab_api import ColabSDMTransform
+from hypergan_api import HyPERGANTransform
 
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel,
@@ -494,6 +494,7 @@ class ProcessMonitorThread(QThread):
         self.running = False
         self.wait(2000)
 
+
 class FrameReaderThread(QThread):
     frameReady = Signal(QPixmap)
 
@@ -501,16 +502,17 @@ class FrameReaderThread(QThread):
         super().__init__()
         self.reader = SharedMemoryReader("frames")
         self.running = False
-        self._sdm = ColabSDMTransform(api_url="https://send-krypton-straining.ngrok-free.dev", timeout=300)
-        self._sdm.check_connection()
+        self._hypergan = HyPERGANTransform(
+            repo_path="/home/felix/repo/tmp/eye-trainer-working/HyPER-GAN",
+            checkpoint_path="/home/felix/repo/tmp/eye-trainer-working/HyPER-GAN/pretrained_models/gta2cs.pth",
+            input_size=512,
+        )
+        
         self.frame_counter = 0
 
     def run(self):
         self.running = True
         print("[FrameReaderThread] Started")
-        
-        frame_buffer = []
-        BATCH_SIZE = 4
         
         while self.running:
             frame = self.reader.read_frame()
@@ -523,58 +525,37 @@ class FrameReaderThread(QThread):
                 frame = np.ascontiguousarray(frame)
             
             if frame is not None and frame.size > 0:
-                frame_buffer.append(frame)
-                print(f"[FrameReaderThread] Buffered frame, buffer size: {len(frame_buffer)}")
-            
-            if len(frame_buffer) >= BATCH_SIZE:
                 try:
-                    print(f"[FrameReaderThread] Processing batch of {len(frame_buffer)} frames...")
+                    output = self._hypergan.transform(frame)
                     
-                    valid_frames = [f for f in frame_buffer if f is not None and f.size > 0]
-                    
-                    if len(valid_frames) == 0:
-                        print("[FrameReaderThread] No valid frames in buffer")
-                        frame_buffer = []
-                        continue
-                    
-                    if len(valid_frames) != len(frame_buffer):
-                        print(f"[FrameReaderThread] Warning: filtered {len(frame_buffer) - len(valid_frames)} invalid frames")
-                    
-                    generated_images = self._sdm.send_batch_sync(valid_frames)
-                    
-                    if generated_images:
-                        print(f"[FrameReaderThread] Received {len(generated_images)} generated images")
+                    if output is not None:
+                        os.makedirs('test_dir', exist_ok=True)
+                        save_path = f"test_dir/generated_{self.frame_counter:06d}.png"
+                        Image.fromarray(output).save(save_path)
                         
-                        for idx, gen_img in enumerate(generated_images):
-                            if gen_img is not None:
-                                os.makedirs('test_dir', exist_ok=True)
-                                save_path = f"test_dir/generated_{self.frame_counter + idx:06d}.png"
-                                Image.fromarray(gen_img).save(save_path)
-                                
-                                h, w = valid_frames[idx].shape[:2]
-                                gen_img_resized = cv2.resize(gen_img, (w, h), interpolation=cv2.INTER_LINEAR)
-                                
-                                bytes_per_line = 3 * w
-                                qimage = QImage(gen_img_resized.data, w, h, bytes_per_line, QImage.Format_RGB888)
-                                pixmap = QPixmap.fromImage(qimage)
-                                self.frameReady.emit(pixmap)
-                            else:
-                                print(f"[FrameReaderThread] Frame {idx} generation failed")
+                        h, w = output.shape[:2]
+                        bytes_per_line = 3 * w
+                        qimage = QImage(output.data, w, h, bytes_per_line, QImage.Format_RGB888)
+                        pixmap = QPixmap.fromImage(qimage)
+                        self.frameReady.emit(pixmap)
                         
-                        self.frame_counter += len(valid_frames)
+                        self.frame_counter += 1
                     else:
-                        print("[FrameReaderThread] No generated images received")
-                    
-                    frame_buffer = []
-                    
+                        print("[FrameReaderThread] Frame processing failed")
+                        
                 except Exception as e:
-                    print(f"[FrameReaderThread] Batch processing error: {e}")
+                    print(f"[FrameReaderThread] Error: {e}")
+                    import traceback
                     traceback.print_exc()
-                    frame_buffer = []
+        
+        if self.reader:
+            self.reader.close()
+        print("[FrameReaderThread] Stopped")
+
     def stop(self):
         self.running = False
-        self.wait(5000) 
-        
+        self.wait(5000)
+
 def _shadow(blur=24, dy=6, alpha=80):
     s = QGraphicsDropShadowEffect()
     s.setBlurRadius(blur)

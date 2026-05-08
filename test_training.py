@@ -17,7 +17,7 @@ def main():
     training_tab = TrainingTab()
     test_plan = {
             "disease": "Healthy",
-            "scene": "test",
+            "scene": "star",
             "bl_type": "Healthy",
             "object_scale": 1.0,
             "speed_factor": 1.0,

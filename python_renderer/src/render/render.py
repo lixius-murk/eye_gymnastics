@@ -52,8 +52,6 @@ class SceneSetterTest:
             "object_tex": self.load_texture("test_object.png", [1.0, 1.0, 1.0]),
         }
 
-
-#todo: cach of images
 class SceneSetter:
     def __init__(self):
         self.textures = {}
